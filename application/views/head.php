@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="<?php echo base_url("assets/css/style.css"); ?>" />
 
     <!-- Custom styles for this template -->
-    <link href="blog.css" rel="stylesheet">
+    <!-- <link href="blog.css" rel="stylesheet"> -->
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->

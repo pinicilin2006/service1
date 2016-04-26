@@ -5,7 +5,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
   <body>
 
-  <?php include_once('main_navigation.php'); ?>
+  <?php 
+
+  if($this->ion_auth->logged_in())
+  {
+  	include_once('main_navigation_login.php');
+  } else {
+  	include_once('main_navigation_not_login.php');
+  }
+
+  ?>
 
     <div class="container">
 
@@ -17,6 +26,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
           <div class="blog-post">
             <!-- Содержимое страницы здесь -->
+            <pre>
+            <?php print_r($user_data)?>
+            </pre>
           </div>	
 
         </div><!-- /.blog-main -->
