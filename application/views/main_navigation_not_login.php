@@ -19,7 +19,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                           <i class="fa fa-bars"></i>
                         </button>
                         <div class="logo-wrapper">
-                            <a class="navbar-brand" href="#templatemo">
+                            <a class="navbar-brand" href="/">
                                 <p>TKLIENT.RU</p>
                             </a>
                         </div>  
