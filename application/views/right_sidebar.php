@@ -1,3 +1,6 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+?>
 		<div class="col-sm-3  blog-sidebar">
           <div class="sidebar-module sidebar-module-inset">
             <h4>Сводные данные по заявкам</h4>
