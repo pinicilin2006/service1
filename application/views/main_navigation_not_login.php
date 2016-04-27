@@ -29,7 +29,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <li><span></span><a class=" <?php echo (uri_string() == 'main/index') ? 'active' : '' ?>" href="/main/index"><b>Заявки</b></a></li>
                             <li><span></span><a class=" <?php echo (uri_string() == 'main/request') ? 'active' : '' ?>" href="/main/request"><b>Добавить заявку</b></a></li>
                             <li><span></span><a class=" <?php echo (uri_string() == 'main/about') ? 'active' : '' ?>" href="/main/about"><b>О сервисе</b></a></li>
-                            <li><span></span><a class=" <?php echo (uri_string() == 'auth/login') ? 'active' : '' ?>" href="/auth/logout"><b>Вход</b></a></li>
+                            <li><span></span><a class=" <?php echo (uri_string() == 'auth/login') ? 'active' : '' ?>" href="/auth/login"><b>Вход</b></a></li>
                         </ul>
                     </div>
                 </div> 
