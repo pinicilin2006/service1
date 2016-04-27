@@ -26,9 +26,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
           <div class="blog-post">
             <!-- Содержимое страницы здесь -->
-            <pre>
-            <?php echo $this->input->ip_address()?>
-            </pre>
+            <div class="alert alert-success">Заявка успешна добавлена в базу данных.</div>
           </div>	
 
         </div><!-- /.blog-main -->

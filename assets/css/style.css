@@ -1,7 +1,11 @@
 /*
  * Globals
  */
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800,900);
 
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100);
+
+@import url(http://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800);
 body {
   //font-family: Georgia, "Times New Roman", Times, serif;
   color: #555;
@@ -80,7 +84,7 @@ h6, .h6 {
  */
 
 .blog-header {
-  padding-top: 20px;
+  padding-top: 40px;
   padding-bottom: 20px;
 }
 .blog-title {
@@ -169,4 +173,97 @@ h6, .h6 {
 }
 .login-help a {
   text-decoration: none;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+.blue {
+  color:#06F;
+  font-weight:normal;
+}
+
+.green {
+  color:#0A0;
+  font-weight:normal;
+}
+
+#top {
+    margin-top: -50px;
+}
+
+.navbar-default {
+    background-color: #98d361;
+    border-color: transparent;
+}
+
+.navbar-brand p {
+    /*font-family: 'Dosis';*/
+    font-size: 32px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.navbar-brand em {
+    font-size: 26px;
+    font-style: normal;
+}
+
+.nav .navbar-nav {
+    text-align: center;
+}
+
+.navbar-right a {
+    /*font-family: 'Dosis';*/
+    font-size: 16px;
+    color: #eaffd6 !important;
+    text-transform: uppercase;
+    ;
+  padding: 0;
+    line-height: 50px;
+    position: relative;
+    z-index: 211;
+    -webkit-transition: all 350ms ease-in-out;
+    -moz-transition: all 350ms ease-in-out;
+    -o-transition: all 350ms ease-in-out;
+    transition: all 350ms ease-in-out;
+}
+
+.navbar-right a:hover {
+  /*background-color: #fff !important;*/
+  /*color: #8bc655 !important;*/;
+}
+
+.navbar-right li {
+    height: 50px;
+    position: relative;
+    z-index: 210;
+}
+
+.navbar-right li span {
+    position: absolute;
+    width: 0;
+    height: 100%;
+    background-color: #fff;
+    -webkit-transition: all 250ms ease-in-out;
+    -moz-transition: all 250ms ease-in-out;
+    -o-transition: all 250ms ease-in-out;
+    transition: all 250ms ease-in-out;
+    top: 0;
+    left: 0;
+    z-index: 200;
+}
+
+.navbar-right li:hover span {
+    width: 100%;
+}
+
+.navbar-right li:hover a {
+    color: #7cb14a !important;
+}
+
+.active{
+  background-color: #93cb60;
 }

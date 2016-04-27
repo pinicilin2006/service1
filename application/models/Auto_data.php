@@ -19,6 +19,15 @@ class Auto_data extends CI_Model {
                         $query = $this->db->get_where('car_model', array('id_car_mark' => $id));
                 }
                 return $query;
+        }
+        public function get_modification($id = FALSE)
+        {
+                if($id === FALSE){
+                        $query = $this->db->get('car_modification');
+                } else {
+                        $query = $this->db->get_where('car_modification', array('id_car_model' => $id));
+                }
+                return $query;
         }      	
 }
 ?>
