@@ -1,21 +1,66 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 class Main extends CI_Controller {
+		
+	function __construct() 
+	{
+		parent::__construct();
+		$this->load->model('Request_data');
+	}	
 	
-	public function index()
+	public function index($id = FALSE)
 	{	
-		$data['user_data'] = $this->ion_auth->user()->row();
+
+		$this->load->model('Auto_data');
+		$this->load->model('Detail_data');
+		$this->load->model('Region_data');		
+		$this->load->library('pagination');
+		$data['all_request_count_all'] = $this->Request_data->request_count();
+	 	$data['all_request_count_today'] = $this->Request_data->request_count_today();
+		$limit = 50;
+		$offset = (is_numeric($id) ? $id : 0);
+		$request_all_count = $this->Request_data->request_count();				
+		
+		$config['base_url'] = base_url() . "index.php/main/index";
+		$config['total_rows'] = $request_all_count;
+		$config['per_page'] = $limit;
+		$config['num_links'] = 2;
+		$config['full_tag_open'] = '<ul class="pagination">';
+		$config['full_tag_close'] = '</ul>';
+		$config['first_link'] = 'Первая';
+		$config['first_tag_open'] = '<li>';
+		$config['first_tag_close'] = '</li>';
+		$config['last_link'] = 'Последняя';
+		$config['last_tag_open'] = '<li>';
+		$config['last_tag_close'] = '</li>';
+		$config['next_tag_open'] = '<li>';
+		$config['next_tag_close'] = '</li>';		
+		$config['cur_tag_open'] = '<li class="active"><span>';
+		$config['cur_tag_close'] = '<span class="sr-only">(current)</span></span></li>';
+		$config['num_tag_open'] = '<li>';
+		$config['num_tag_close'] = '</li>';
+		$config['prev_link'] = '&lt;';
+		$config['prev_tag_open'] = '<li>';
+		$config['prev_tag_close'] = '</li>';
+		$this->pagination->initialize($config);
+		$data['pagination'] = $this->pagination->create_links();
+		$table_data = $this->Request_data->request_limit_to_table($limit,$offset);
+		$data['table_data'] = $table_data->result_array();
+		
 		$this->load->view('main_page',$data);
 	}
 
 	public function about()
 	{
-		$this->load->view('about_page');
+		$data['all_request_count_all'] = $this->Request_data->request_count();
+	 	$data['all_request_count_today'] = $this->Request_data->request_count_today();		
+		$this->load->view('about_page', $data);
 	}
 
 	public function request()
 	{
-		$data['message'] = '';
+		$data['all_request_count_all'] = $this->Request_data->request_count();
+	 	$data['all_request_count_today'] = $this->Request_data->request_count_today();		
 		$this->load->model('Auto_data');
 		$this->load->model('Detail_data');
 		$this->load->model('Region_data');
@@ -71,7 +116,17 @@ class Main extends CI_Controller {
 			$this->load->view('request_add_success_page');
 		}
 	}
-
+	/*
+	Различные вспомогательные классы
+	*/
+	// public function info_block()
+	// {
+	// 	$all_request_count_all = $this->Request_data->request_count();
+	// 	$all_request_count_today = $this->Request_data->request_count_today();
+	// 	$data['all_request_count_all'] = $all_request_count_all;
+	// 	$data['all_request_count_today'] = $all_request_count_today;
+	// 	return $data;
+	// }
 	/*
 	Различные ajax запросы
 	*/

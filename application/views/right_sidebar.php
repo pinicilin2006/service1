@@ -2,14 +2,6 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 		<div class="col-sm-3  blog-sidebar">
-          <div class="sidebar-module sidebar-module-inset">
-            <h4>Сводные данные по заявкам</h4>
-            <ol class="list-unstyled">
-            	<li>Общее количество: <b>15800</b></li>
-            	<li>Добавлено сегодня: <b>134</b></li>
-            	<li>Добавлено за месяц: <b>3458</b></li>
-            </ol>
-          </div>
           <div class="sidebar-module">
             <h4>Архив заявок</h4>
             <ol class="list-unstyled">

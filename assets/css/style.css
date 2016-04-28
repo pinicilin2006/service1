@@ -267,3 +267,37 @@ html {
 .active{
   background-color: #93cb60;
 }
+#request_table{
+  font-size: 0.95em;
+}
+#request_table th{
+  vertical-align:middle;
+  text-align:center;
+  //border: 2px solid #ddd;
+}
+#request_table td{
+  vertical-align:middle;
+  text-align:center;
+  padding: 4px;
+  //border: 2px solid #ddd;
+}
+.get-info-request{
+  font-size: 1.5em;
+}
+.show-info{
+  padding-top: 73px;
+}
+.pagination{
+  font-size: 0.8em;
+  color: #98d361;
+  margin: 1px;
+}
+
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+  z-index: 3;
+  color: #fff;
+  cursor: default;
+  background-color: #98d361;
+  border-color: #98d361;
+}
+

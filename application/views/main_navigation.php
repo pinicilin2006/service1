@@ -7,11 +7,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <a class="blog-nav-item <?php echo (uri_string() == 'main/index') ? 'active' : '' ?>" href="/main/index"><b>Заявки</b></a>
           <a class="blog-nav-item <?php echo (uri_string() == 'main/request') ? 'active' : '' ?>" href="/main/request"><b>Добавить заявку</b></a>
           <a class="blog-nav-item <?php echo (uri_string() == 'main/about') ? 'active' : '' ?>" href="/main/about"><b>О сервисе</b></a>
-          <a class="blog-nav-item <?php echo (uri_string() == 'auth/login') ? 'active' : '' ?>" href="/auth/login"><b>Вход</b></a>
+          <a class="blog-nav-item <?php echo (uri_string() == 'auth/logout') ? 'active' : '' ?>" href="/auth/logout"><b>Выход</b></a>
         </nav>
       </div>
     </div> -->
-<nav class="navbar navbar-default navbar-fixed-top">
+    
+        <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <div class="row">
                     <div class="navbar-header">
@@ -26,12 +27,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </div>
                     <div class="collapse navbar-collapse" id="main-menu">
                         <ul class="nav navbar-nav navbar-right">
-                            <li><span></span><a class=" <?php echo (uri_string() == 'main/index') ? 'active' : '' ?>" href="/main/index"><b>Заявки</b></a></li>
+                            <li><span></span><a class=" <?php echo (uri_string() == 'main/index' OR uri_string() == '') ? 'active' : '' ?>" href="/main/index"><b>Заявки</b></a></li>
                             <li><span></span><a class=" <?php echo (uri_string() == 'main/request') ? 'active' : '' ?>" href="/main/request"><b>Добавить заявку</b></a></li>
                             <li><span></span><a class=" <?php echo (uri_string() == 'main/about') ? 'active' : '' ?>" href="/main/about"><b>О сервисе</b></a></li>
-                            <li><span></span><a class=" <?php echo (uri_string() == 'auth/login') ? 'active' : '' ?>" href="/auth/login"><b>Вход</b></a></li>
+                            <?php if($this->ion_auth->logged_in()):?>
+                              <li><span></span><a class=" <?php echo (uri_string() == 'auth/logout') ? 'active' : '' ?>" href="/auth/logout"><b>Выход</b></a></li>
+                            <?php else: ?>
+                              <li><span></span><a class=" <?php echo (uri_string() == 'auth/login') ? 'active' : '' ?>" href="/auth/login"><b>Вход</b></a></li>
+                            <?php endif; ?>
                         </ul>
                     </div>
                 </div> 
             </div>
-        </nav>    
+        </nav>
+    

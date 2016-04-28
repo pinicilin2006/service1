@@ -12,11 +12,14 @@ class Auth extends CI_Controller {
 		$this->form_validation->set_error_delimiters($this->config->item('error_start_delimiter', 'ion_auth'), $this->config->item('error_end_delimiter', 'ion_auth'));
 
 		$this->lang->load('auth');
+		$this->load->model('Request_data');
 	}
 
 	// redirect if needed, otherwise display the user list
 	function index()
 	{
+		$this->data['all_request_count_all'] = $this->Request_data->request_count();
+	 	$this->data['all_request_count_today'] = $this->Request_data->request_count_today();
 
 		if (!$this->ion_auth->logged_in())
 		{
@@ -48,7 +51,8 @@ class Auth extends CI_Controller {
 	function login()
 	{
 		$this->data['title'] = $this->lang->line('login_heading');
-
+		$this->data['all_request_count_all'] = $this->Request_data->request_count();
+	 	$this->data['all_request_count_today'] = $this->Request_data->request_count_today();
 		//validate form input
 		$this->form_validation->set_rules('identity', str_replace(':', '', $this->lang->line('login_identity_label')), 'required');
 		$this->form_validation->set_rules('password', str_replace(':', '', $this->lang->line('login_password_label')), 'required');
@@ -110,6 +114,8 @@ class Auth extends CI_Controller {
 	// change password
 	function change_password()
 	{
+		$this->data['all_request_count_all'] = $this->Request_data->request_count();
+	 	$this->data['all_request_count_today'] = $this->Request_data->request_count_today();		
 		$this->form_validation->set_rules('old', $this->lang->line('change_password_validation_old_password_label'), 'required');
 		$this->form_validation->set_rules('new', $this->lang->line('change_password_validation_new_password_label'), 'required|min_length[' . $this->config->item('min_password_length', 'ion_auth') . ']|max_length[' . $this->config->item('max_password_length', 'ion_auth') . ']|matches[new_confirm]');
 		$this->form_validation->set_rules('new_confirm', $this->lang->line('change_password_validation_new_password_confirm_label'), 'required');
@@ -178,6 +184,8 @@ class Auth extends CI_Controller {
 	// forgot password
 	function forgot_password()
 	{
+		$this->data['all_request_count_all'] = $this->Request_data->request_count();
+	 	$this->data['all_request_count_today'] = $this->Request_data->request_count_today();		
 		// setting validation rules by checking whether identity is username or email
 		if($this->config->item('identity', 'ion_auth') != 'email' )
 		{
@@ -249,6 +257,8 @@ class Auth extends CI_Controller {
 	// reset password - final step for forgotten password
 	public function reset_password($code = NULL)
 	{
+		$this->data['all_request_count_all'] = $this->Request_data->request_count();
+	 	$this->data['all_request_count_today'] = $this->Request_data->request_count_today();		
 		if (!$code)
 		{
 			show_404();
@@ -340,6 +350,8 @@ class Auth extends CI_Controller {
 	// activate the user
 	function activate($id, $code=false)
 	{
+		$this->data['all_request_count_all'] = $this->Request_data->request_count();
+	 	$this->data['all_request_count_today'] = $this->Request_data->request_count_today();		
 		if ($code !== false)
 		{
 			$activation = $this->ion_auth->activate($id, $code);
@@ -366,6 +378,8 @@ class Auth extends CI_Controller {
 	// deactivate the user
 	function deactivate($id = NULL)
 	{
+		$this->data['all_request_count_all'] = $this->Request_data->request_count();
+	 	$this->data['all_request_count_today'] = $this->Request_data->request_count_today();		
 		if (!$this->ion_auth->logged_in() || !$this->ion_auth->is_admin())
 		{
 			// redirect them to the home page because they must be an administrator to view this
@@ -412,6 +426,8 @@ class Auth extends CI_Controller {
 	// create a new user
 	function create_user()
     {
+		$this->data['all_request_count_all'] = $this->Request_data->request_count();
+	 	$this->data['all_request_count_today'] = $this->Request_data->request_count_today();    	
         $this->data['title'] = $this->lang->line('create_user_heading');
 
         if ($this->ion_auth->logged_in() && !$this->ion_auth->is_admin())
@@ -523,6 +539,8 @@ class Auth extends CI_Controller {
 	// edit a user
 	function edit_user($id)
 	{
+		$this->data['all_request_count_all'] = $this->Request_data->request_count();
+	 	$this->data['all_request_count_today'] = $this->Request_data->request_count_today();		
 		$this->data['title'] = $this->lang->line('edit_user_heading');
 
 		if (!$this->ion_auth->logged_in() || (!$this->ion_auth->is_admin() && !($this->ion_auth->user()->row()->id == $id)))
@@ -674,6 +692,8 @@ class Auth extends CI_Controller {
 	// create a new group
 	function create_group()
 	{
+		$this->data['all_request_count_all'] = $this->Request_data->request_count();
+	 	$this->data['all_request_count_today'] = $this->Request_data->request_count_today();		
 		$this->data['title'] = $this->lang->line('create_group_title');
 
 		if (!$this->ion_auth->logged_in() || !$this->ion_auth->is_admin())
@@ -721,6 +741,8 @@ class Auth extends CI_Controller {
 	// edit a group
 	function edit_group($id)
 	{
+		$this->data['all_request_count_all'] = $this->Request_data->request_count();
+	 	$this->data['all_request_count_today'] = $this->Request_data->request_count_today();		
 		// bail if no group id given
 		if(!$id || empty($id))
 		{

@@ -5,7 +5,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
   <body>
 
-  <?php $this->view('main_navigation_not_login') ?>
+  <?php $this->view('main_navigation') ?>
 
     <div class="container">
 

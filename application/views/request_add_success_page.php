@@ -7,12 +7,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
   <?php 
 
-  if($this->ion_auth->logged_in())
-  {
-  	include_once('main_navigation_login.php');
-  } else {
-  	include_once('main_navigation_not_login.php');
-  }
+  	include_once('main_navigation.php');
 
   ?>
 
