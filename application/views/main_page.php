@@ -25,7 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="panel panel-default">
               <!-- Default panel contents -->
               <div class="panel-heading">Заявки на подбор автодеталей</div>           
-              <table class="table table-hover table-condensed table-bordered" id="request_table">
+              <table class="table-responsive table-hover table-condensed table-bordered" id="request_table">
                 <thead>
                   <th>Id заявки</th>
                   <th>Дата</th>
