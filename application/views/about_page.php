@@ -37,6 +37,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <li>Увеличение продаж вашего разбора/стола заказов!</li>
               </ul>
             </div>
+           </div>
 
         </div><!-- /.blog-main -->
 
