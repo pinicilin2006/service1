@@ -45,3 +45,15 @@ function get_city_list(id){
 		});
 		return false;
 }
+
+function get_request_info(id){
+	var a = id;
+	$('#info-modal-text').html('');
+		$.ajax({
+			url: '/main/get_request_info/'+a,
+			success: function(data){
+				$('#info-modal-text').html(data);
+			}
+		});
+		return false;
+}

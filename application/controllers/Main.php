@@ -134,7 +134,8 @@ class Main extends CI_Controller {
 	/*
 	Различные ajax запросы
 	*/
-	public function get_model($id = FALSE){
+	public function get_model($id = FALSE)
+	{
 		$this->load->model('Auto_data');
 			$auto_model_data = $this->Auto_data->get_model($id);
 		if(!$auto_model_data->num_rows()){
@@ -146,7 +147,8 @@ class Main extends CI_Controller {
 		echo $message;
 	}
 
-	public function get_modification($id = FALSE){
+	public function get_modification($id = FALSE)
+	{
 		$this->load->model('Auto_data');
 		$auto_modification_data = $this->Auto_data->get_modification($id);
 		if(!$auto_modification_data->num_rows()){
@@ -159,7 +161,8 @@ class Main extends CI_Controller {
 		echo $message;
 	}
 
-	public function get_detail_type($id = FALSE){
+	public function get_detail_type($id = FALSE)
+	{
 		$this->load->model('Detail_data');
 		$detail_type_data = $this->Detail_data->get_detail_type($id);
 		if(!$detail_type_data->num_rows()){
@@ -171,7 +174,8 @@ class Main extends CI_Controller {
 		echo $message;
 	}
 	
-	public function get_city($id = FALSE){
+	public function get_city($id = FALSE)
+	{
 		$this->load->model('Region_data');
 		$city_data = $this->Region_data->get_city($id);
 		if(!$city_data->num_rows()){
@@ -181,6 +185,38 @@ class Main extends CI_Controller {
 			$message = $this->load->view('ajax/city_list',$data,true);
 		}
 		echo $message;
+	}
+
+	public function get_request_info($id = FALSE)
+	{
+		if($id === FALSE)
+		{
+			return FALSE;
+		}
+		if(!$this->ion_auth->logged_in()){
+			$message = $this->load->view('ajax/user_not_login','',true);
+			echo $message;
+			return FALSE;
+		}
+		if($this->ion_auth->logged_in()){
+			$request_data = $this->Request_data->request_full_info($id);
+			if($request_data->num_rows() == 0)
+			{
+				$message = $this->load->view('ajax/request_info_error','',true);
+				echo $message;
+				return FALSE;				
+			}
+			$request_data = $request_data->result_array();
+			if($this->ion_auth->is_admin() OR $this->ion_auth->in_group('operator') OR $this->ion_auth->in_group($request_data[0]['id_detail_category']))
+			{
+				$data['request_info'] = $request_data;
+				$message = $this->load->view('ajax/request_info',$data,true);
+				echo $message;
+			} else {
+				$message = $this->load->view('ajax/request_info_no_access','',true);
+				echo $message;
+			}
+		}
 	}			
 
 }

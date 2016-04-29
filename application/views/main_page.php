@@ -4,7 +4,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<?php include_once('head.php'); ?>
 
   <body>
-
   <?php 
 
   include_once('main_navigation.php');
@@ -48,7 +47,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                       <td data-label="Категория:"><?=$row['name_detail_category']?></td>
                       <td data-label="Наименование:"><?=$row['detail_name']?></td>
                       <td data-label="Срочность:"><?=$row['name']?></td>
-                      <td data-label="Данные клиента:"><button type="button" class="btn btn-success">Info</button></td>
+                      <td data-label="Данные клиента:"><a  href="#info_modal" role="button" id="<?=$row['id_request']?>" class="btn  btn-success" data-toggle="modal">info</a></td>
                     </tr>
                   <?php endforeach;?>
                 </tbody>
@@ -64,8 +63,34 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       </div><!-- /.row -->
 
     </div><!-- /.container -->
+    <?php include_once('footer.php'); ?> 
 
-    <?php include_once('footer.php'); ?>
+    <div id="info_modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h3 id="myModalLabel">TKLIENT.RU</h3>
+      </div>
+      <div class="modal-body">
+        <p><div id="info-modal-text"></div></p>
+      </div>
+      <div class="modal-footer">
+    <?php if(!$this->ion_auth->logged_in()):?>
+      <a href="/auth/login" role="button" class="btn  btn-success">Вход</a>
+      <a href="/auth/create_user" role="button" class="btn  btn-success">Зарегестрироватся</a>
+    <?php endif;?>
+      </div>
+    </div>
+
+
     <?php include_once('javascript.php'); ?>
+
+    <script type="text/javascript">
+      $('#info_modal').on('show.bs.modal', function (e) {
+        get_request_info(e.relatedTarget.id);
+      })
+
+    </script>  
   </body>
 </html>

@@ -28,15 +28,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           		?>
 				<legend><?php echo lang('create_group_heading');?></legend>
 				  <div class="form-group">
-				    <label for="group_name" class="col-sm-4 control-label">Название группы</label>
+				    <label for="group_name" class="col-sm-4 control-label"><?php echo lang('create_group_name_label', 'group_name');?> </label>
 				    <div class="col-sm-8">
-				      <input type="text" name="group_name" class="form-control" id="group_name" placeholder="Название группы">
+				      <?php echo form_input($group_name);?>
 				    </div>
 				  </div>
 				  <div class="form-group">
-				    <label for="group_description" class="col-sm-4 control-label">Описание</label>
+				    <label for="group_description" class="col-sm-4 control-label"><?php echo lang('create_group_desc_label', 'description');?></label>
 				    <div class="col-sm-8">
-				      <input type="text" name="group_description" class="form-control" id="group_description" placeholder="Описание">
+				      <?php echo form_input($description);?>
 				    </div>
 				  </div>				  
 				  <div class="form-group">

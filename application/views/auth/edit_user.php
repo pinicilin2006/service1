@@ -92,7 +92,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                   }
               ?>
               <input type="checkbox" name="groups[]" value="<?php echo $group['id'];?>"<?php echo $checked;?>>
-              <?php echo htmlspecialchars($group['name'],ENT_QUOTES,'UTF-8');?>
+              <?php echo htmlspecialchars($group['name'],ENT_QUOTES,'UTF-8');?> 
+              (<small><?php echo htmlspecialchars($group['description'],ENT_QUOTES,'UTF-8');?></small>)
               </label>
           <?php endforeach?>
           	</div>

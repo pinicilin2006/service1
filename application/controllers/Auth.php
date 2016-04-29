@@ -735,12 +735,14 @@ class Auth extends CI_Controller {
 				'id'    => 'group_name',
 				'type'  => 'text',
 				'value' => $this->form_validation->set_value('group_name'),
+				'class' => 'form-control',
 			);
 			$this->data['description'] = array(
 				'name'  => 'description',
 				'id'    => 'description',
 				'type'  => 'text',
 				'value' => $this->form_validation->set_value('description'),
+				'class' => 'form-control',
 			);
 
 			$this->_render_page('auth/create_group', $this->data);
