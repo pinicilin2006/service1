@@ -74,7 +74,9 @@ class Main extends CI_Controller {
 	}
 
 	public function request_add()
-	{	
+	{		
+		$data['all_request_count_all'] = $this->Request_data->request_count();
+	 	$data['all_request_count_today'] = $this->Request_data->request_count_today();
 		$this->form_validation->set_error_delimiters('<div class="alert alert-warning">', '</div>');
 		$this->form_validation->set_rules('name','"Имя"','regex_match[/^[a-zA-Zа-яёА-ЯЁ\s]+$/u]');
 		$this->form_validation->set_rules('phone','"Телефон"','required|regex_match[/^[0-9\-\+\(\)]+$/u]');
@@ -94,7 +96,7 @@ class Main extends CI_Controller {
 			$this->request();
 		}	else {
 			$this->load->model('Insert_model');
-			$data = array(
+			$data_form = array(
 				'name' => $this->input->post('name'), 
 				'phone' => $this->input->post('phone'),
 				'email' => $this->input->post('email'),
@@ -112,8 +114,8 @@ class Main extends CI_Controller {
 				'time_create' => now(),
 				'active' => '1'
 			);
-			$this->Insert_model->request_insert($data);
-			$this->load->view('request_add_success_page');
+			$this->Insert_model->request_insert($data_form);
+			$this->load->view('request_add_success_page',$data);
 		}
 	}
 	/*
