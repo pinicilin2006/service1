@@ -18,7 +18,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
           <div class="blog-post">
             <p class="lead">TKlient.ru является удобным инструментом для поиска и продажи запчастей.</p> 
-            <p>Ежедневно сотни клиентов оставляют свои заявки и только десятки авторизованных авторазборов отвечают на них.</p>
             <hr>
             <div class="col-sm-6">
               Отправьте запрос в TKlient.ru и вы получите:
@@ -38,6 +37,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               </ul>
             </div>
            </div>
+           <hr>
+            <p>Ежедневно сотни клиентов оставляют свои заявки и только десятки авторизованных авторазборов отвечают на них.</p>
+           
 
         </div><!-- /.blog-main -->
 
