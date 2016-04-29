@@ -39,14 +39,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <tbody>
                   <?php foreach ($table_data as $row):?>
                     <tr>
-                      <td><?=$row['id_request']?></td>
-                      <td><?=date('d.m.y', $row['time_create'])?><br><?=date('H:i', $row['time_create'])?></td>
-                      <td><?=$row['region_name']?>/<br><b><?=$row['city_name']?></b></td>
-                      <td><?=$row['mark_name']?>/<br><b><?=$row['model_name']?></b></td>
-                      <td><?=$row['name_detail_category']?></td>
-                      <td><?=$row['detail_name']?></td>
-                      <td><?=$row['name']?></td>
-                      <td><button type="button" class="btn btn-success">Info</button></td>
+                      <td data-label="ID заявки:"><?=$row['id_request']?></td>
+                      <td data-label="Дата:"><?=date('d.m.y', $row['time_create'])?><br><?=date('H:i', $row['time_create'])?></td>
+                      <td data-label="Город:"><?=$row['region_name']?>/<br><b><?=$row['city_name']?></b></td>
+                      <td data-label="Авто:"><?=$row['mark_name']?>/<br><b><?=$row['model_name']?></b></td>
+                      <td data-label="Категория:"><?=$row['name_detail_category']?></td>
+                      <td data-label="Наименование:"><?=$row['detail_name']?></td>
+                      <td data-label="Срочность:"><?=$row['name']?></td>
+                      <td data-label="Данные клиента:"><button type="button" class="btn btn-success">Info</button></td>
                     </tr>
                   <?php endforeach;?>
                 </tbody>
