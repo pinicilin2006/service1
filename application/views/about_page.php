@@ -17,7 +17,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="col-sm-12 blog-main" style="padding-top: 5px">
 
           <div class="blog-post">
-            <h3>TKlient.ru является удобным инструментом для поиска и продажи запчастей.</h3> 
+            <p>TKlient.ru является удобным инструментом для поиска и продажи запчастей.</p> 
             <p class="lead">Ежедневно сотни клиентов оставляют свои заявки и только десятки авторизованных авторазборов отвечают на них.</p>
             
             <div class="col-sm-6">
