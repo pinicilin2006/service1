@@ -14,7 +14,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
       <div class="row">
 
-        <div class="col-sm-12 blog-main" style="padding-top: 5px">
+        <div class="col-sm-9 blog-main" style="padding-top: 5px">
 
           <div class="blog-post">
             <p class="lead">TKlient.ru является удобным инструментом для поиска и продажи запчастей.</p> 
