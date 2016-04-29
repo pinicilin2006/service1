@@ -40,7 +40,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         </div><!-- /.blog-main -->
 
-        <?php //include_once('right_sidebar.php') ?>
+        <?php include_once('right_sidebar.php') ?>
 
       </div><!-- /.row -->
 
