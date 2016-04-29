@@ -131,7 +131,7 @@ $config['email_config'] = array(
  | Default: auth/
  */
 $config['email_templates'] = 'auth/email/';
-
+$config['protocol'] = 'smpt';
 /*
  | -------------------------------------------------------------------------
  | Activate Account Email Template
