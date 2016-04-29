@@ -22,7 +22,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           			'class' => 'form-horizontal',
           			'role' 	=> 'form'
           		);
-          		echo form_open('auth/reset_password/', $attributes);
+          		echo form_open('auth/reset_password/' . $code, $attributes);
           		?>
           		<div id="infoMessage"><?php echo $message;?></div>
 				<legend><?php echo lang('reset_password_heading');?></legend>        			
