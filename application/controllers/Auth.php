@@ -135,21 +135,24 @@ class Auth extends CI_Controller {
 
 			$this->data['min_password_length'] = $this->config->item('min_password_length', 'ion_auth');
 			$this->data['old_password'] = array(
-				'name' => 'old',
-				'id'   => 'old',
-				'type' => 'password',
+				'name' 	=> 'old',
+				'id'   	=> 'old',
+				'type' 	=> 'password',
+				'class'	=> 'form-control',
 			);
 			$this->data['new_password'] = array(
 				'name'    => 'new',
 				'id'      => 'new',
 				'type'    => 'password',
 				'pattern' => '^.{'.$this->data['min_password_length'].'}.*$',
+				'class'	  => 'form-control',
 			);
 			$this->data['new_password_confirm'] = array(
 				'name'    => 'new_confirm',
 				'id'      => 'new_confirm',
 				'type'    => 'password',
 				'pattern' => '^.{'.$this->data['min_password_length'].'}.*$',
+				'class'	  => 'form-control',
 			);
 			$this->data['user_id'] = array(
 				'name'  => 'user_id',

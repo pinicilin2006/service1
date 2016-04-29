@@ -25,8 +25,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="panel panel-default">
               <!-- Default panel contents -->
               <div class="panel-heading">Заявки на подбор автодеталей</div>           
-              <table class="table-responsive table-hover table-condensed table-bordered" id="request_table">
+              <table class="table table-hover table-condensed table-bordered" id="request_table">
                 <thead>
+                <tr>
                   <th>Id</th>
                   <th>Дата</th>
                   <th>Город</th>
@@ -34,7 +35,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                   <th>Категория</th>
                   <th>Наименование</th>
                   <th>Срочность</th>
-                  <th>Данные клиента</th>
+                  <th>Клиент</th>
+                  </tr>
                 </thead>
                 <tbody>
                   <?php foreach ($table_data as $row):?>

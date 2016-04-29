@@ -200,7 +200,7 @@ html {
 
 .navbar-brand p {
     /*font-family: 'Dosis';*/
-    font-size: 32px;
+    font-size: 30px;
     font-weight: 600;
     color: #fff;
     text-transform: uppercase;
@@ -217,7 +217,7 @@ html {
 
 .navbar-right a {
     /*font-family: 'Dosis';*/
-    font-size: 16px;
+    font-size: 14px;
     color: #eaffd6 !important;
     text-transform: uppercase;
     ;
@@ -388,4 +388,12 @@ html {
 /*--------------------------------------------------------------*/
 textarea {
   resize: none;
+}
+#request_table td{
+  vertical-align:middle;
+  padding: 3px;
+}
+
+#request_table.table-hover > tbody > tr:hover {
+  background-color: #98d361;
 }
