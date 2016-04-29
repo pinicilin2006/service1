@@ -53,7 +53,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				  </div>
 				  <div class="form-group">
 				    <div class="col-sm-offset-2 col-sm-10">
-				      <button type="submit" class="btn btn-default">Войти</button>
+				      <button type="submit" class="btn btn-success">Войти</button>
 				    </div>
 				  </div>
 				  <hr>
