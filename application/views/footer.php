@@ -5,7 +5,7 @@
                     <div class="col-md-12">
                         <div class="col-md-4">
                             <div class="copyright-text">
-                                <p>Copyright &copy; 2016  <a href="http://h-aa.ru">Хусаинов Артур Амурович</a></p>
+                                <p>Copyright &copy; 2016  <a href="http://www.tklient.ru">www.tklient.ru</a></p>
                             </div>
                         </div>
                         <div class="col-md-8">
