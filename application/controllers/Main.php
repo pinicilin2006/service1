@@ -90,6 +90,7 @@ class Main extends CI_Controller {
 		$this->form_validation->set_rules('detail_type','"Тип детали"','required|numeric');
 		$this->form_validation->set_rules('detail_name','"Наименование детали (деталей)"','required|regex_match[/^[0-9a-zA-Zа-яёА-ЯЁ,\.\s]+$/u]');
 		$this->form_validation->set_rules('dop_info','"Дополнительная информация"','');
+		$this->form_validation->set_rules('price','"Цена детали"','');
 		$this->form_validation->set_rules('urgency','"Как быстро необходимо выполнить заявку"','required|numeric');		
 		if($this->form_validation->run() == FALSE)
 		{
@@ -110,6 +111,7 @@ class Main extends CI_Controller {
 				'detail_name' => $this->input->post('detail_name'),
 				'dop_info' => $this->input->post('dop_info'),
 				'urgency' => $this->input->post('urgency'),
+				'price' => $this->input->post('price'),
 				'ip' => $this->input->ip_address(),
 				'time_create' => now(),
 				'active' => '1'

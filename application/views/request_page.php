@@ -107,6 +107,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </div>                
 
                 <div class="form-group">
+                  <label for="price" class="col-sm-4 control-label">Цена детали</label>
+                  <div class="col-sm-8">
+                    <input type="text" name="price" class="form-control" id="price" placeholder="Максимальная желаемая стоимость">
+                  </div>
+                </div>
+
+                <div class="form-group">
                   <label for="urgency" class="col-sm-4 control-label">Срочность заявки</label>
                   <div class="col-sm-8">
                     <select class="form-control" name="urgency" id="urgency" required>

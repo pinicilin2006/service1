@@ -27,7 +27,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               <div class="panel-heading">Заявки на подбор автодеталей</div>           
               <table class="table-responsive table-hover table-condensed table-bordered" id="request_table">
                 <thead>
-                  <th>Id заявки</th>
+                  <th>Id</th>
                   <th>Дата</th>
                   <th>Город</th>
                   <th>Авто</th>
