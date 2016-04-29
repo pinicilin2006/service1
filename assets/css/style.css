@@ -397,3 +397,6 @@ textarea {
 #request_table.table-hover > tbody > tr:hover {
   background-color: #98d361;
 }
+.badge{
+  background-color: #5cb85c;
+}
