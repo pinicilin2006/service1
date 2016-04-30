@@ -45,8 +45,7 @@ class Main extends CI_Controller {
 		$this->pagination->initialize($config);
 		$data['pagination'] = $this->pagination->create_links();
 		$table_data = $this->Request_data->request_limit_to_table($limit,$offset);
-		$data['table_data'] = $table_data->result_array();
-		
+		$data['table_data'] = $table_data->result_array();	
 		$this->load->view('main_page',$data);
 	}
 
@@ -116,6 +115,10 @@ class Main extends CI_Controller {
 				'time_create' => now(),
 				'active' => '1'
 			);
+			if($this->ion_auth->logged_in()){
+				$user = $this->ion_auth->user()->row();
+				$data_form['id_user'] = $user->id;
+			}
 			if($this->Request_data->request_in_base($data_form))
 			{
 				$this->load->view('request_page',$data);
