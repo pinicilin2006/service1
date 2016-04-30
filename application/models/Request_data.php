@@ -18,7 +18,7 @@ class Request_data extends CI_Model {
         {
                 $period=now();
                 $period=$period - 86400;
-                $this->db->where('time_create <',$period);
+                $this->db->where('time_create >',$period);
                 $query = $this->db->count_all_results('request');
                 return $query;
         }
