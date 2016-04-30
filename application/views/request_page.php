@@ -129,8 +129,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                   <label for="urgency" class="col-sm-4 control-label">Срочность заявки</label>
                   <div class="col-sm-8">
                     <select class="form-control" name="urgency" id="urgency" required>
-                      <option value="1" selected="selected">Не срочно</option>
-                      <option value="2">Срочно</option>
+                      <option value="1">Не срочно</option>
+                      <option value="2"  selected="selected">Срочно</option>
                       <option value="3">Очень срочно</option>
                     </select>
                   </div>
