@@ -35,6 +35,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                   <th>Наименование</th>
                   <th>Срочность</th>
                   <th>Клиент</th>
+                <?php if($this->ion_auth->in_group('operator')): ?>
+                  <th>Действия</th>
+                <?php endif; ?>                  
                   </tr>
                 </thead>
                 <tbody>
@@ -48,6 +51,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                       <td data-label="Наименование:"><?=$row['detail_name']?></td>
                       <td data-label="Срочность:"><?=$row['name']?></td>
                       <td data-label="Данные клиента:"><a  href="#info_modal" role="button" id="<?=$row['id_request']?>" class="btn  btn-success" data-toggle="modal">info</a></td>
+                    <?php if($this->ion_auth->in_group('operator')): ?>
+                      <td data-label="Удалить:"><a  href="/main/request_del/<?=$row['id_request']?>" role="button"class="btn  btn-danger" data-toggle="modal">del</a></td>                      
+                    <?php endif; ?>
                     </tr>
                   <?php endforeach;?>
                 </tbody>

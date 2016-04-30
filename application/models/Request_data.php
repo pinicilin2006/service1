@@ -167,6 +167,12 @@ class Request_data extends CI_Model {
           } else {
             return FALSE;
           }
-        }           	
+        } 
+        
+        public function request_del($id)
+        {
+          $this->db->where('id_request',$id);
+          $this->db->delete('request');
+        }          	
 }
 ?>

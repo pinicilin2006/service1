@@ -125,6 +125,16 @@ class Main extends CI_Controller {
 			}
 		}
 	}
+
+	public function request_del($id)
+	{
+		if(!$this->ion_auth->in_group('operator')){
+			redirect('/', 'refresh');
+		} else {
+			$this->Request_data->request_del($id);
+			redirect('/', 'refresh');
+		}
+	}
 	/*
 	Различные вспомогательные классы
 	*/
