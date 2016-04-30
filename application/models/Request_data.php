@@ -56,7 +56,8 @@ class Request_data extends CI_Model {
                   request.urgency,
                   urgency.name,
                   request.time_create,
-                  request.detail_name'
+                  request.detail_name,
+                  request.auto_year'
                   );
                 // $this->db->from('request');
                 $this->db->where('active','1');
@@ -109,7 +110,6 @@ class Request_data extends CI_Model {
                   AND request.detail_category = detail_category.id_detail_category 
                   AND request.urgency = urgency.urgency_id             
                 */
-                $modification = $this->request_info($id);
                 $this->db->select('
                   region.name region_name,
                   city.name city_name,
@@ -117,7 +117,6 @@ class Request_data extends CI_Model {
                   car_model.name model_name,
                   detail_category.name_detail_category,
                   detail_category.id_detail_category,
-                  detail_type.name_detail_type,
                   request.id_request,
                   request.urgency,
                   urgency.name urgency_name,
@@ -126,9 +125,8 @@ class Request_data extends CI_Model {
                   request.phone,
                   request.name,
                   request.email,
-                  request.auto_modification,
+                  request.auto_year,
                   request.dop_info,
-                  '.($modification >0 ? 'car_modification.name modification_name,' : '').'
                   request.price'                  
                   );
                 
@@ -140,21 +138,9 @@ class Request_data extends CI_Model {
                 $this->db->join('car_mark','request.auto_mark = car_mark.id_car_mark','inner'); 
                 $this->db->join('car_model','request.auto_model = car_model.id_car_model','inner');
                 $this->db->join('detail_category','request.detail_category = detail_category.id_detail_category','inner');
-                $this->db->join('detail_type','request.detail_type= detail_type.id_detail_type','inner');
                 $this->db->join('urgency','request.urgency = urgency.urgency_id','inner');
-                if($modification >0){
-                  $this->db->join('car_modification','request.auto_modification = car_modification.id_car_modification','inner');
-                }
                 $query = $this->db->get('request');
                 return $query;
-        }
-
-        public function request_info($id)
-        { 
-          $this->db->where('id_request',$id);
-          $this->db->where('auto_modification !=','NULL');
-          $query = $this->db->count_all_results('request');
-          return $query;
         }
 
         public function request_in_base($data)

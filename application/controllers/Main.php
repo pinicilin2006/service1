@@ -84,9 +84,8 @@ class Main extends CI_Controller {
 		$this->form_validation->set_rules('city','"Ваш город"','required|numeric');
 		$this->form_validation->set_rules('auto_mark','"Марка автомобиля"','required|numeric');
 		$this->form_validation->set_rules('auto_model','"Модель автомобиля"','required|numeric');
-		$this->form_validation->set_rules('auto_modification','"Модификация автомобиля"','numeric');
+		$this->form_validation->set_rules('auto_year','"Год выпуска автомобиля"','numeric');
 		$this->form_validation->set_rules('detail_category','"Категория детали"','required|numeric');
-		$this->form_validation->set_rules('detail_type','"Тип детали"','required|numeric');
 		$this->form_validation->set_rules('detail_name','"Наименование детали (деталей)"','required|regex_match[/^[0-9a-zA-Zа-яёА-ЯЁ,\.\s]+$/u]');
 		$this->form_validation->set_rules('dop_info','"Дополнительная информация"','');
 		$this->form_validation->set_rules('price','"Цена детали"','');
@@ -104,9 +103,8 @@ class Main extends CI_Controller {
 				'city' => $this->input->post('city'),
 				'auto_mark' => $this->input->post('auto_mark'),
 				'auto_model' => $this->input->post('auto_model'),
-				'auto_modification' => $this->input->post('auto_modification'),
+				'auto_year' => $this->input->post('auto_year'),
 				'detail_category' => $this->input->post('detail_category'),
-				'detail_type' => $this->input->post('detail_type'),
 				'detail_name' => $this->input->post('detail_name'),
 				'dop_info' => $this->input->post('dop_info'),
 				'urgency' => $this->input->post('urgency'),

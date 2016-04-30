@@ -38,11 +38,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   			<li><?=$row['model_name']?></li>
 		</ol>
 	</li>
-	<?php if(isset($row['modification_name'])):?>
+	<?php if(isset($row['auto_year'])):?>
 	<li class="list-group-item">
 		<ol class="list-inline">
-  			<li><b>Модификация автомобиля:</b></li>
-  			<li><?=$row['modification_name']?></li>
+  			<li><b>Год выпуска автомобиля:</b></li>
+  			<li><?=$row['auto_year']?></li>
 		</ol>
 	</li>
 	<?php endif;?>
@@ -51,12 +51,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<ol class="list-inline">
   			<li><b>Категоря детали:</b></li>
   			<li><?=$row['name_detail_category']?></li>
-		</ol>
-	</li>
-	<li class="list-group-item">
-		<ol class="list-inline">
-  			<li><b>Тип детали:</b></li>
-  			<li><?=$row['name_detail_type']?></li>
 		</ol>
 	</li>	
 	<li class="list-group-item">

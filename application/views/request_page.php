@@ -77,7 +77,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                   </div>
                 </div>
                 <div id="message_model_auto"></div>
-                <div id="message_modification_auto"></div>
+
+                <div class="form-group">
+                  <label for="auto_year" class="col-sm-4 control-label">Год выпуска автомобиля*</label>
+                  <div class="col-sm-8">
+                    <select class="form-control" name="auto_year" id="auto_year" required>
+                      <?php
+                      $a = date("Y");
+                      for($x=$a;$x>=$a-115;$x--){
+                        echo '<option value='.$x.'>'.$x.'</option>';
+                      }
+                      ?>
+                    </select>
+                  </div>
+                </div>
 
                 <div class="form-group">
                   <label for="detail_category" class="col-sm-4 control-label">Категория детали*</label>
@@ -90,7 +103,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </select>
                   </div>
                 </div>                
-                <div id="message_detail_type"></div>
 
                 <div class="form-group">
                   <label for="name_detail" class="col-sm-4 control-label">Наименование детали (деталей)*</label>
@@ -154,17 +166,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       $(document).on("change", "#auto_mark", function(){
         var a = $(this).val();
         get_model_list(a);
-        $('#message_modification_auto').html('');
-      });
-
-      $(document).on("change", "#auto_model", function(){
-        var a = $(this).val();
-        get_modification_list(a);
-      });
-
-      $(document).on("change", "#detail_category", function(){
-        var a = $(this).val();
-        get_detail_type_list(a);
       });
       $(document).on("change", "#region", function(){
         var a = $(this).val();

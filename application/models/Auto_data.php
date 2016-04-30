@@ -20,12 +20,30 @@ class Auto_data extends CI_Model {
                 }
                 return $query;
         }
+        public function get_generation($id = FALSE)
+        {
+                if($id === FALSE){
+                        $query = $this->db->get('car_generation');
+                } else {
+                        $query = $this->db->get_where('car_generation', array('id_car_model' => $id));
+                }
+                return $query;
+        }
+        public function get_series($id = FALSE)
+        {
+                if($id === FALSE){
+                        $query = $this->db->get('car_serie');
+                } else {
+                        $query = $this->db->get_where('car_series', array('id_car_generation' => $id));
+                }
+                return $query;
+        }                 
         public function get_modification($id = FALSE)
         {
                 if($id === FALSE){
                         $query = $this->db->get('car_modification');
                 } else {
-                        $query = $this->db->get_where('car_modification', array('id_car_model' => $id));
+                        $query = $this->db->get_where('car_modification', array('id_car_serie' => $id));
                 }
                 return $query;
         }      	
