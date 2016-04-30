@@ -49,7 +49,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 	<li class="list-group-item">
 		<ol class="list-inline">
-  			<li><b>Категоря детали:</b></li>
+  			<li><b>Категория детали:</b></li>
   			<li><?=$row['name_detail_category']?></li>
 		</ol>
 	</li>	
