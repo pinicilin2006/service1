@@ -2,7 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 		<div class="col-sm-3  blog-sidebar">
-          <div class="sidebar-module">
+<!--           <div class="sidebar-module">
             <h4>Архив заявок</h4>
             <ol class="list-unstyled">
               <li><a href="#">Март 2016</a></li>
@@ -18,13 +18,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               <li><a href="#">Май 2015</a></li>
               <li><a href="#">Апрель 2015</a></li>
             </ol>
-          </div>
+          </div> -->
           <div class="sidebar-module">
-            <h4>Новости</h4>
+            <h4>Новости <a href="http://tklient.ru">Tklient.ru</a></h4>
             <ol class="list-unstyled">
-              <li>Новость 1</li>
-              <li>Новость 2</li>
-              <li>Новость 3</li>
+              <li><small><em>Мы рады Вам представить новый сервис по поиску контрактных автозапчастей.<br> Если вы нашли ошибку в сервисе, то просьба сообщить о ней по адресу <a href="mailto:info@tklient.ru">info@tklient.ru.</a></em></small></li>
+              <li></li>
+              <li></li>
             </ol>
           </div>
         </div><!-- /.blog-sidebar -->
