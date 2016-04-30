@@ -116,8 +116,13 @@ class Main extends CI_Controller {
 				'time_create' => now(),
 				'active' => '1'
 			);
-			$this->Insert_model->request_insert($data_form);
-			$this->load->view('request_add_success_page',$data);
+			if($this->Request_data->request_in_base($data_form))
+			{
+				$this->load->view('request_page',$data);
+			} else {
+				$this->Insert_model->request_insert($data_form);
+				$this->load->view('request_add_success_page',$data);
+			}
 		}
 	}
 	/*

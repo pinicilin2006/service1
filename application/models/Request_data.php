@@ -155,6 +155,18 @@ class Request_data extends CI_Model {
           $this->db->where('auto_modification !=','NULL');
           $query = $this->db->count_all_results('request');
           return $query;
+        }
+
+        public function request_in_base($data)
+        {
+          unset($data['time_create']);
+          $this->db->where($data);
+          $count = $this->db->count_all_results('request');
+          if($count >0){
+            return TRUE;
+          } else {
+            return FALSE;
+          }
         }           	
 }
 ?>
