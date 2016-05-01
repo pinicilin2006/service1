@@ -86,7 +86,7 @@ class Main extends CI_Controller {
 		$this->form_validation->set_rules('auto_model','"Модель автомобиля"','required|numeric');
 		$this->form_validation->set_rules('auto_year','"Год выпуска автомобиля"','numeric');
 		$this->form_validation->set_rules('detail_category','"Категория детали"','required|numeric');
-		$this->form_validation->set_rules('detail_name','"Наименование детали (деталей)"','required|regex_match[/^[0-9a-zA-Zа-яёА-ЯЁ,\.\s]+$/u]');
+		$this->form_validation->set_rules('detail_name','"Наименование детали (деталей)"','');
 		$this->form_validation->set_rules('dop_info','"Дополнительная информация"','');
 		$this->form_validation->set_rules('price','"Цена детали"','');
 		$this->form_validation->set_rules('urgency','"Как быстро необходимо выполнить заявку"','required|numeric');		
