@@ -25,7 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               <!-- Default panel contents -->
               <div class="panel-heading">
                 <div class="row">
-                  <div class="pull-right" id="request_search_form">
+                  <div id="request_search_form">
                     <?php
                     $attributes = array(
                       'class' => 'form-inline',
@@ -113,7 +113,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </div>
                      <!--  </div>  -->                     
                       <!-- <div class="col-sm-3 col-xs-12"> -->
-                        <div class="form-group">                          
+                        <div class="form-group pull-right">                          
                             <button type="submit" name="clear" value="yes" class="btn btn-success">Фильтр</button>   
                         </div>
                       </div>
