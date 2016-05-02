@@ -8,9 +8,23 @@ class Request_data extends CI_Model {
                 parent::__construct();
         }
         
-        public function request_count()
+        public function request_count($filter = FALSE)
         {
-                $query = $this->db->count_all('request');
+                if($filter){
+                  if(isset($filter['region'])){
+                    $this->db->where_in('region',$filter['region']);
+                  }
+                  if(isset($filter['mark'])){
+                    $this->db->where_in('auto_mark',$filter['mark']);
+                  }
+                  if(isset($filter['category'])){
+                    $this->db->where_in('detail_category',$filter['category']);
+                  }
+                  if(isset($filter['name_search_detail'])){
+                    $this->db->like('detail_name',$filter['name_search_detail']);
+                  }                                                      
+                }          
+                $query = $this->db->count_all_results('request');
                 return $query;
         }
 
@@ -23,7 +37,7 @@ class Request_data extends CI_Model {
                 return $query;
         }
         
-        public function request_limit_to_table($limit,$offset)
+        public function request_limit_to_table($limit,$offset,$filter = FALSE)
         {
                 /*
                 SELECT
@@ -60,6 +74,24 @@ class Request_data extends CI_Model {
                   request.auto_year'
                   );
                 // $this->db->from('request');
+                if($filter){
+                  if(isset($filter['region'])){
+                    $this->db->where_in('region',$filter['region']);
+                  }
+                  if(isset($filter['mark'])){
+                    $this->db->where_in('auto_mark',$filter['mark']);
+                  }
+                  if(isset($filter['category'])){
+                    $this->db->where_in('detail_category',$filter['category']);
+                  }
+                  if(isset($filter['name_search_detail'])){
+                    $this->db->like('detail_name',$filter['name_search_detail']);
+                  }                  
+                  if(isset($filter['type_request'])){
+                    if($filter['type_request'] == 1){
+                    }
+                  }                                                       
+                }
                 $this->db->where('active','1');
                 $this->db->join('region','request.region = region.region_id','inner');
                 $this->db->join('city','request.city = city.city_id','inner');
@@ -155,10 +187,26 @@ class Request_data extends CI_Model {
           }
         } 
         
+        public function request_read($id,$user_id){
+        $data = array(
+          'id_request' => $id,
+          'id_user'    => $user_id
+          );
+          $this->db->where($data);
+          $count = $this->db->count_all_results('request_read');
+          if($count >0){
+            return TRUE;
+          } else {
+            return FALSE;
+          }                    
+        }
+
         public function request_del($id)
         {
           $this->db->where('id_request',$id);
           $this->db->delete('request');
-        }          	
+        }
+
+                  	
 }
 ?>

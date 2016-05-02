@@ -15,12 +15,52 @@ class Main extends CI_Controller {
 		$this->load->model('Detail_data');
 		$this->load->model('Region_data');		
 		$this->load->library('pagination');
+		if($this->ion_auth->logged_in())
+		{	
+			$user = $this->ion_auth->user()->row();
+			$user_id = $user->id;
+		} else {
+			$user_id = FALSE;
+		}	
 		$data['all_request_count_all'] = $this->Request_data->request_count();
 	 	$data['all_request_count_today'] = $this->Request_data->request_count_today();
+		$data['all_region'] = $this->Region_data->get_region()->result_array();
+		$data['all_category'] = $this->Detail_data->get_detail_category()->result_array();
+		$data['all_mark'] = $this->Auto_data->get_mark()->result_array();
 		$limit = 50;
-		$offset = (is_numeric($id) ? $id : 0);
-		$request_all_count = $this->Request_data->request_count();				
-		
+		$offset = (is_numeric($id) ? $id : 0);			
+		$filter='';
+		if($this->input->post('clear') && !$this->input->post('region_request[]') && !$this->input->post('mark_request[]') && !$this->input->post('category_request[]') && !$this->input->post('type_request[]') && !$this->input->post('name_search_detail') OR $id == 'all'){
+			$filter='132';
+		}
+		if($this->input->post('region_request[]')){
+			$filter['region'] = $this->input->post('region_request[]');
+		}
+		if($this->input->post('mark_request[]')){
+			$filter['mark'] = $this->input->post('mark_request[]');
+		}		
+		if($this->input->post('category_request[]')){
+			$filter['category'] = $this->input->post('category_request[]');
+		}
+		if($this->input->post('type_request')){
+			$filter['type_request'] = $this->input->post('type_request');
+		}
+		if($this->input->post('name_search_detail')){
+			$filter['name_search_detail'] = $this->input->post('name_search_detail');
+		}		
+		if($filter){
+			$this->session->set_flashdata('filter',$filter);
+		}
+		if(!$filter && $this->session->flashdata('filter')){
+			$filter = $this->session->flashdata('filter');
+			$this->session->keep_flashdata('filter');
+		}
+		//echo '<pre>';
+		//print_r($this->session->all_userdata());
+		//print_r($this->input->post());
+		//print_r($filter);
+		//echo '</pre>';
+		$request_all_count = $this->Request_data->request_count($filter);			
 		$config['base_url'] = base_url() . "index.php/main/index";
 		$config['total_rows'] = $request_all_count;
 		$config['per_page'] = $limit;
@@ -44,8 +84,9 @@ class Main extends CI_Controller {
 		$config['prev_tag_close'] = '</li>';
 		$this->pagination->initialize($config);
 		$data['pagination'] = $this->pagination->create_links();
-		$table_data = $this->Request_data->request_limit_to_table($limit,$offset);
-		$data['table_data'] = $table_data->result_array();	
+		$table_data = $this->Request_data->request_limit_to_table($limit,$offset,$filter);
+		$data['table_data'] = $table_data->result_array();
+		
 		$this->load->view('main_page',$data);
 	}
 
@@ -205,6 +246,7 @@ class Main extends CI_Controller {
 
 	public function get_request_info($id = FALSE)
 	{
+		$this->load->model('Insert_model');		
 		if($id === FALSE)
 		{
 			return FALSE;
@@ -226,6 +268,11 @@ class Main extends CI_Controller {
 			if($this->ion_auth->is_admin() OR $this->ion_auth->in_group('operator') OR $this->ion_auth->in_group($request_data[0]['id_detail_category']))
 			{
 				$data['request_info'] = $request_data;
+				$user_id = $this->ion_auth->user()->row()->id;
+				if(!$this->Request_data->request_read($id,$user_id)){
+					$this->Insert_model->request_read_insert($id,$user_id);				
+				}
+				
 				$message = $this->load->view('ajax/request_info',$data,true);
 				echo $message;
 			} else {

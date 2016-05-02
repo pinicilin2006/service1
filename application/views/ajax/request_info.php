@@ -67,6 +67,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	</li>
 	<li class="list-group-item">
 		<ol class="list-inline">
+  			<li><b>Дополнительная инофрмация:</b></li>
+  			<li><?=$row['dop_info']?></li>
+		</ol>
+	</li>	
+	<li class="list-group-item">
+		<ol class="list-inline">
   			<li><b>Максимальная цена:</b></li>
   			<li><?=$row['price']?></li>
 		</ol>

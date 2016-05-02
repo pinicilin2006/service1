@@ -1,6 +1,8 @@
 	<script type="text/javascript" src="<?php echo base_url("assets/js/jquery.js"); ?>"></script>
 	<script type="text/javascript" src="<?php echo base_url("assets/js/bootstrap.js"); ?>"></script>
-	<script type="text/javascript" src="<?php echo base_url("assets/js/maskedinput.js"); ?>"></script>	
+	<script type="text/javascript" src="<?php echo base_url("assets/js/maskedinput.js"); ?>"></script>
+	<script type="text/javascript" src="<?php echo base_url("assets/js/bootstrap-select.js"); ?>"></script>
+	<script type="text/javascript" src="<?php echo base_url("assets/js/i18n/defaults-ru_RU.js"); ?>"></script>			
 	<script type="text/javascript" src="<?php echo base_url("assets/js/function.js"); ?>"></script>
 	<!-- BEGIN JIVOSITE CODE {literal} -->
 	<script type='text/javascript'>

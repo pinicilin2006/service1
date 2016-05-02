@@ -23,7 +23,104 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <!-- Содержимое страницы здесь -->
             <div class="panel panel-default">
               <!-- Default panel contents -->
-              <div class="panel-heading">Заявки на подбор автодеталей</div>           
+              <div class="panel-heading">
+                <div class="row">
+                  <div class="pull-right" id="request_search_form">
+                    <?php
+                    $attributes = array(
+                      'class' => 'form-inline',
+                      'role'  => 'form'
+                    );
+                    // echo '<pre>';
+                    // print_r($this->input->post());
+                    // echo '</pre>';
+                    echo form_open('/', $attributes);
+                    ?>
+                      <!-- <div class="col-sm-2 col-xs-12">  -->
+                        <div class="form-group">               
+                          <select name="region_request[]" id="region" class="selectpicker" multiple title="Все регионы" data-live-search="true" data-width="150px">
+                            <!-- <option value="0">Все регионы</option> -->
+                            <?php foreach ($all_region as $row):?>
+                              <option value="<?=$row['region_id']?>" 
+                                <?php
+                                  if($this->session->flashdata('filter'))
+                                  {
+                                    $val = $this->session->flashdata('filter');
+                                    if(isset($val['region']) && in_array($row['region_id'], $val['region']))
+                                    {
+                                     echo ' selected';
+                                    }
+                                  }
+                                ?>                                
+                              ><?=$row['name']?></option>
+                            <?php endforeach;?>
+                          </select>
+                        </div>
+                      <!-- </div> -->
+                      <!-- <div class="col-sm-2 col-xs-12"> -->
+                        <div class="form-group">               
+                          <select name="mark_request[]" class="selectpicker" multiple title="Все марки" data-live-search="true" data-width="150px">
+                            <!-- <option value="0">Все категории</option> -->
+                            <?php foreach ($all_mark as $row):?>
+                              <option value="<?=$row['id_car_mark']?>"
+                                <?php
+                                  if($this->session->flashdata('filter'))
+                                  {
+                                    $val = $this->session->flashdata('filter');
+                                    if(isset($val['mark']) && in_array($row['id_car_mark'], $val['mark']))
+                                    {
+                                     echo ' selected';
+                                    }
+                                  }
+                                ?>
+                              ><?=$row['name']?></option>
+                            <?php endforeach;?>
+                          </select>
+                        </div>
+                      <!-- </div> -->
+                      <!-- <div class="col-sm-2 col-xs-12"> -->
+                        <div class="form-group">               
+                          <select name="category_request[]" class="selectpicker" multiple title="Все категории" data-width="150px">
+                            <!-- <option value="0">Все категории</option> -->
+                            <?php foreach ($all_category as $row):?>
+                              <option value="<?=$row['id_detail_category']?>"
+                                <?php
+                                  if($this->session->flashdata('filter'))
+                                  {
+                                    $val = $this->session->flashdata('filter');
+                                    if(isset($val['category']) && in_array($row['id_detail_category'], $val['category']))
+                                    {
+                                     echo ' selected';
+                                    }
+                                  }
+                                ?>
+                              ><?=$row['name_detail_category']?></option>
+                            <?php endforeach;?>
+                          </select>
+                        </div>
+                       <!-- </div> -->
+<!--                        <div class="col-sm-4"> 
+                        <div class="form-group" >               
+                          <select name="type_request" class="selectpicker" data-width="150px">
+                            <option value="0">Все заявки</option>
+                            <option value="1">Непросмотренные</option>
+                          </select>
+                        </div>
+                      </div> -->
+                       <!-- <div class="col-sm-2 col-xs-12">  -->
+                        <div class="form-group" >               
+                          <input type="text" name="name_search_detail" value="<?=$this->input->post('name_search_detail')?>" class="form-control" placeholder="Поиск по наименованию">
+                        </div>
+                     <!--  </div>  -->                     
+                      <!-- <div class="col-sm-3 col-xs-12"> -->
+                        <div class="form-group">                          
+                            <button type="submit" name="clear" value="yes" class="btn btn-success">Фильтр</button>   
+                        </div>
+                      </div>
+                    <?=form_close()?>                  
+                  </div>
+                </div> 
+              </div>           
               <table class="table table-hover table-condensed table-bordered" id="request_table">
                 <thead>
                 <tr>
@@ -96,7 +193,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       $('#info_modal').on('show.bs.modal', function (e) {
         get_request_info(e.relatedTarget.id);
       })
-
     </script>  
   </body>
 </html>
