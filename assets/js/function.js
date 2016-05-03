@@ -5,6 +5,7 @@ function get_model_list(id){
 			url: '/main/get_model/'+a,
 			success: function(data){
 				$('#message_model_auto').html(data);
+				$('.selectpicker').selectpicker('refresh');
 			}
 		});
 		return false;
@@ -41,6 +42,7 @@ function get_city_list(id){
 			url: '/main/get_city/'+a,
 			success: function(data){
 				$('#message_city').html(data);
+				$('.selectpicker').selectpicker('refresh');
 			}
 		});
 		return false;

@@ -30,7 +30,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               echo form_open('main/request_add', $attributes);
               ?>
               <legend>Добавление заявки на поиск автозапчасти</legend>
-
+              <div class="row">
+                <p class="text-danger pull-right"><em><b><small>Для внесения заявки на поиск запчастей не требуется регистрация.</small></b></em></p>
+                </div>
                 <div class="form-group">
                   <label for="name" class="col-sm-4 control-label">Ваше имя</label>
                   <div class="col-sm-8">
@@ -55,8 +57,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="form-group">
                   <label for="region" class="col-sm-4 control-label">Ваш регион*</label>
                   <div class="col-sm-8">
-                    <select class="form-control" name="region" id="region" required>
-                      <option value="" disabled="disabled" selected="selected">Выберите Ваш регион</option>
+                    <select class="form-control selectpicker" name="region" id="region" required title="Регион" data-live-search="true" data-size="10">
                       <?php foreach ($region_data as $item):?>
                         <option value="<?=$item->region_id?>"><?=$item->name?></option>
                       <?php endforeach;?>
@@ -68,8 +69,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="form-group">
                   <label for="auto_mark" class="col-sm-4 control-label">Марка автомобиля*</label>
                   <div class="col-sm-8">
-                    <select class="form-control" name="auto_mark" id="auto_mark" required>
-                      <option value="" disabled="disabled" selected="selected">Марка автомобиля</option>
+                    <select class="form-control selectpicker" name="auto_mark" id="auto_mark" required title="Марка" data-live-search="true" data-size="10">
                       <?php foreach ($auto_mark_data as $item):?>
                         <option value="<?=$item->id_car_mark?>"><?=$item->name?></option>
                       <?php endforeach;?>
@@ -81,7 +81,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="form-group">
                   <label for="auto_year" class="col-sm-4 control-label">Год выпуска автомобиля*</label>
                   <div class="col-sm-8">
-                    <select class="form-control" name="auto_year" id="auto_year" required>
+                    <select class="form-control selectpicker" name="auto_year" id="auto_year" data-live-search="true" data-size="10" required>
                       <?php
                       $a = date("Y");
                       for($x=$a;$x>=$a-115;$x--){
@@ -95,8 +95,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="form-group">
                   <label for="detail_category" class="col-sm-4 control-label">Категория детали*</label>
                   <div class="col-sm-8">
-                    <select class="form-control" name="detail_category" id="detail_category" required>
-                      <option value="" disabled="disabled" selected="selected">Категория детали</option>
+                    <select class="form-control selectpicker" name="detail_category" id="detail_category" title="Категория" required>
                       <?php foreach ($detail_category_data as $item):?>
                         <option value="<?=$item->id_detail_category?>"><?=$item->name_detail_category?></option>
                       <?php endforeach;?>
