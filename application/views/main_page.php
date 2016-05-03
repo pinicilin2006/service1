@@ -123,7 +123,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                   </div>
                 </div> 
               </div>
-              <small><span class="text-success "><i class="fa fa-check" aria-hidden="true"></i>-прочитаны</span></small>           
+              <small><span><i class="fa fa-check" aria-hidden="true"></i>-прочитаны</span></small>           
               <table class="table table-hover table-condensed table-bordered" id="request_table">
                 <thead>
                 <tr>
@@ -144,7 +144,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                   <?php foreach ($table_data as $row):?>
                     <tr>
                       <td data-label="ID заявки:"><?=$row['id_request']?>
-                      <span class="text-success" id="check_<?=$row['id_request']?>">
+                      <span class="text-default" id="check_<?=$row['id_request']?>">
 <?=($this->ion_auth->logged_in() && in_array($row['id_request'],$request_read) ? '<i class="fa fa-check" aria-hidden="true"></i>' : '')?>       
                       </span>
                       </td>
