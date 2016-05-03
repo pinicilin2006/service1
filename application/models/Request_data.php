@@ -207,6 +207,7 @@ class Request_data extends CI_Model {
           $this->db->where('id_user',$user_id);
           if($this->db->count_all_results('request_read'))
           {
+            $this->db->where('id_user',$user_id);
             $query = $this->db->get('request_read');
             return $query;
           } else {
