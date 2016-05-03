@@ -34,68 +34,89 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     echo form_open('/', $attributes);
                     ?>
                       <!-- <div class="col-sm-2 col-xs-12">  -->
-                        <div class="form-group">               
-                          <select name="region_request[]" id="region" class="selectpicker" multiple title="Все регионы" data-live-search="true" data-width="150px">
-                            <!-- <option value="0">Все регионы</option> -->
-                            <?php foreach ($all_region as $row):?>
-                              <option value="<?=$row['region_id']?>" 
-                                <?php
-                                  if($this->session->flashdata('filter'))
-                                  {
-                                    $val = $this->session->flashdata('filter');
-                                    if(isset($val['region']) && in_array($row['region_id'], $val['region']))
+                        <div class="form-group">
+                          <div class="input-group">                                        
+                            <select name="region_request[]" id="region" class="selectpicker" multiple title="Все регионы" data-live-search="true" data-width="150px">
+                              <!-- <option value="0">Все регионы</option> -->
+                              <?php foreach ($all_region as $row):?>
+                                <option value="<?=$row['region_id']?>" 
+                                  <?php
+                                    if($this->session->flashdata('filter'))
                                     {
-                                     echo ' selected';
+                                      $val = $this->session->flashdata('filter');
+                                      if(isset($val['region']) && in_array($row['region_id'], $val['region']))
+                                      {
+                                       echo ' selected';
+                                      }
                                     }
-                                  }
-                                ?>                                
-                              ><?=$row['name']?></option>
-                            <?php endforeach;?>
-                          </select>
+                                  ?>                                
+                                ><?=$row['name']?></option>
+                              <?php endforeach;?>
+                            </select>
+                          <span class="input-group-btn">
+                            <button class="btn btn-danger clear" value="region" type="button">
+                              <i class="fa fa-times" aria-hidden="true"></i>
+                            </button>
+                          </span>                                
+                          </div>                          
                         </div>
-                        <div class="form-group">               
-                          <select name="mark_request[]" class="selectpicker" multiple title="Все марки" data-live-search="true" data-width="150px">
-                            <!-- <option value="0">Все категории</option> -->
-                            <?php foreach ($all_mark as $row):?>
-                              <option value="<?=$row['id_car_mark']?>"
-                                <?php
-                                  if($this->session->flashdata('filter'))
-                                  {
-                                    $val = $this->session->flashdata('filter');
-                                    if(isset($val['mark']) && in_array($row['id_car_mark'], $val['mark']))
+                        <div class="form-group">
+                          <div class="input-group">                                         
+                            <select name="mark_request[]" class="selectpicker" id="mark" multiple title="Все марки" data-live-search="true" data-width="150px">
+                              <!-- <option value="0">Все категории</option> -->
+                              <?php foreach ($all_mark as $row):?>
+                                <option value="<?=$row['id_car_mark']?>"
+                                  <?php
+                                    if($this->session->flashdata('filter'))
                                     {
-                                     echo ' selected';
+                                      $val = $this->session->flashdata('filter');
+                                      if(isset($val['mark']) && in_array($row['id_car_mark'], $val['mark']))
+                                      {
+                                       echo ' selected';
+                                      }
                                     }
-                                  }
-                                ?>
-                              ><?=$row['name']?></option>
-                            <?php endforeach;?>
-                          </select>
+                                  ?>
+                                ><?=$row['name']?></option>
+                              <?php endforeach;?>
+                            </select>
+                            <span class="input-group-btn">
+                              <button class="btn btn-danger clear" value="mark" type="button">
+                                <i class="fa fa-times" aria-hidden="true"></i>
+                              </button>
+                            </span>                            
+                          </div>
                         </div>
-                        <div class="form-group">               
-                          <select name="category_request[]" class="selectpicker" multiple title="Все категории" data-width="150px">
-                            <!-- <option value="0">Все категории</option> -->
-                            <?php foreach ($all_category as $row):?>
-                              <option value="<?=$row['id_detail_category']?>"
-                                <?php
-                                  if($this->session->flashdata('filter'))
-                                  {
-                                    $val = $this->session->flashdata('filter');
-                                    if(isset($val['category']) && in_array($row['id_detail_category'], $val['category']))
+                        <div class="form-group">
+                          <div class="input-group">                                         
+                            <select name="category_request[]" id="category" class="selectpicker" multiple title="Все категории" data-width="150px">
+                              <!-- <option value="0">Все категории</option> -->
+                              <?php foreach ($all_category as $row):?>
+                                <option value="<?=$row['id_detail_category']?>"
+                                  <?php
+                                    if($this->session->flashdata('filter'))
                                     {
-                                     echo ' selected';
+                                      $val = $this->session->flashdata('filter');
+                                      if(isset($val['category']) && in_array($row['id_detail_category'], $val['category']))
+                                      {
+                                       echo ' selected';
+                                      }
                                     }
-                                  }
-                                ?>
-                              ><?=$row['name_detail_category']?></option>
-                            <?php endforeach;?>
-                          </select>
+                                  ?>
+                                ><?=$row['name_detail_category']?></option>
+                              <?php endforeach;?>
+                            </select>
+                            <span class="input-group-btn">
+                              <button class="btn btn-danger clear" value="category" type="button">
+                                <i class="fa fa-times" aria-hidden="true"></i>
+                              </button>
+                            </span>                            
+                          </div>
                         </div>
                         <div class="form-group" >               
                           <input type="text" name="name_search_detail" value="<?=$this->input->post('name_search_detail')?>" class="form-control" placeholder="Поиск по наименованию">
                         </div>
                         <div class="form-group pull-right">                          
-                            <button type="submit" name="clear" value="yes" class="btn btn-success">Фильтр</button>   
+                            <button type="submit" name="clear" value="yes" class="btn btn-success">Фильтр</button>  
                         </div>
                       </div>
                     <?=form_close()?>                  
@@ -109,7 +130,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                   <th>Дата</th>
                   <th>Город</th>
                   <th>Авто</th>
-                  <th>Категория</th>
+                  <th>Год</th>
                   <th>Наименование</th>
                   <th>Срочность</th>
                   <th>Клиент</th>
@@ -125,7 +146,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                       <td data-label="Дата:"><?=date('d.m.y', $row['time_create'])?><br><?=date('H:i', $row['time_create'])?></td>
                       <td data-label="Город:"><?=$row['region_name']?>/<br><b><?=$row['city_name']?></b></td>
                       <td data-label="Авто:"><?=$row['mark_name']?>/<br><b><?=$row['model_name']?></b></td>
-                      <td data-label="Категория:"><?=$row['name_detail_category']?></td>
+                      <td data-label="Год выпуска:"><?=$row['auto_year']?></td>
                       <td data-label="Наименование:"><?=$row['detail_name']?></td>
                       <td data-label="Срочность:"><?=$row['name']?></td>
                       <td data-label="Данные клиента:"><a  href="#info_modal" role="button" id="<?=$row['id_request']?>" class="btn  btn-success" data-toggle="modal">info</a></td>
@@ -174,6 +195,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       $('#info_modal').on('show.bs.modal', function (e) {
         get_request_info(e.relatedTarget.id);
       })
+      $('.clear').click(function(){
+        var a = $(this).val();
+        $('#'+a).selectpicker('deselectAll');
+        return false;
+      });
     </script>  
   </body>
 </html>

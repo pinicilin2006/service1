@@ -431,6 +431,7 @@ textarea {
 #request_search_form .form-control{
   font-size: 11px;
   height: auto;
+  //width: 150px;
 }
 
 #register-message{
@@ -438,4 +439,10 @@ textarea {
   font-size: 0.7em;
   font-weight: bold;
   text-align: right;
+}
+
+#request_search_form .bootstrap-select > .dropdown-toggle {
+  width: 150px;
+  /* padding-right: 150px; */
+  z-index: 1;
 }
