@@ -476,6 +476,13 @@ class Auth extends CI_Controller {
         }
         if ($this->form_validation->run() == true && $this->ion_auth->register($identity, $password, $email, $additional_data))
         {
+        	//Отправляем письмо с уведомлением о новом пользователе
+        	$this->email->clear();
+        	$this->email->to('info@tklient.ru');
+        	$this->email->from('site@tklient.ru');
+        	$this->email->subject('Информация по сайту');
+        	$this->email->message('Зарегестрирован новый пользователь. Телефон:'.$additional_data['phone'].'. Имя:'.$additional_data['first_name'].'. Email:'.$email);
+        	$this->email->send();
             // check to see if we are creating the user
             // redirect them back to the admin page
             //$this->session->set_flashdata('message', $this->ion_auth->messages());
