@@ -21,3 +21,7 @@
         <!--    </div>-->
         <!--</div>-->
 
+    <div class="blog-footer">
+        <a href="#" id="to_top">Вверх</a>
+      <p><a href="mailto:info@tklient.ru">info@tklient.ru</a></p>
+    </div>
