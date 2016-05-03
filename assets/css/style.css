@@ -432,3 +432,10 @@ textarea {
   font-size: 11px;
   height: auto;
 }
+
+#register-message{
+  padding: 6px 15px;
+  font-size: 0.7em;
+  font-weight: bold;
+  text-align: right;
+}
