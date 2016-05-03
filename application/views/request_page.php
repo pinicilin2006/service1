@@ -30,10 +30,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               echo form_open('main/request_add', $attributes);
               ?>
               <legend>Добавление заявки на поиск автозапчасти</legend>
-                <div class="row">
-                  <p class="text-danger pull-right"><em><b><small>Для внесения заявки на поиск запчастей не требуется регистрация.</small></b></em></p>
+                <div class="row" id="register-message">
+                  <p>
+                    <span class="text-danger">Для внесения заявки на поиск запчастей не требуется регистрация</span>
+                    <br>
+                    <span class="text-success">После добавления заявки, доступ к полной информации по ней имеют<br> только проверенные и надёжные авторазборы <br>(проверка уставных документов и исключительно платный доступ к базе заявок).</span>
+                  </p>
                 </div>
-                <hr>
                 <div class="form-group">
                   <label for="name" class="col-sm-4 control-label">Ваше имя</label>
                   <div class="col-sm-8">
