@@ -31,9 +31,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                       'class' => 'form-inline',
                       'role'  => 'form'
                     );
-                    // echo '<pre>';
-                    // print_r($this->input->post());
-                    // echo '</pre>';
                     echo form_open('/', $attributes);
                     ?>
                       <!-- <div class="col-sm-2 col-xs-12">  -->
@@ -56,8 +53,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <?php endforeach;?>
                           </select>
                         </div>
-                      <!-- </div> -->
-                      <!-- <div class="col-sm-2 col-xs-12"> -->
                         <div class="form-group">               
                           <select name="mark_request[]" class="selectpicker" multiple title="Все марки" data-live-search="true" data-width="150px">
                             <!-- <option value="0">Все категории</option> -->
@@ -77,8 +72,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <?php endforeach;?>
                           </select>
                         </div>
-                      <!-- </div> -->
-                      <!-- <div class="col-sm-2 col-xs-12"> -->
                         <div class="form-group">               
                           <select name="category_request[]" class="selectpicker" multiple title="Все категории" data-width="150px">
                             <!-- <option value="0">Все категории</option> -->
@@ -98,21 +91,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <?php endforeach;?>
                           </select>
                         </div>
-                       <!-- </div> -->
-<!--                        <div class="col-sm-4"> 
-                        <div class="form-group" >               
-                          <select name="type_request" class="selectpicker" data-width="150px">
-                            <option value="0">Все заявки</option>
-                            <option value="1">Непросмотренные</option>
-                          </select>
-                        </div>
-                      </div> -->
-                       <!-- <div class="col-sm-2 col-xs-12">  -->
                         <div class="form-group" >               
                           <input type="text" name="name_search_detail" value="<?=$this->input->post('name_search_detail')?>" class="form-control" placeholder="Поиск по наименованию">
                         </div>
-                     <!--  </div>  -->                     
-                      <!-- <div class="col-sm-3 col-xs-12"> -->
                         <div class="form-group pull-right">                          
                             <button type="submit" name="clear" value="yes" class="btn btn-success">Фильтр</button>   
                         </div>

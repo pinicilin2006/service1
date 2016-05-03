@@ -121,7 +121,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <?php $this->view('footer'); ?>
     <?php $this->view('javascript'); ?>
 	<script type="text/javascript">
-	    $("#phone").mask("(999)999-99-99");
+	    $("#phone").mask("+7(999)999-99-99");
 	</script>
   </body>
 </html>

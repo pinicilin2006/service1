@@ -55,11 +55,6 @@ class Main extends CI_Controller {
 			$filter = $this->session->flashdata('filter');
 			$this->session->keep_flashdata('filter');
 		}
-		//echo '<pre>';
-		//print_r($this->session->all_userdata());
-		//print_r($this->input->post());
-		//print_r($filter);
-		//echo '</pre>';
 		$request_all_count = $this->Request_data->request_count($filter);			
 		$config['base_url'] = base_url() . "index.php/main/index";
 		$config['total_rows'] = $request_all_count;
@@ -270,7 +265,13 @@ class Main extends CI_Controller {
 				$data['request_info'] = $request_data;
 				$user_id = $this->ion_auth->user()->row()->id;
 				if(!$this->Request_data->request_read($id,$user_id)){
-					$this->Insert_model->request_read_insert($id,$user_id);				
+					$data_read = array(
+						'id_request' => $id,
+						'id_user' => $user_id,
+						'time_read' =>now(),
+						'ip' => $this->input->ip_address()
+						);
+					$this->Insert_model->request_read_insert($data_read);				
 				}
 				
 				$message = $this->load->view('ajax/request_info',$data,true);
