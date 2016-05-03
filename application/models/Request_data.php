@@ -187,7 +187,8 @@ class Request_data extends CI_Model {
           }
         } 
         
-        public function request_read($id,$user_id){
+        public function request_read($id,$user_id)
+        {
         $data = array(
           'id_request' => $id,
           'id_user'    => $user_id
@@ -199,6 +200,18 @@ class Request_data extends CI_Model {
           } else {
             return FALSE;
           }                    
+        }
+
+        public function request_checked($user_id)
+        {
+          $this->db->where('id_user',$user_id);
+          if($this->db->count_all_results('request_read'))
+          {
+            $query = $this->db->get('request_read');
+            return $query;
+          } else {
+            return FALSE;
+          }
         }
 
         public function request_del($id)

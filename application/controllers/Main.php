@@ -19,6 +19,14 @@ class Main extends CI_Controller {
 		{	
 			$user = $this->ion_auth->user()->row();
 			$user_id = $user->id;
+			$request_read = $this->Request_data->request_checked($user_id);
+			if($request_read){
+				foreach ($request_read->result_array() as $key => $value) {
+					$data['request_read'][] = $value['id_request'];
+				}
+			} else {
+				$data['request_read'][] = NULL;
+			}
 		} else {
 			$user_id = FALSE;
 		}	

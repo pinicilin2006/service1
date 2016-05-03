@@ -21,7 +21,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <div class="blog-post">
           <?=$pagination?>
             <!-- Содержимое страницы здесь -->
-            <div class="panel panel-default">
+            <div class="panel panel-default" style="margin-bottom: 0px">
               <!-- Default panel contents -->
               <div class="panel-heading">
                 <div class="row">
@@ -54,7 +54,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                               <?php endforeach;?>
                             </select>
                           <span class="input-group-btn">
-                            <button class="btn btn-danger clear" value="region" type="button">
+                            <button class="btn btn-default clear" value="region" type="button">
                               <i class="fa fa-times" aria-hidden="true"></i>
                             </button>
                           </span>                                
@@ -80,7 +80,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                               <?php endforeach;?>
                             </select>
                             <span class="input-group-btn">
-                              <button class="btn btn-danger clear" value="mark" type="button">
+                              <button class="btn btn-default clear" value="mark" type="button">
                                 <i class="fa fa-times" aria-hidden="true"></i>
                               </button>
                             </span>                            
@@ -106,7 +106,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                               <?php endforeach;?>
                             </select>
                             <span class="input-group-btn">
-                              <button class="btn btn-danger clear" value="category" type="button">
+                              <button class="btn btn-default clear" value="category" type="button">
                                 <i class="fa fa-times" aria-hidden="true"></i>
                               </button>
                             </span>                            
@@ -122,7 +122,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <?=form_close()?>                  
                   </div>
                 </div> 
-              </div>           
+              </div>
+              <small><span class="text-success "><i class="fa fa-check" aria-hidden="true"></i>-прочитаны</span></small>           
               <table class="table table-hover table-condensed table-bordered" id="request_table">
                 <thead>
                 <tr>
@@ -142,7 +143,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <tbody>
                   <?php foreach ($table_data as $row):?>
                     <tr>
-                      <td data-label="ID заявки:"><?=$row['id_request']?></td>
+                      <td data-label="ID заявки:"><?=$row['id_request']?>
+                      <span class="text-success" id="check_<?=$row['id_request']?>">
+<?=($this->ion_auth->logged_in() && in_array($row['id_request'],$request_read) ? '<i class="fa fa-check" aria-hidden="true"></i>' : '')?>       
+                      </span>
+                      </td>
                       <td data-label="Дата:"><?=date('d.m.y', $row['time_create'])?><br><?=date('H:i', $row['time_create'])?></td>
                       <td data-label="Город:"><?=$row['region_name']?>/<br><b><?=$row['city_name']?></b></td>
                       <td data-label="Авто:"><?=$row['mark_name']?>/<br><b><?=$row['model_name']?></b></td>
@@ -157,8 +162,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                   <?php endforeach;?>
                 </tbody>
               </table>
+               <?=$pagination?>
             </div>
-            <?=$pagination?>
+           
           </div>	
 
         </div><!-- /.blog-main -->
@@ -194,6 +200,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <script type="text/javascript">
       $('#info_modal').on('show.bs.modal', function (e) {
         get_request_info(e.relatedTarget.id);
+        <?php if($this->ion_auth->logged_in()):?>
+        var a = e.relatedTarget.id;
+        $('#check_'+a).html('<i class="fa fa-check" aria-hidden="true"></i>');
+        <?php endif;?>
+
       })
       $('.clear').click(function(){
         var a = $(this).val();
