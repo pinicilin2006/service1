@@ -34,6 +34,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<label for="first_name" class="col-sm-4 control-label"><?php echo lang('edit_user_fname_label', 'first_name');?></label>            
              <div class="col-sm-8">
             	<?php echo form_input($first_name);?>
+              <span class="text-danger"><em><small><?php echo form_error('first_name'); ?></em></small></span>
             </div>
         </div>
 
@@ -42,6 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<label for="first_name" class="col-sm-4 control-label"><?php echo lang('edit_user_lname_label', 'last_name');?> </label>            
              <div class="col-sm-8">
             	<?php echo form_input($last_name);?>
+              <span class="text-danger"><em><small><?php echo form_error('last_name'); ?></em></small></span>
             </div>
         </div>     
       
@@ -49,6 +51,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<label for="first_name" class="col-sm-4 control-label"><?php echo lang('edit_user_company_label', 'company');?></label>            
              <div class="col-sm-8">
             	<?php echo form_input($company);?>
+              <span class="text-danger"><em><small><?php echo form_error('company'); ?></em></small></span>
             </div>
         </div>
 
@@ -56,6 +59,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<label for="first_name" class="col-sm-4 control-label"><?php echo lang('edit_user_phone_label', 'phone');?></label>            
              <div class="col-sm-8">
             	<?php echo form_input($phone);?>
+              <span class="text-danger"><em><small><?php echo form_error('phone'); ?></em></small></span>
             </div>
         </div>            
       
@@ -64,6 +68,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<label for="first_name" class="col-sm-4 control-label"><?php echo lang('edit_user_password_label', 'password');?></label>            
              <div class="col-sm-8">
             	<?php echo form_input($password);?>
+              <span class="text-danger"><em><small><?php echo form_error('password'); ?></em></small></span>
             </div>
         </div>
       
@@ -71,6 +76,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<label for="first_name" class="col-sm-4 control-label"><?php echo lang('edit_user_password_confirm_label', 'password_confirm');?></label>            
              <div class="col-sm-8">
             	<?php echo form_input($password_confirm);?>
+              <span class="text-danger"><em><small><?php echo form_error('password_confirm'); ?></em></small></span>
             </div>
         </div>      
       
@@ -121,7 +127,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <?php $this->view('footer'); ?>
     <?php $this->view('javascript'); ?>
 	<script type="text/javascript">
-	    $("#phone").mask("+7(999)999-99-99");
+	    //$("#phone").mask("+7(999)999-99-99");
 	</script>
   </body>
 </html>

@@ -39,43 +39,50 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				  <div class="form-group">
 				    <label for="first_name" class="col-sm-4 control-label">Имя</label>
 				    <div class="col-sm-8">
-				      <input type="text" name="first_name" class="form-control" id="first_name" placeholder="Имя">
+				      <input type="text" name="first_name" value="<?php echo set_value('first_name'); ?>" class="form-control" id="first_name" placeholder="Имя">
+				      <span class="text-danger"><em><small><?php echo form_error('first_name'); ?></em></small></span>
 				    </div>
 				  </div>
 				  <div class="form-group">
 				    <label for="last_name" class="col-sm-4 control-label">Фамилия</label>
 				    <div class="col-sm-8">
-				      <input type="text" name="last_name" class="form-control" id="last_name" placeholder="Фамилия">
+				      <input type="text" name="last_name" value="<?php echo set_value('last_name'); ?>" class="form-control" id="last_name" placeholder="Фамилия">
+				      <span class="text-danger"><em><small><?php echo form_error('last_name'); ?></em></small></span>
 				    </div>
 				  </div>
 				  <div class="form-group">
 				    <label for="company" class="col-sm-4 control-label">Компания</label>
 				    <div class="col-sm-8">
-				      <input type="text" name="company" class="form-control" id="company" placeholder="Наименование компании">
+				      <input type="text" name="company" value="<?php echo set_value('company'); ?>" class="form-control" id="company" placeholder="Наименование компании">
+				      <span class="text-danger"><em><small><?php echo form_error('company'); ?></em></small></span>
 				    </div>
 				  </div>				  
 				  <div class="form-group">
-				    <label for="phone" class="col-sm-4 control-label">Телефон</label>
+				    <label for="phone" class="col-sm-4 control-label">Телефон*</label>
 				    <div class="col-sm-8">
-				      <input type="text" name="phone" class="form-control" id="phone" placeholder="Телефон">
+				      <input type="text" name="phone" value="<?php echo set_value('phone'); ?>" class="form-control" id="phone" placeholder="Телефон" required>
+				      <span class="text-danger"><em><small><?php echo form_error('phone'); ?></em></small></span>
 				    </div>
 				  </div>				  				  				
 				  <div class="form-group">
 				    <label for="inputEmail3" class="col-sm-4 control-label">Email*</label>
 				    <div class="col-sm-8">
-				      <input type="email" name="email" class="form-control" id="inputEmail3" placeholder="Email" required="required">
+				      <input type="email" name="email" value="<?php echo set_value('email'); ?>" class="form-control" id="inputEmail3" placeholder="Email" required="required">
+				      <span class="text-danger"><em><small><?php echo form_error('email'); ?></em></small></span>
 				    </div>
 				  </div>
 				  <div class="form-group">
 				    <label for="inputPassword3" class="col-sm-4 control-label">Пароль*</label>
 				    <div class="col-sm-8">
-				      <input type="password" name="password" class="form-control" id="inputPassword3" placeholder="Пароль" required="required">
+				      <input type="password" name="password" value="<?php echo set_value('password'); ?>" class="form-control" id="inputPassword3" placeholder="Пароль" required="required">
+				      <span class="text-danger"><em><small><?php echo form_error('password'); ?></em></small></span>
 				    </div>
 				  </div>
 				  <div class="form-group">
 				    <label for="inputPassword4" class="col-sm-4 control-label">Подтверждение пароля*</label>
 				    <div class="col-sm-8">
-				      <input type="password" name="password_confirm" class="form-control" id="inputPassword4" placeholder="Подтверждение пароля" required="required">
+				      <input type="password" name="password_confirm" value="<?php echo set_value('password_confirm'); ?>" class="form-control" id="inputPassword4" placeholder="Подтверждение пароля" required="required">
+						<span class="text-danger"><em><small><?php echo form_error('password_confirm'); ?></em></small></span>				      
 				    </div>
 				  </div>
 				  <div class="text-right text-warning">
@@ -101,7 +108,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <?php $this->view('footer'); ?>
     <?php $this->view('javascript'); ?>
 	<script type="text/javascript">
-	    $("#phone").mask("+7(999)999-99-99");
+	    //$("#phone").mask("99999999999");
 	</script>
   </body>
 </html>

@@ -456,7 +456,7 @@ class Auth extends CI_Controller {
         {
             $this->form_validation->set_rules('email', $this->lang->line('create_user_validation_email_label'), 'required|valid_email|is_unique[' . $tables['users'] . '.email]');
         }
-        $this->form_validation->set_rules('phone', $this->lang->line('create_user_validation_phone_label'), 'trim');
+        $this->form_validation->set_rules('phone', $this->lang->line('create_user_validation_phone_label'), 'trim|required|is_natural');
         $this->form_validation->set_rules('company', $this->lang->line('create_user_validation_company_label'), 'trim');
         $this->form_validation->set_rules('password', $this->lang->line('create_user_validation_password_label'), 'required|min_length[' . $this->config->item('min_password_length', 'ion_auth') . ']|max_length[' . $this->config->item('max_password_length', 'ion_auth') . ']|matches[password_confirm]');
         $this->form_validation->set_rules('password_confirm', $this->lang->line('create_user_validation_password_confirm_label'), 'required');
@@ -567,7 +567,7 @@ class Auth extends CI_Controller {
 		// validate form input
 		$this->form_validation->set_rules('first_name', $this->lang->line('edit_user_validation_fname_label'), 'required');
 		$this->form_validation->set_rules('last_name', $this->lang->line('edit_user_validation_lname_label'), 'required');
-		$this->form_validation->set_rules('phone', $this->lang->line('edit_user_validation_phone_label'), 'required');
+		$this->form_validation->set_rules('phone', $this->lang->line('edit_user_validation_phone_label'), 'required|is_natural');
 		$this->form_validation->set_rules('company', $this->lang->line('edit_user_validation_company_label'), 'required');
 
 		if (isset($_POST) && !empty($_POST))

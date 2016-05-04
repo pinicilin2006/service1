@@ -122,7 +122,7 @@ class Main extends CI_Controller {
 	 	$data['all_request_count_today'] = $this->Request_data->request_count_today();
 		$this->form_validation->set_error_delimiters('<div class="alert alert-warning">', '</div>');
 		$this->form_validation->set_rules('name','"Имя"','regex_match[/^[a-zA-Zа-яёА-ЯЁ\s]+$/u]');
-		$this->form_validation->set_rules('phone','"Телефон"','required|regex_match[/^[0-9\-\+\(\)]+$/u]');
+		$this->form_validation->set_rules('phone','"Телефон*"','required|is_numeric');
 		$this->form_validation->set_rules('email','"Email"','valid_email');
 		$this->form_validation->set_rules('region','"Ваш регион"','required|numeric');
 		$this->form_validation->set_rules('city','"Ваш город"','required|numeric');

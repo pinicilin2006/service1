@@ -20,8 +20,13 @@
         <!--        </div>-->
         <!--    </div>-->
         <!--</div>-->
-
+    <div id="top">
+        <a href='#'><span class="glyphicon glyphicon-arrow-up"></span></a>
+    </div>
     <div class="blog-footer">
-        <a href="#" id="to_top">Вверх</a>
-      <p><a href="mailto:info@tklient.ru">info@tklient.ru</a></p>
+        <div class='container'>
+            <div class='row'>
+                <div class='text-center'><a href="mailto:info@tklient.ru">info@tklient.ru</a> </div>             
+            </div>
+        </div>
     </div>

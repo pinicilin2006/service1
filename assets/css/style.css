@@ -160,13 +160,20 @@ h6, .h6 {
 /*
  * Footer
  */
-
+html {
+  position: relative;
+  min-height: 100%;
+}
 .blog-footer {
-  padding: 40px 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;  
+  padding: 0px 0;
   color: #999;
-  text-align: center;
+  //text-align: center;
   background-color: #f9f9f9;
   border-top: 1px solid #e5e5e5;
+  font-size: 14px;
 }
 .login-help {
   font-size: 14px;
@@ -444,4 +451,20 @@ textarea {
   width: 150px;
   /* padding-right: 150px; */
   z-index: 1;
+}
+
+#top{
+display: none;
+position: fixed; /* фиксированная позиция */
+opacity: 0.8; /* прозрачность */
+padding: 15px 10px 10px; /* отступы */
+background: #98d361;
+border-radius: 5px; /* скругление углов */
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+left: 10px; /* отступ слева */
+bottom: 10px; /* отступ снизу */
+display: none; /* спрятать блок */
+cursor: pointer;
+z-index: 100; 
 }

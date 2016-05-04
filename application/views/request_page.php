@@ -164,7 +164,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <?php include_once('footer.php'); ?>
     <?php include_once('javascript.php'); ?>
   <script type="text/javascript">
-      $("#phone").mask("+7(999)999-99-99");
+      //$("#phone").mask("8(999)999-99-99");
 
       $(document).on("change", "#auto_mark", function(){
         var a = $(this).val();

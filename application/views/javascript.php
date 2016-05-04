@@ -10,8 +10,19 @@
 	var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);}if(d.readyState=='complete'){l();}else{if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
 	</script>
 	<!-- {/literal} END JIVOSITE CODE -->
-	<script type='text/javascript'>
-		$('#to_top').click(function(){
-			$('body, html').animate( { scrollTop: 0 }, 1100 );
-		});
-	</script>
+	<!-- Появление кнопки вверх и прокрутка  вверх при нажатие на неё-->
+	<script type="text/javascript">
+	var top_show = 150; // В каком положении полосы прокрутки начинать показ кнопки "Наверх"
+	var delay = 1000; // Задержка прокрутки
+	$(window).scroll(function () { // При прокрутке попадаем в эту функцию
+      /* В зависимости от положения полосы прокрукти и значения top_show, скрываем или открываем кнопку "Наверх" */
+      if ($(this).scrollTop() > top_show) $('#top').fadeIn();
+      else $('#top').fadeOut();
+    });
+    $('#top').click(function () { // При клике по кнопке "Наверх" попадаем в эту функцию
+      /* Плавная прокрутка наверх */
+      $('body, html').animate({
+        scrollTop: 0
+      }, delay);
+    });
+    </script>

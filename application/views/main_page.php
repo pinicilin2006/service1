@@ -9,7 +9,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   include_once('main_navigation.php');
 
   ?>
-
     <div class="container">
 
     <?php include_once('blog_title.php'); ?>
@@ -148,7 +147,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <?=($this->ion_auth->logged_in() && in_array($row['id_request'],$request_read) ? '<i class="fa fa-check" aria-hidden="true"></i>' : '')?>       
                       </span>
                       </td>
-                      <td data-label="Дата:"><?=date('d.m.y', $row['time_create'])?><br><?=date('H:i', $row['time_create'])?></td>
+                      <td data-label="Дата:"><?=date('d.m.y', $row['time_create'])?><br><?php //echo date('H:i', $row['time_create'])?></td>
                       <td data-label="Город:"><?=$row['region_name']?>/<br><b><?=$row['city_name']?></b></td>
                       <td data-label="Авто:"><?=$row['mark_name']?>/<br><b><?=$row['model_name']?></b></td>
                       <td data-label="Год выпуска:"><?=$row['auto_year']?></td>
