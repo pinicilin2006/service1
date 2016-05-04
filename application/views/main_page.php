@@ -188,7 +188,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <div class="modal-footer">
     <?php if(!$this->ion_auth->logged_in()):?>
       <a href="/auth/login" role="button" class="btn  btn-success">Вход</a>
-      <a href="/auth/create_user" role="button" class="btn  btn-success">Зарегистрироватся</a>
+      <a href="/auth/create_user" role="button" class="btn  btn-success">Зарегистрироваться</a>
     <?php endif;?>
       </div>
     </div>
