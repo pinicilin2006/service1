@@ -463,7 +463,7 @@ border-radius: 5px; /* скругление углов */
 -webkit-border-radius: 5px;
 -moz-border-radius: 5px;
 left: 10px; /* отступ слева */
-bottom: 10px; /* отступ снизу */
+bottom: 60px; /* отступ снизу */
 display: none; /* спрятать блок */
 cursor: pointer;
 z-index: 100; 

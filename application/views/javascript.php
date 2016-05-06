@@ -1,9 +1,9 @@
-	<script type="text/javascript" src="<?php echo base_url("assets/js/jquery.js"); ?>"></script>
-	<script type="text/javascript" src="<?php echo base_url("assets/js/bootstrap.js"); ?>"></script>
-	<script type="text/javascript" src="<?php echo base_url("assets/js/maskedinput.js"); ?>"></script>
-	<script type="text/javascript" src="<?php echo base_url("assets/js/bootstrap-select.js"); ?>"></script>
-	<script type="text/javascript" src="<?php echo base_url("assets/js/i18n/defaults-ru_RU.js"); ?>"></script>			
-	<script type="text/javascript" src="<?php echo base_url("assets/js/function.js"); ?>"></script>
+	<script type="text/javascript" src="<?php echo base_url("assets/js/jquery.js"); ?>?t=<?php echo(microtime(true)) ?>"></script>
+	<script type="text/javascript" src="<?php echo base_url("assets/js/bootstrap.js"); ?>?t=<?php echo(microtime(true)) ?>"></script>
+	<script type="text/javascript" src="<?php echo base_url("assets/js/maskedinput.js"); ?>?t=<?php echo(microtime(true)) ?>"></script>
+	<script type="text/javascript" src="<?php echo base_url("assets/js/bootstrap-select.js"); ?>?t=<?php echo(microtime(true)) ?>"></script>
+	<script type="text/javascript" src="<?php echo base_url("assets/js/i18n/defaults-ru_RU.js"); ?>?t=<?php echo(microtime(true)) ?>"></script>			
+	<script type="text/javascript" src="<?php echo base_url("assets/js/function.js"); ?>?t=<?php echo(microtime(true)) ?>"></script>
 	<!-- BEGIN JIVOSITE CODE {literal} -->
 	<script type='text/javascript'>
 	(function(){ var widget_id = '1XDVwtSYcV';var d=document;var w=window;function l(){

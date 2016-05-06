@@ -9,10 +9,10 @@
     <title>Tklient.ru - регулярно обновляемая база заявок по поиску контрактных запчастей</title>
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="<?php echo base_url("assets/css/bootstrap.css"); ?>" />
-    <link rel="stylesheet" href="<?php echo base_url("assets/css/bootstrap-select.css"); ?>" />
-    <link rel="stylesheet" href="<?php echo base_url("assets/css/font-awesome.min.css"); ?>">
-    <link rel="stylesheet" href="<?php echo base_url("assets/css/style.css"); ?>" />
+    <link rel="stylesheet" href="<?php echo base_url("assets/css/bootstrap.css"); ?>?t=<?php echo(microtime(true)) ?>"/>
+    <link rel="stylesheet" href="<?php echo base_url("assets/css/bootstrap-select.css"); ?>?t=<?php echo(microtime(true)) ?>"/>
+    <link rel="stylesheet" href="<?php echo base_url("assets/css/font-awesome.min.css"); ?>?t=<?php echo(microtime(true)) ?>">
+    <link rel="stylesheet" href="<?php echo base_url("assets/css/style.css"); ?>?t=<?php echo(microtime(true)) ?>" />
 
     <!-- Custom styles for this template -->
     <!-- <link href="blog.css" rel="stylesheet"> -->
