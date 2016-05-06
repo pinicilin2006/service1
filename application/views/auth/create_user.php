@@ -56,7 +56,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				      <input type="text" name="company" value="<?php echo set_value('company'); ?>" class="form-control" id="company" placeholder="Наименование компании">
 				      <span class="text-danger"><em><small><?php echo form_error('company'); ?></em></small></span>
 				    </div>
-				  </div>				  
+				  </div>				  				  
 				  <div class="form-group">
 				    <label for="phone" class="col-sm-4 control-label">Телефон*</label>
 				    <div class="col-sm-8">
@@ -71,6 +71,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				      <span class="text-danger"><em><small><?php echo form_error('email'); ?></em></small></span>
 				    </div>
 				  </div>
+				  <div class="form-group">
+				    <label for="promocode" class="col-sm-4 control-label">Промокод (если есть)</label>
+				    <div class="col-sm-8">
+				      <input type="text" name="promocode" value="<?php echo set_value('promocode'); ?>" class="form-control" id="promocode" placeholder="Промокод">
+				      <span class="text-danger"><em><small><?php echo form_error('promocode'); ?></em></small></span>
+				    </div>
+				  </div>				  
 				  <div class="form-group">
 				    <label for="inputPassword3" class="col-sm-4 control-label">Пароль*</label>
 				    <div class="col-sm-8">

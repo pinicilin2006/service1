@@ -460,7 +460,7 @@ class Auth extends CI_Controller {
         $this->form_validation->set_rules('company', $this->lang->line('create_user_validation_company_label'), 'trim');
         $this->form_validation->set_rules('password', $this->lang->line('create_user_validation_password_label'), 'required|min_length[' . $this->config->item('min_password_length', 'ion_auth') . ']|max_length[' . $this->config->item('max_password_length', 'ion_auth') . ']|matches[password_confirm]');
         $this->form_validation->set_rules('password_confirm', $this->lang->line('create_user_validation_password_confirm_label'), 'required');
-
+		$this->form_validation->set_rules('promocode', $this->lang->line('create_user_validation_promocode_label'), 'trim');
         if ($this->form_validation->run() == true)
         {
             $email    = strtolower($this->input->post('email'));
@@ -472,6 +472,7 @@ class Auth extends CI_Controller {
                 'last_name'  => $this->input->post('last_name'),
                 'company'    => $this->input->post('company'),
                 'phone'      => $this->input->post('phone'),
+                'promocode'  => $this->input->post('promocode'),
             );
         }
         if ($this->form_validation->run() == true && $this->ion_auth->register($identity, $password, $email, $additional_data))
@@ -543,6 +544,12 @@ class Auth extends CI_Controller {
                 'type'  => 'password',
                 'value' => $this->form_validation->set_value('password_confirm'),
             );
+            $this->data['promocode'] = array(
+                'name'  => 'Промокод',
+                'id'    => 'promocode',
+                'type'  => 'text',
+                'value' => $this->form_validation->set_value('promocode'),
+            );            
 
             $this->_render_page('auth/create_user', $this->data);
         }
@@ -569,6 +576,7 @@ class Auth extends CI_Controller {
 		$this->form_validation->set_rules('last_name', $this->lang->line('edit_user_validation_lname_label'), 'required');
 		$this->form_validation->set_rules('phone', $this->lang->line('edit_user_validation_phone_label'), 'required|is_natural');
 		$this->form_validation->set_rules('company', $this->lang->line('edit_user_validation_company_label'), 'required');
+		$this->form_validation->set_rules('promocode', $this->lang->line('edit_user_validation_promocode_label'), '');
 
 		if (isset($_POST) && !empty($_POST))
 		{
@@ -592,6 +600,7 @@ class Auth extends CI_Controller {
 					'last_name'  => $this->input->post('last_name'),
 					'company'    => $this->input->post('company'),
 					'phone'      => $this->input->post('phone'),
+					'promocode'  => $this->input->post('promocode'),
 				);
 
 				// update the password if it was posted
@@ -703,7 +712,13 @@ class Auth extends CI_Controller {
 			'type' => 'password',
 			'class' => 'form-control'
 		);
-
+		$this->data['promocode'] = array(
+			'name'  => 'promocode',
+			'id'    => 'promocode',
+			'type'  => 'text',
+			'value' => $this->form_validation->set_value('promocode', $user->promocode),
+			'class' => 'form-control'
+		);
 		$this->_render_page('auth/edit_user', $this->data);
 	}
 

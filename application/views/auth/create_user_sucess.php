@@ -15,7 +15,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         <div class="col-sm-9 blog-main">
           <div class="blog-post">
-          Поздравляем! Вы успешно зарегестрировались.<br>Теперь вы можете авторизоватся.
+          Поздравляем! Вы успешно зарегестрировались.<br>Теперь вы можете <a href="/auth/login">авторизоваться</a>.
           </div>
           
 
@@ -30,7 +30,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <?php $this->view('footer'); ?>
     <?php $this->view('javascript'); ?>
 	<script type="text/javascript">
-	    $("#phone").mask("(999)999-99-99");
+	    //$("#phone").mask("(999)999-99-99");
 	</script>
   </body>
 </html>

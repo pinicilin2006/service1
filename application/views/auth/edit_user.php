@@ -40,7 +40,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 		<div class="form-group">
-			<label for="first_name" class="col-sm-4 control-label"><?php echo lang('edit_user_lname_label', 'last_name');?> </label>            
+			<label for="last_name" class="col-sm-4 control-label"><?php echo lang('edit_user_lname_label', 'last_name');?> </label>            
              <div class="col-sm-8">
             	<?php echo form_input($last_name);?>
               <span class="text-danger"><em><small><?php echo form_error('last_name'); ?></em></small></span>
@@ -48,7 +48,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>     
       
 		<div class="form-group">
-			<label for="first_name" class="col-sm-4 control-label"><?php echo lang('edit_user_company_label', 'company');?></label>            
+			<label for="company" class="col-sm-4 control-label"><?php echo lang('edit_user_company_label', 'company');?></label>            
              <div class="col-sm-8">
             	<?php echo form_input($company);?>
               <span class="text-danger"><em><small><?php echo form_error('company'); ?></em></small></span>
@@ -56,16 +56,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
 
 		<div class="form-group">
-			<label for="first_name" class="col-sm-4 control-label"><?php echo lang('edit_user_phone_label', 'phone');?></label>            
+			<label for="phone" class="col-sm-4 control-label"><?php echo lang('edit_user_phone_label', 'phone');?></label>            
              <div class="col-sm-8">
             	<?php echo form_input($phone);?>
               <span class="text-danger"><em><small><?php echo form_error('phone'); ?></em></small></span>
             </div>
         </div>            
-      
+
+    <div class="form-group">
+      <label for="promocode" class="col-sm-4 control-label"><?php echo lang('edit_user_promocode_label', 'promocode');?></label>            
+             <div class="col-sm-8">
+              <?php echo form_input($promocode);?>
+              <span class="text-danger"><em><small><?php echo form_error('promocode'); ?></em></small></span>
+            </div>
+        </div>      
 
 		<div class="form-group">
-			<label for="first_name" class="col-sm-4 control-label"><?php echo lang('edit_user_password_label', 'password');?></label>            
+			<label for="password" class="col-sm-4 control-label"><?php echo lang('edit_user_password_label', 'password');?></label>            
              <div class="col-sm-8">
             	<?php echo form_input($password);?>
               <span class="text-danger"><em><small><?php echo form_error('password'); ?></em></small></span>
@@ -73,7 +80,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
       
 		<div class="form-group">
-			<label for="first_name" class="col-sm-4 control-label"><?php echo lang('edit_user_password_confirm_label', 'password_confirm');?></label>            
+			<label for="password_confirm" class="col-sm-4 control-label"><?php echo lang('edit_user_password_confirm_label', 'password_confirm');?></label>            
              <div class="col-sm-8">
             	<?php echo form_input($password_confirm);?>
               <span class="text-danger"><em><small><?php echo form_error('password_confirm'); ?></em></small></span>
