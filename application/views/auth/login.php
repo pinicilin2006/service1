@@ -59,7 +59,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				  <hr>
 				  <div class="login-help text-right">
 					  <ul class="list-inline">
-					  	<li><a href="create_user">Зарегистрироватся</a></li>
+					  	<li><a href="create_user">Зарегистрироваться</a></li>
 					  	<li><a href="forgot_password"><?php echo lang('login_forgot_password');?></a></li>
 					  </ul>
 				  </div>						  
