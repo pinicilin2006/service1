@@ -281,7 +281,17 @@ class Main extends CI_Controller {
 						);
 					$this->Insert_model->request_read_insert($data_read);				
 				}
-				
+				if($this->Request_data->notes_in_base($user_id,$id))
+				{
+					$data_notes = array(
+						'user_id' 		=> $user_id, 
+						'request_id'	=> $id,
+					);
+					$notes_text = $this->Request_data->notes_text($data_notes);
+					$data['notes_text'] = $notes_text->notes_text;
+				} else {
+					$data['notes_text'] = '';
+				}
 				$message = $this->load->view('ajax/request_info',$data,true);
 				echo $message;
 			} else {
@@ -289,6 +299,37 @@ class Main extends CI_Controller {
 				echo $message;
 			}
 		}
-	}			
+	}
+
+	public function insert_request_notes()			
+	{
+		//$a - текст примечания
+        //$b - id объявления
+		$a = $this->input->post('notes_text');
+		$b = $this->input->post('request_id');
+		if($b === FALSE || !is_numeric($b) || !$this->ion_auth->logged_in())
+		{
+			return FALSE;
+		}
+		$this->load->model('Update_model');
+		$this->load->model('Insert_model');
+		$user_id = $this->ion_auth->user()->row()->id;
+		$data = array(
+			'user_id' 		=> $user_id,
+			'request_id' 	=> $b,
+		);		
+		if($this->Request_data->notes_in_base($user_id,$b))
+		{
+			//если уже было ранее добавленно какое либо замечание то мы его обновляем
+			$notes_id = $this->Request_data->notes_id($data)->notes_id;
+			$data = array(
+				'notes_text' => $a, 
+			);
+			$this->Update_model->request_notes_update($notes_id,$data);
+		} else {
+			$data['notes_text']	= $a;
+			$this->Insert_model->request_notes_insert($data);			
+		}
+	}
 
 }

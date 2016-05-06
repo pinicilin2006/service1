@@ -221,6 +221,32 @@ class Request_data extends CI_Model {
           $this->db->delete('request');
         }
 
+        public function notes_in_base($user_id,$request_id)
+        {
+          $this->db->where('request_id',$request_id);
+          $this->db->where('user_id',$user_id);
+          $count = $this->db->count_all_results('request_notes');
+          if($count >0){
+            return TRUE;
+          } else {
+            return FALSE;
+          }          
+        }
+
+        public function notes_id($data)
+        {
+          $this->db->select('notes_id');
+          $query = $this->db->get_where('request_notes',$data);
+          return $query->row();
+        }
+
+        public function notes_text($data)
+        {
+          $this->db->select('notes_text');
+          $query = $this->db->get_where('request_notes',$data);
+          return $query->row();
+        }
+
                   	
 }
 ?>

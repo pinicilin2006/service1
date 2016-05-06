@@ -12,7 +12,10 @@ class Insert_model extends CI_Model{
     }
     public function request_read_insert($data){
     	$this->db->insert('request_read', $data);
-    }    
+    } 
+    public function request_notes_insert($data){
+        $this->db->insert('request_notes', $data);
+    }        
 
 }
 

@@ -59,3 +59,18 @@ function get_request_info(id){
 		});
 		return false;
 }
+
+// Записываем заметки по заявкам
+// a = текст
+// b = номер заявки
+function notes_insert(a,b){
+	if(!a || !b){
+		return false;
+	}
+	// $.post(
+	// 	'/main/insert_request_notes',
+	// 	{notes_text: a,request_id: b,},
+	// )
+	$.post( "/main/insert_request_notes", { notes_text: a, request_id: b } );
+	return false;	
+}

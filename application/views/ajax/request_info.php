@@ -94,6 +94,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   			<li><b>Email:</b></li>
   			<li><a href="mailto:<?=$row['email']?>"><?=$row['email']?></a></li>
 		</ol>
-	</li>					
+	</li>
+	<li class="list-group-item">
+		<textarea name="notes" id="<?=$row['id_request']?>" class="user_notes" rows="2" placeholder="Здесь вы можете оставить отметку о работе по данной заявке" style="width:100%;"><?=$notes_text?></textarea>		
+	</li>						
   <?php endforeach;?>
 </ol>
+
+	

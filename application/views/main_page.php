@@ -197,6 +197,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <?php include_once('javascript.php'); ?>
 
     <script type="text/javascript">
+      //Пометка заяки в общем списке как прочитанная при открытие модали
       $('#info_modal').on('show.bs.modal', function (e) {
         get_request_info(e.relatedTarget.id);
         <?php if($this->ion_auth->logged_in()):?>
@@ -205,11 +206,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <?php endif;?>
 
       })
+      //Очитска фильтра
       $('.clear').click(function(){
         var a = $(this).val();
         $('#'+a).selectpicker('deselectAll');
         return false;
       });
+      //Сохранение примечания
+      $(document).on("change", ".user_notes", function(){
+        var a = $(this).val();
+        var b = this.id;
+          notes_insert(a,b);
+      });       
     </script>  
   </body>
 </html>
