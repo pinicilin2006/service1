@@ -6,8 +6,12 @@ class Auto_data extends CI_Model {
                 // Call the CI_Model constructor
                 parent::__construct();
         }
-        public function get_mark()
+        public function get_mark($user_mark = FALSE)
         {
+                if($user_mark)
+                {
+                  $this->db->where_in('id_car_mark',$user_mark);
+                }                
                 $query = $this->db->get('car_mark');
                 return $query;
         }

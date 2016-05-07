@@ -8,7 +8,7 @@ class Request_data extends CI_Model {
                 parent::__construct();
         }
         
-        public function request_count($filter = FALSE)
+        public function request_count($filter = FALSE,$user_mark = FALSE)
         {
                 if($filter){
                   if(isset($filter['region'])){
@@ -23,6 +23,10 @@ class Request_data extends CI_Model {
                   if(isset($filter['name_search_detail'])){
                     $this->db->like('detail_name',$filter['name_search_detail']);
                   }                                                      
+                }
+                if($user_mark)
+                {
+                  $this->db->where_in('auto_mark',$user_mark);
                 }          
                 $query = $this->db->count_all_results('request');
                 return $query;
@@ -37,7 +41,7 @@ class Request_data extends CI_Model {
                 return $query;
         }
         
-        public function request_limit_to_table($limit,$offset,$filter = FALSE)
+        public function request_limit_to_table($limit,$offset,$filter = FALSE,$user_mark = FALSE)
         {
                 /*
                 SELECT
@@ -92,6 +96,10 @@ class Request_data extends CI_Model {
                     }
                   }                                                       
                 }
+                if($user_mark)
+                {
+                  $this->db->where_in('auto_mark',$user_mark);
+                }                
                 $this->db->where('active','1');
                 $this->db->join('region','request.region = region.region_id','inner');
                 $this->db->join('city','request.city = city.city_id','inner');
@@ -104,7 +112,7 @@ class Request_data extends CI_Model {
                 return $query;
         }
 
-        public function request_full_info($id)
+        public function request_full_info($id,$user_mark)
         {
                 /*
                 SELECT
@@ -163,6 +171,10 @@ class Request_data extends CI_Model {
                   );
                 
                 // $this->db->from('request');
+                if($user_mark)
+                {
+                  $this->db->where_in('auto_mark',$user_mark);
+                }                 
                 $this->db->where('active','1');
                 $this->db->where('id_request',$id);
                 $this->db->join('region','request.region = region.region_id','inner');
@@ -247,6 +259,12 @@ class Request_data extends CI_Model {
           return $query->row();
         }
 
-                  	
+        public function get_user_mark($user_id)
+        {
+          $this->db->select('mark_id');
+          $this->db->where('user_id',$user_id);
+          $query = $this->db->get('users_mark');
+          return $query->result();
+        }          	
 }
 ?>

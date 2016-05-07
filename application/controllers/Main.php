@@ -34,7 +34,14 @@ class Main extends CI_Controller {
 	 	$data['all_request_count_today'] = $this->Request_data->request_count_today();
 		$data['all_region'] = $this->Region_data->get_region()->result_array();
 		$data['all_category'] = $this->Detail_data->get_detail_category()->result_array();
-		$data['all_mark'] = $this->Auto_data->get_mark()->result_array();
+		if($this->ion_auth->in_group('limit-mark'))
+		{
+			$limit_mark = $this->get_user_mark();
+		} else {
+			$limit_mark = FALSE;
+		}		
+		$data['all_mark'] = $this->Auto_data->get_mark($limit_mark)->result_array();
+		
 		$limit = 50;
 		$offset = (is_numeric($id) ? $id : 0);			
 		$filter='';
@@ -63,11 +70,11 @@ class Main extends CI_Controller {
 			$filter = $this->session->flashdata('filter');
 			$this->session->keep_flashdata('filter');
 		}
-		$request_all_count = $this->Request_data->request_count($filter);			
+		$request_all_count = $this->Request_data->request_count($filter,$limit_mark);			
 		$config['base_url'] = base_url() . "index.php/main/index";
 		$config['total_rows'] = $request_all_count;
 		$config['per_page'] = $limit;
-		$config['num_links'] = 2;
+		$config['num_links'] = 4;
 		$config['full_tag_open'] = '<ul class="pagination">';
 		$config['full_tag_close'] = '</ul>';
 		$config['first_link'] = 'Первая';
@@ -87,7 +94,7 @@ class Main extends CI_Controller {
 		$config['prev_tag_close'] = '</li>';
 		$this->pagination->initialize($config);
 		$data['pagination'] = $this->pagination->create_links();
-		$table_data = $this->Request_data->request_limit_to_table($limit,$offset,$filter);
+		$table_data = $this->Request_data->request_limit_to_table($limit,$offset,$filter,$limit_mark);
 		$data['table_data'] = $table_data->result_array();
 		
 		$this->load->view('main_page',$data);
@@ -260,7 +267,13 @@ class Main extends CI_Controller {
 			return FALSE;
 		}
 		if($this->ion_auth->logged_in()){
-			$request_data = $this->Request_data->request_full_info($id);
+			if($this->ion_auth->in_group('limit-mark'))
+			{
+				$limit_mark = $this->get_user_mark();
+			} else {
+				$limit_mark = FALSE;
+			}			
+			$request_data = $this->Request_data->request_full_info($id,$limit_mark);
 			if($request_data->num_rows() == 0)
 			{
 				$message = $this->load->view('ajax/request_info_error','',true);
@@ -330,6 +343,17 @@ class Main extends CI_Controller {
 			$data['notes_text']	= $a;
 			$this->Insert_model->request_notes_insert($data);			
 		}
+	}
+
+	public function get_user_mark()
+	{
+		$user_id = $this->ion_auth->user()->row()->id;
+		$user_mark_all = $this->Request_data->get_user_mark($user_id);
+		$user_mark = array();
+		foreach ($user_mark_all as $key => $value) {
+			$user_mark[] = $value->mark_id;
+		}
+		return $user_mark;
 	}
 
 }
