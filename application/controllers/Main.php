@@ -180,7 +180,7 @@ class Main extends CI_Controller {
 
 	public function request_del($id)
 	{
-		if(!$this->ion_auth->in_group('operator')){
+		if(!$this->ion_auth->in_group('admin')){
 			redirect('/', 'refresh');
 		} else {
 			$this->Request_data->request_del($id);
