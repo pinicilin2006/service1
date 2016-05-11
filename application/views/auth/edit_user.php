@@ -88,6 +88,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>      
       
       <?php if ($this->ion_auth->is_admin()): ?>
+    <div class="form-group">
+      <label for="dop_info" class="col-sm-4 control-label"><?php echo lang('edit_user_dop_info_label', 'dop_info');?></label>            
+             <div class="col-sm-8">
+              <?php echo form_input($dop_info);?>
+              <span class="text-danger"><em><small><?php echo form_error('dop_info'); ?></em></small></span>
+            </div>
+    </div>
+
 		<div class="form-group">
 			<label for="first_name" class="col-sm-4 control-label"><?php echo lang('edit_user_groups_heading');?></label>            
              <div class="col-sm-8">

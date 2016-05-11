@@ -601,6 +601,7 @@ class Auth extends CI_Controller {
 					'company'    => $this->input->post('company'),
 					'phone'      => $this->input->post('phone'),
 					'promocode'  => $this->input->post('promocode'),
+					'dop_info'  => $this->input->post('dop_info'),
 				);
 
 				// update the password if it was posted
@@ -719,6 +720,13 @@ class Auth extends CI_Controller {
 			'value' => $this->form_validation->set_value('promocode', $user->promocode),
 			'class' => 'form-control'
 		);
+		$this->data['dop_info'] = array(
+			'name'  => 'dop_info',
+			'id'    => 'dop_info',
+			'type'  => 'text',
+			'value' => $this->form_validation->set_value('dop_info', $user->dop_info),
+			'class' => 'form-control'
+		);		
 		$this->_render_page('auth/edit_user', $this->data);
 	}
 
