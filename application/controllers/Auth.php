@@ -29,7 +29,7 @@ class Auth extends CI_Controller {
 		elseif (!$this->ion_auth->is_admin()) // remove this elseif if you want to enable this for non-admins
 		{
 			// redirect them to the home page because they must be an administrator to view this
-			return show_error('You must be an administrator to view this page.');
+			return show_error('Только пользователь с правами администратора имеет доступ на эту страницу.');
 		}
 		else
 		{
@@ -577,6 +577,7 @@ class Auth extends CI_Controller {
 		$this->form_validation->set_rules('phone', $this->lang->line('edit_user_validation_phone_label'), 'required|is_natural');
 		$this->form_validation->set_rules('company', $this->lang->line('edit_user_validation_company_label'), 'required');
 		$this->form_validation->set_rules('promocode', $this->lang->line('edit_user_validation_promocode_label'), '');
+		$this->form_validation->set_rules('sms', $this->lang->line('edit_user_validation_sms_label'), 'is_natural');		
 
 		if (isset($_POST) && !empty($_POST))
 		{
@@ -601,7 +602,8 @@ class Auth extends CI_Controller {
 					'company'    => $this->input->post('company'),
 					'phone'      => $this->input->post('phone'),
 					'promocode'  => $this->input->post('promocode'),
-					'dop_info'  => $this->input->post('dop_info'),
+					'dop_info'   => $this->input->post('dop_info'),
+					'sms'   	 => $this->input->post('sms'),
 				);
 
 				// update the password if it was posted
@@ -726,7 +728,14 @@ class Auth extends CI_Controller {
 			'type'  => 'text',
 			'value' => $this->form_validation->set_value('dop_info', $user->dop_info),
 			'class' => 'form-control'
-		);		
+		);
+		$this->data['sms'] = array(
+			'name'  => 'sms',
+			'id'    => 'sms',
+			'type'  => 'text',
+			'value' => $this->form_validation->set_value('sms', $user->sms),
+			'class' => 'form-control'
+		);				
 		$this->_render_page('auth/edit_user', $this->data);
 	}
 

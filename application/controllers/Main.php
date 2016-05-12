@@ -356,4 +356,10 @@ class Main extends CI_Controller {
 		return $user_mark;
 	}
 
+	public function send_sms()
+	{
+		$this->load->library('smsc_api');
+		$this->smsc_api->send_sms("79678856663", "Имеется 'крыло левое' за 5000р. 89226543006", 0);
+	}
+
 }
