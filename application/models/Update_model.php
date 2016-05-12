@@ -10,6 +10,12 @@ class Update_model extends CI_Model{
     public function request_notes_update($notes_id,$data){
     	$this->db->where('notes_id',$notes_id);
         $this->db->update('request_notes', $data); 
+    }
+    public function send_sms($id_user)
+    {
+    	$this->db->where('id',$id_user);
+    	$this->db->set('sms','sms-1',FALSE);
+    	$this->db->update('users');
     }        
 
 }

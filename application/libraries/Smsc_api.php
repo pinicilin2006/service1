@@ -67,7 +67,7 @@ class Smsc_api {
 
 	// SMTP версия функции отправки SMS
 
-	public function send_sms_mail($phones, $message, $translit = 0, $time = 0, $id = 0, $format = 0, $sender = "")
+	public function send_sms_mail($phones, $message, $translit = 0, $time = 0, $id = 0, $format = 0, $sender = "TKlient.ru")
 	{
 		return mail("send@send.smsc.ru", "", SMSC_LOGIN.":".SMSC_PASSWORD.":$id:$time:$translit,$format,$sender:$phones:$message", "From: ".SMTP_FROM."\nContent-Type: text/plain; charset=".SMSC_CHARSET."\n");
 	}
@@ -88,7 +88,7 @@ class Smsc_api {
 	//
 	// возвращает массив (<стоимость>, <количество sms>) либо массив (0, -<код ошибки>) в случае ошибки
 
-	public function get_sms_cost($phones, $message, $translit = 0, $format = 0, $sender = false, $query = "")
+	public function get_sms_cost($phones, $message, $translit = 0, $format = 0, $sender = 'TKlient.ru', $query = "")
 	{
 		static $formats = array(1 => "flash=1", "push=1", "hlr=1", "bin=1", "bin=2", "ping=1", "mms=1", "mail=1", "call=1");
 

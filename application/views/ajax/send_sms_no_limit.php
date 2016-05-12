@@ -1,0 +1,1 @@
+<span class="text-danger">Вы исчерпали лимит sms сообщений. Для увеличения лимита свяжитесь с администрацией сайта <a href="mailto:info@tklient.ru">info@tklient.ru</a></span>

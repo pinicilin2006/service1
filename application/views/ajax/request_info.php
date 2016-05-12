@@ -16,26 +16,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	</li>
 	<li class="list-group-item">
 		<ol class="list-inline">
-  			<li><b>Регион:</b></li>
-  			<li><?=$row['region_name']?></li>
+  			<li><b>Регион/город:</b></li>
+  			<li><?=$row['region_name']?> / <?=$row['city_name']?><li>
 		</ol>
 	</li>	
 	<li class="list-group-item">
 		<ol class="list-inline">
-  			<li><b>Город:</b></li>
-  			<li><?=$row['city_name']?></li>
-		</ol>
-	</li>
-	<li class="list-group-item">
-		<ol class="list-inline">
-  			<li><b>Марка автомобиля:</b></li>
-  			<li><?=$row['mark_name']?></li>
-		</ol>
-	</li>
-	<li class="list-group-item">
-		<ol class="list-inline">
-  			<li><b>Модель автомобиля:</b></li>
-  			<li><?=$row['model_name']?></li>
+  			<li><b>Марка/модель автомобиля:</b></li>
+  			<li><?=$row['mark_name']?> / <?=$row['model_name']?></li>
 		</ol>
 	</li>
 	<?php if(isset($row['auto_year'])):?>
@@ -67,7 +55,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	</li>
 	<li class="list-group-item">
 		<ol class="list-inline">
-  			<li><b>Дополнительная инофрмация:</b></li>
+  			<li><b>Дополнительная информация:</b></li>
   			<li><?=$row['dop_info']?></li>
 		</ol>
 	</li>	
@@ -98,7 +86,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<li class="list-group-item">
 		<textarea name="notes" id="<?=$row['id_request']?>" class="user_notes" rows="2" placeholder="Здесь вы можете оставить отметку о работе по данной заявке" style="width:100%;"><?=$notes_text?></textarea>		
 	</li>						
-  <?php endforeach;?>
+
+	  <?php	if($this->ion_auth->logged_in() && $this->ion_auth->in_group('SMS') && $row['phone']):?>
+	  	<li class="list-group-item">
+	  		<div id="sms_data">
+				<form class="form-inline" id='send_sms' role="form">
+				  <div class="form-group">
+				    <label class="sr-only" for="sms_name">Название детали</label>
+				    <input type="text" class="form-control" name="sms_name" id="sms_name" placeholder="Название детали" required="required">
+				  </div>
+				  <div class="form-group">
+				    <label class="sr-only" for="sms_price">Цена</label>
+				    <input type="text" class="form-control" name="sms_price" id="sms_price" placeholder="Цена" required="required">
+				  </div>
+				  <input type="hidden" name="id_request" value="<?=$row['id_request']?>"></input>
+				  <button type="submit" id="button_send_sms" data-loading-text="Отправка..." class="btn btn-success">Отправить SMS</button>
+				</form>
+			</div>
+	  	</li>
+	  <?php endif;?>
+  <?php endforeach;?>	  
 </ol>
 
 	

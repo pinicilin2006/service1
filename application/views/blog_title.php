@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div class="row">
 	    <div class="col-sm-9">
 			<div class="blog-header">
-			    <h1 class="blog-title">Tklient.ru - регулярно обновляемая база заявок <br>по поиску контрактных запчастей</h1>
+			    <h1 class="blog-title"><a href="http://tklient.ru">TKlient.ru</a> - регулярно обновляемая база заявок <br>по поиску контрактных запчастей</h1>
 			    <p class="lead blog-description">Гарантия низкой цены на контрактные запчасти</p>
 			    <script type="text/javascript">(function() {
 					  if (window.pluso)if (typeof window.pluso.start == "function") return;

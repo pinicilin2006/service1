@@ -217,7 +217,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         var a = $(this).val();
         var b = this.id;
           notes_insert(a,b);
-      });       
+      });
+      //Обработка формы отправки смс
+      $(document).on("submit", "#send_sms", function(){
+        $('#button_send_sms').button('loading');
+        send_sms();
+        return false;
+      });           
     </script>  
   </body>
 </html>

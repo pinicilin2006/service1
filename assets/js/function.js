@@ -74,3 +74,17 @@ function notes_insert(a,b){
 	$.post( "/main/insert_request_notes", { notes_text: a, request_id: b } );
 	return false;	
 }
+
+//Функция отправки смс пользователями клиентам
+function send_sms(){	
+	var a = $('#send_sms').serialize();
+	//alert(a);
+	$.ajax({
+		type: "POST",
+		url: '/main/send_sms',
+		data: a,
+		success: function(data) {
+			$('#sms_data').html(data);
+		}
+	});
+}

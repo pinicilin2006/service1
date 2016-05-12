@@ -357,9 +357,62 @@ class Main extends CI_Controller {
 	}
 
 	public function send_sms()
-	{
+	{	
+		if(!$this->ion_auth->logged_in() || !$this->ion_auth->in_group('SMS'))
+		{
+			return FALSE;
+		}
+		if(!$this->input->post('id_request') || !is_numeric($this->input->post('id_request'))){
+			$message = 'Не верный идентификатор заявки';
+			echo $message;
+			return FALSE;
+		}
+		if(!$this->Request_data->request_in_base_2($this->input->post('id_request'))){
+			$message = 'Не найдена заявка с таким идентификатором';
+			echo $message;
+			return FALSE;
+		}		
+		$this->form_validation->set_rules('sms_name','"Название детали"','required');
+		$this->form_validation->set_rules('sms_price','"Цена"','required|is_numeric');
+		$this->form_validation->set_rules('id_request','ID заявки','required|is_numeric');
+		if ($this->form_validation->run() == FALSE){
+			$data['id_request'] = $this->input->post('id_request');
+			$message = $this->load->view('ajax/send_sms_form',$data,true);
+			echo $message;			
+			return FALSE;
+		}
+		if($this->ion_auth->user()->row()->sms < 1)
+		{
+			$message = $this->load->view('ajax/send_sms_no_limit','',true);
+			echo $message;			
+			return FALSE;
+		}
+		$sms_message = 'Имеется "'.$this->input->post('sms_name').'" за '.$this->input->post('sms_price').'. '.$this->ion_auth->user()->row()->phone;
 		$this->load->library('smsc_api');
-		$this->smsc_api->send_sms("79678856663", "Имеется 'крыло левое' за 5000р. 89226543006", 0);
+		$this->load->model('Update_model');
+		$this->load->model('Insert_model');
+		$this->load->library('smsc_api');
+		$request_full_info = $this->Request_data->request_full_info($this->input->post('id_request'));
+		$request_full_info = $request_full_info->result_array();
+		$phone_number = substr_replace(preg_replace("#[^\d]#", "", $request_full_info[0]['phone']),"7",0, 1);
+		if($this->smsc_api->send_sms($phone_number, $sms_message, 0))
+		{
+			$this->Update_model->send_sms($this->ion_auth->user()->row()->id);
+			$data_sms = array(
+				'time_send' 	=> now(),
+				'number_phone' 	=> $phone_number,
+				'text_sms' 		=> $sms_message,
+				'id_request'	=> $this->input->post('id_request'),
+				'id_user'		=> $this->ion_auth->user()->row()->id,
+			);
+			$this->Insert_model->send_sms($data_sms);
+			$data['sms_message'] = $sms_message;
+			$message = $this->load->view('ajax/send_sms_success',$data,true);
+			echo $message;
+		} else {
+			$message = $this->load->view('ajax/send_sms_error','',true);
+			echo $message;			
+		}
 	}
 
 }

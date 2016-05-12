@@ -7,14 +7,21 @@ class Insert_model extends CI_Model{
             // Call the CI_Model constructor
             parent::__construct();
     }
-    public function request_insert($data){
+    public function request_insert($data)
+    {
     	$this->db->insert('request', $data);
     }
-    public function request_read_insert($data){
+    public function request_read_insert($data)
+    {
     	$this->db->insert('request_read', $data);
     } 
-    public function request_notes_insert($data){
+    public function request_notes_insert($data)
+    {
         $this->db->insert('request_notes', $data);
+    }
+    public function send_sms($data)
+    {
+        $this->db->insert('users_sms',$data);
     }        
 
 }

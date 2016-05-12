@@ -112,7 +112,7 @@ class Request_data extends CI_Model {
                 return $query;
         }
 
-        public function request_full_info($id,$user_mark)
+        public function request_full_info($id,$user_mark = FALSE)
         {
                 /*
                 SELECT
@@ -198,6 +198,17 @@ class Request_data extends CI_Model {
             return FALSE;
           }
         } 
+
+        public function request_in_base_2($id_request)
+        {
+          $this->db->where('id_request',$id_request);
+          $count = $this->db->count_all_results('request');
+          if($count >0){
+            return TRUE;
+          } else {
+            return FALSE;
+          }          
+        }
         
         public function request_read($id,$user_id)
         {
