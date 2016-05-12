@@ -27,6 +27,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               <ul class="list-group">
                     <li class="list-group-item"><small><em>Мы рады Вам представить новый сервис по поиску контрактных автозапчастей.<br> Если вы нашли ошибку в сервисе, то просьба сообщить о ней по адресу <a href="mailto:info@tklient.ru">info@tklient.ru.</a></em></small></li>
                     <li class="list-group-item"><small><em>Согласно пожеланиям клиентов добавлена возможность оставлять примечание к заявке.</em></small></li>
+                    <li class="list-group-item"><small><em>Добавлена возможность отправлять sms. Лимит sms для пользователя 100 штук. Возможность будет доступна только при внесение платы за полный доступ. Увелечение лимита sms возможно за дополнительную плату. Цена сверх лимита 2 рубля за смс</em></small></li>
               </ul>
             </div>
 
