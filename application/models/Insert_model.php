@@ -22,6 +22,10 @@ class Insert_model extends CI_Model{
     public function send_sms($data)
     {
         $this->db->insert('users_sms',$data);
+    }
+    public function message_to_user($data)
+    {
+        $this->db->insert('message_to_users',$data);
     }        
 
 }

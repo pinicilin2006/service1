@@ -104,6 +104,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
     </div>
 
+    <div class="form-group">
+      <label for="time_end" class="col-sm-4 control-label"><?php echo lang('edit_user_time_end_label', 'time_end');?></label>            
+             <div class="col-sm-8">
+              <?php echo form_input($time_end);?>
+              <span class="text-danger"><em><small><?php echo form_error('time_end'); ?></em></small></span>
+            </div>
+    </div>
+
 		<div class="form-group">
 			<label for="first_name" class="col-sm-4 control-label"><?php echo lang('edit_user_groups_heading');?></label>            
              <div class="col-sm-8">
@@ -150,7 +158,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <?php $this->view('footer'); ?>
     <?php $this->view('javascript'); ?>
 	<script type="text/javascript">
-	    //$("#phone").mask("+7(999)999-99-99");
+	    $(".datepicker").mask("99.99.9999");
+      $(".datepicker" ).datepicker({
+        minDate: 0,
+        dateFormat: "dd.mm.yy",
+        firstDay: 1,
+        changeMonth: true,
+        changeYear: true
+      });
 	</script>
   </body>
 </html>

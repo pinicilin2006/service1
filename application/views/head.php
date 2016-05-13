@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="/assets/css/bootstrap.css?t=<?php echo(microtime(true)) ?>"/>
     <link rel="stylesheet" href="/assets/css/bootstrap-select.css?t=<?php echo(microtime(true)) ?>"/>
     <link rel="stylesheet" href="/assets/css/font-awesome.min.css?t=<?php echo(microtime(true)) ?>">
+    <link rel="stylesheet" href="/assets/css/jquery-ui.css?t=<?php echo(microtime(true)) ?>">
     <link rel="stylesheet" href="/assets/css/style.css?t=<?php echo(microtime(true)) ?>" />
 
     <!-- Custom styles for this template -->

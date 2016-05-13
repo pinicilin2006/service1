@@ -577,7 +577,8 @@ class Auth extends CI_Controller {
 		$this->form_validation->set_rules('phone', $this->lang->line('edit_user_validation_phone_label'), 'required|is_natural');
 		$this->form_validation->set_rules('company', $this->lang->line('edit_user_validation_company_label'), 'required');
 		$this->form_validation->set_rules('promocode', $this->lang->line('edit_user_validation_promocode_label'), '');
-		$this->form_validation->set_rules('sms', $this->lang->line('edit_user_validation_sms_label'), 'is_natural');		
+		$this->form_validation->set_rules('sms', $this->lang->line('edit_user_validation_sms_label'), 'is_natural');
+		$this->form_validation->set_rules('time_end', $this->lang->line('edit_user_validation_time_end_label'), 'strtotime|is_natural');		
 
 		if (isset($_POST) && !empty($_POST))
 		{
@@ -604,6 +605,7 @@ class Auth extends CI_Controller {
 					'promocode'  => $this->input->post('promocode'),
 					'dop_info'   => $this->input->post('dop_info'),
 					'sms'   	 => $this->input->post('sms'),
+					'time_end'   => $this->input->post('time_end'),
 				);
 
 				// update the password if it was posted
@@ -735,7 +737,14 @@ class Auth extends CI_Controller {
 			'type'  => 'text',
 			'value' => $this->form_validation->set_value('sms', $user->sms),
 			'class' => 'form-control'
-		);				
+		);
+		$this->data['time_end'] = array(
+			'name'  	=> 'time_end',
+			'id'    	=> 'time_end',
+			'type'  	=> 'text',
+			'value' 	=> $this->form_validation->set_value('time_end', ($user->time_end > 0 ?date("d.m.Y", $user->time_end) : '0')),
+			'class' 	=> 'form-control datepicker',
+		);						
 		$this->_render_page('auth/edit_user', $this->data);
 	}
 

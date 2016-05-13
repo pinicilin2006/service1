@@ -93,6 +93,7 @@ $lang['edit_user_password_confirm_label']            = 'Повторите па�
 $lang['edit_user_promocode_label']            		 = 'Промокод (если есть):';
 $lang['edit_user_dop_info_label']            		 = 'Примечание:';
 $lang['edit_user_sms_label']            		 	 = 'Доступно SMS:';
+$lang['edit_user_time_end_label']            		 = 'Дата окончания доступа:';
 $lang['edit_user_validation_sms_label']           	 = 'Доступно SMS:';
 $lang['edit_user_phone_label']                       = 'Телефон:';
 $lang['edit_user_groups_heading']                    = 'Член группы';
