@@ -26,7 +26,17 @@
     <div class="blog-footer">
         <div class='container'>
             <div class='row'>
-                <div class='text-center'><a href="mailto:info@tklient.ru">info@tklient.ru</a> </div>             
+                    <div class="col-sm-6 text-left">                        
+                            <a href="mailto:info@tklient.ru">info@tklient.ru</a>                        
+                    </div>
+                    <div class="col-sm-6 text-right">
+                        <?php if($this->ion_auth->logged_in()):?>                       
+                            <a href="/auth/edit_user/<?=$this->ion_auth->user()->row()->id?>">Личный кабинет</a>
+                        <?php endif;?>    
+                        <?php if($this->ion_auth->is_admin()):?>
+                            <a href="/auth/">Админка</a>
+                        <?php endif;?>                                               
+                    </div>            
             </div>
         </div>
-    </div>
+    </div><
