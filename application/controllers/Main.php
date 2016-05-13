@@ -395,7 +395,8 @@ class Main extends CI_Controller {
 		$request_full_info = $this->Request_data->request_full_info($this->input->post('id_request'));
 		$request_full_info = $request_full_info->result_array();
 		$phone_number = substr_replace(preg_replace("#[^\d]#", "", $request_full_info[0]['phone']),"7",0, 1);
-		if($this->smsc_api->send_sms($phone_number, $sms_message, 0))
+		$sms_sending = $this->smsc_api->send_sms($phone_number, $sms_message, 0);
+		if($sms_sending)
 		{
 			$this->Update_model->send_sms($this->ion_auth->user()->row()->id);
 			$data_sms = array(
@@ -404,6 +405,7 @@ class Main extends CI_Controller {
 				'text_sms' 		=> $sms_message,
 				'id_request'	=> $this->input->post('id_request'),
 				'id_user'		=> $this->ion_auth->user()->row()->id,
+				'price'			=> $sms_sending[2],
 			);
 			$this->Insert_model->send_sms($data_sms);
 			$data['sms_message'] = $sms_message;
