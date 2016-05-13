@@ -33,12 +33,18 @@ class Tools extends CI_Controller {
 			$this->Insert_model->message_to_user($message);
 		//Отправляем письмо с уведомлением о окончание действия полного доступа
         	$this->email->clear();
-        	$this->email->to('info@tklient.ru');
         	$this->email->to($row->email);
         	$this->email->from('site@tklient.ru');
         	$this->email->subject('Полный доступ приостановлен');
         	$this->email->message($this->load->view('mail_access_denied',$row,true));
-        	$this->email->send();			
+        	$this->email->send();
+        //Отправляем письмо с уведомлением для админов
+        	$this->email->clear();
+        	$this->email->to('info@tklient.ru');
+        	$this->email->from('site@tklient.ru');
+        	$this->email->subject('Полный доступ приостановлен');
+        	$this->email->message('Пользователь: '.$row->email);
+        	$this->email->send();        			
 		}
 	}
 }
