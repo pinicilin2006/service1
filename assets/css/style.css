@@ -87,17 +87,25 @@ h6, .h6 {
   padding-top: 40px;
   padding-bottom: 20px;
 }
+.blog-header-logo {
+  width: 25%;
+  // float:left;
+}
 .blog-title {
   margin-top: 30px;
   margin-bottom: 0;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: normal;
 }
 .blog-description {
-  font-size: 20px;
+  font-size: 17px;
   color: #999;
+  margin-bottom: 0;
 }
 
+.pluso{
+  margin-top: 10px;
+}
 
 /*
  * Main column and sidebar layout
