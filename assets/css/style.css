@@ -185,6 +185,7 @@ html {
 }
 .blog-footer a {
   color: #fff;
+  text-decoration: none;
 }
 .login-help {
   font-size: 14px;
@@ -478,4 +479,9 @@ bottom: 60px; /* отступ снизу */
 display: none; /* спрятать блок */
 cursor: pointer;
 z-index: 100; 
+}
+
+.blog-footer ul, ol {
+  margin-top: 2px;
+  margin-bottom: 2px;
 }

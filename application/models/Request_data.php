@@ -276,6 +276,18 @@ class Request_data extends CI_Model {
           $this->db->where('user_id',$user_id);
           $query = $this->db->get('users_mark');
           return $query->result();
+        }
+
+        public function count_user_request($user_id,$period = FALSE)
+        {
+          if($period === FALSE)
+          {
+            $period = 0;
+          }
+          $this->db->where('id_user',$user_id);
+          $this->db->where('time_create >',$period);
+          $query = $this->db->count_all_results('request');
+          return $query;          
         }          	
 }
 ?>

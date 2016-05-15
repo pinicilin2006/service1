@@ -13,7 +13,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
       <div class="row">
 
-        <div class="col-sm-9 blog-main"
+        <div class="col-sm-9 blog-main">
+        <?php $this->view('auth/user_menu') ?>
           <div class="blog-post">
 	          <?php if ($message):?>
 		          <div class="alert alert-warning alert-dismissable">
@@ -148,7 +149,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <?php echo form_close();?>
 </div><!-- /.blog-main -->
-
+</div>
         <?php $this->view('right_sidebar') ?>
 
       </div><!-- /.row -->
