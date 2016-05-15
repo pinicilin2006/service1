@@ -29,7 +29,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <li class="list-group-item">Всего ваших заявок за 7 дней:<span class="badge"><?=$week_user_request?></span></li>
     <li class="list-group-item">Всего ваших заявок за последние 24 часа:<span class="badge"><?=$hour24_user_request?></span></li>
     <li class="list-group-item">Всего ваших заявок за последние 4 часа:<span class="badge"><?=$hour4_user_request?></span></li>
-    <li class="list-group-item">Всего ващих заявок за последний час:<span class="badge"><?=$hour1_user_request?></span></li>
+    <li class="list-group-item">Всего ваших заявок за последний час:<span class="badge"><?=$hour1_user_request?></span></li>
   </ul>
   </div>
 
