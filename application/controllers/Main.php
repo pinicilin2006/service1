@@ -388,7 +388,7 @@ class Main extends CI_Controller {
 			echo $message;			
 			return FALSE;
 		}
-		$sms_message = 'Имеется "'.$this->input->post('sms_name').'" за '.$this->input->post('sms_price').'. '.$this->ion_auth->user()->row()->phone;
+		$sms_message = 'Имеется "'.$this->input->post('sms_name').'" цена '.$this->input->post('sms_price').'. '.$this->ion_auth->user()->row()->phone;
 		$this->load->library('smsc_api');
 		$this->load->model('Update_model');
 		$this->load->model('Insert_model');
