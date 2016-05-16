@@ -285,6 +285,7 @@ class Main extends CI_Controller {
 			{
 				$data['request_info'] = $request_data;
 				$user_id = $this->ion_auth->user()->row()->id;
+				$data['sms_data'] = $this->Request_data->sms_data($user_id,$id);
 				if(!$this->Request_data->request_read($id,$user_id)){
 					$data_read = array(
 						'id_request' => $id,

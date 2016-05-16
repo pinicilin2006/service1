@@ -88,6 +88,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	</li>						
 
 	  <?php	if($this->ion_auth->logged_in() && $this->ion_auth->in_group('SMS') && $row['phone']):?>
+	  	<?php foreach($sms_data as $sms):?>
+		<li class="list-group-item">
+			<ol class="list-inline">
+	  			<li><b>Ранее отправленное смс:</b></li>
+	  			<li><?=$sms->text_sms?></a></li>
+			</ol>
+		</li>	  		
+	  	<?php endforeach ;?>	  	
 	  	<li class="list-group-item">
 	  		<div id="sms_data">
 		  		<div class="row">
@@ -105,7 +113,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					</form>
 				</div>
 			</div>
-	  	</li>
+	  	</li>	
 	  <?php endif;?>
   <?php endforeach;?>	  
 </ol>

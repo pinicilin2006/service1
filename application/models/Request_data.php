@@ -284,6 +284,14 @@ class Request_data extends CI_Model {
           $this->db->where('time_create >',$period);
           $query = $this->db->count_all_results('request');
           return $query;          
-        }          	
+        }
+        
+        public function sms_data($id_user,$id_request)
+        {
+          $this->db->where('id_user',$id_user);
+          $this->db->where('id_request',$id_request);
+          $query = $this->db->get('users_sms');
+          return $query->result();
+        }
 }
 ?>
