@@ -401,10 +401,10 @@ class Main extends CI_Controller {
 			if($this->ion_auth->user()->row()->sms >0)
 			{
 				$type_sms = 'free';
-				$this->Update_model->send_sms($this->ion_auth->user()->row()->id);
+				$this->Update_model->send_sms($this->ion_auth->user()->row()->id,$sms_sending[1]);
 			} else {
 				$type_sms = 'paid';
-				$this->Update_model->send_sms_paid($this->ion_auth->user()->row()->id);
+				$this->Update_model->send_sms_paid($this->ion_auth->user()->row()->id,$sms_sending[1]);
 			}
 			
 			$data_sms = array(
@@ -418,6 +418,7 @@ class Main extends CI_Controller {
 			);
 			$this->Insert_model->send_sms($data_sms);
 			$data['sms_message'] = $sms_message;
+			$data['sms_count'] = $sms_sending[1];
 			$message = $this->load->view('ajax/send_sms_success',$data,true);
 			echo $message;
 		} else {
