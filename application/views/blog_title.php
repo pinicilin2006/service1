@@ -19,7 +19,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			</div> -->
 			<div class="blog-header">
 					<div class="col-sm-4">
-						<a href="/"><img src="/assets/images/logo.png" alt="..." class="img-thumbnail"></a>
+						<a href="/"><img style="width: 100%" src="/assets/images/logo.png" alt="..." ></a>
 					</div>
 					<div class="col-sm-8">
 						<h1 class="blog-title">Регулярно обновляемая база заявок по поиску контрактных запчастей</h1>

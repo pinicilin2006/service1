@@ -9,8 +9,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                           <i class="fa fa-bars"></i>
                         </button>
                         <div class="logo-wrapper">
-                            <a class="navbar-brand" href="/main/index/all">
-                                <p>TKLIENT.RU</p>
+                            <a  href="/main/index/all">
+                                <img src="/assets/images/logo_brand3.png" alt="TKlient.ru" >
                             </a>
                         </div>  
                     </div>
