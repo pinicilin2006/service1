@@ -578,6 +578,7 @@ class Auth extends CI_Controller {
 		$this->form_validation->set_rules('company', $this->lang->line('edit_user_validation_company_label'), 'required');
 		$this->form_validation->set_rules('promocode', $this->lang->line('edit_user_validation_promocode_label'), '');
 		$this->form_validation->set_rules('sms', $this->lang->line('edit_user_validation_sms_label'), 'is_natural');
+		$this->form_validation->set_rules('sms_paid', $this->lang->line('edit_user_validation_sms_paid_label'), 'is_natural');		
 		$this->form_validation->set_rules('time_end', $this->lang->line('edit_user_validation_time_end_label'), 'strtotime|is_natural');		
 
 		if (isset($_POST) && !empty($_POST))
@@ -605,6 +606,7 @@ class Auth extends CI_Controller {
 					'promocode'  => $this->input->post('promocode'),
 					'dop_info'   => $this->input->post('dop_info'),
 					'sms'   	 => $this->input->post('sms'),
+					'sms_paid'   => $this->input->post('sms_paid'),
 					'time_end'   => $this->input->post('time_end'),
 				);
 
@@ -738,6 +740,13 @@ class Auth extends CI_Controller {
 			'value' => $this->form_validation->set_value('sms', $user->sms),
 			'class' => 'form-control'
 		);
+		$this->data['sms_paid'] = array(
+			'name'  => 'sms_paid',
+			'id'    => 'sms_paid',
+			'type'  => 'text',
+			'value' => $this->form_validation->set_value('sms_paid', $user->sms_paid),
+			'class' => 'form-control'
+		);		
 		$this->data['time_end'] = array(
 			'name'  	=> 'time_end',
 			'id'    	=> 'time_end',

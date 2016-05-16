@@ -381,7 +381,7 @@ class Main extends CI_Controller {
 			echo $message;			
 			return FALSE;
 		}
-		if($this->ion_auth->user()->row()->sms < 1)
+		if($this->ion_auth->user()->row()->sms < 1 && $this->ion_auth->user()->row()->sms_paid < 1)
 		{
 			$message = $this->load->view('ajax/send_sms_no_limit','',true);
 			echo $message;			
@@ -398,7 +398,15 @@ class Main extends CI_Controller {
 		$sms_sending = $this->smsc_api->send_sms($phone_number, $sms_message, 0);
 		if($sms_sending)
 		{
-			$this->Update_model->send_sms($this->ion_auth->user()->row()->id);
+			if($this->ion_auth->user()->row()->sms >0)
+			{
+				$type_sms = 'free';
+				$this->Update_model->send_sms($this->ion_auth->user()->row()->id);
+			} else {
+				$type_sms = 'paid';
+				$this->Update_model->send_sms_paid($this->ion_auth->user()->row()->id);
+			}
+			
 			$data_sms = array(
 				'time_send' 	=> now(),
 				'number_phone' 	=> $phone_number,
@@ -406,6 +414,7 @@ class Main extends CI_Controller {
 				'id_request'	=> $this->input->post('id_request'),
 				'id_user'		=> $this->ion_auth->user()->row()->id,
 				'price'			=> $sms_sending[2],
+				'type_sms'		=> $type_sms,
 			);
 			$this->Insert_model->send_sms($data_sms);
 			$data['sms_message'] = $sms_message;

@@ -106,6 +106,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </div>
 
     <div class="form-group">
+      <label for="sms_paid" class="col-sm-4 control-label"><?php echo lang('edit_user_sms_paid_label', 'sms');?></label>            
+             <div class="col-sm-8">
+              <?php echo form_input($sms_paid);?>
+              <span class="text-danger"><em><small><?php echo form_error('sms_paid'); ?></em></small></span>
+            </div>
+    </div>
+
+    <div class="form-group">
       <label for="time_end" class="col-sm-4 control-label"><?php echo lang('edit_user_time_end_label', 'time_end');?></label>            
              <div class="col-sm-8">
               <?php echo form_input($time_end);?>

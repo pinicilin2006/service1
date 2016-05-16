@@ -16,7 +16,13 @@ class Update_model extends CI_Model{
     	$this->db->where('id',$id_user);
     	$this->db->set('sms','sms-1',FALSE);
     	$this->db->update('users');
-    }        
+    }
+    public function send_sms_paid($id_user)
+    {
+        $this->db->where('id',$id_user);
+        $this->db->set('sms_paid','sms_paid-1',FALSE);
+        $this->db->update('users');
+    }             
 
 }
 
