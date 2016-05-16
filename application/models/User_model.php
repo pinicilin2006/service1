@@ -11,9 +11,18 @@ class User_model extends CI_Model{
     public function user_messages($user_id)
     {
         $this->db->where('id_user',$user_id);
+        $this->db->order_by('id_message','desc');
         $query = $this->db->get('message_to_users');
         return $query->result();
     }
+    
+    public function user_messages_unread($user_id)
+    {
+        $this->db->where('id_user',$user_id);
+        $this->db->where('reading','0');
+        $query = $this->db->get('message_to_users');
+        return $query->result();
+    }    
 }
 
 ?>

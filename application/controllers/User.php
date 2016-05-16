@@ -14,6 +14,10 @@ class User extends CI_Controller {
 
 	public function user_message()
 	{
+		if(!$this->ion_auth->logged_in())
+		{
+			redirect('/', 'refresh');
+		}
 		$data['all_request_count_all'] = $this->Request_data->request_count();
 	 	$data['all_request_count_today'] = $this->Request_data->request_count_today();
 	 	$user_id = $this->ion_auth->user()->row()->id;
@@ -30,6 +34,10 @@ class User extends CI_Controller {
 
 	public function user_sms()
 	{
+		if(!$this->ion_auth->logged_in())
+		{
+			redirect('/', 'refresh');
+		}		
 		$data['all_request_count_all'] = $this->Request_data->request_count();
 	 	$data['all_request_count_today'] = $this->Request_data->request_count_today();		
 		$this->load->view('user/user_sms', $data);
@@ -37,6 +45,10 @@ class User extends CI_Controller {
 
 	public function user_request()
 	{
+		if(!$this->ion_auth->logged_in())
+		{
+			redirect('/', 'refresh');
+		}		
 		$data['all_request_count_all'] = $this->Request_data->request_count();
 	 	$data['all_request_count_today'] = $this->Request_data->request_count_today();		
 		$user_id = $this->ion_auth->user()->row()->id;
@@ -56,6 +68,10 @@ class User extends CI_Controller {
 
 	public function user_payment()
 	{
+		if(!$this->ion_auth->logged_in())
+		{
+			redirect('/', 'refresh');
+		}		
 		$data['all_request_count_all'] = $this->Request_data->request_count();
 	 	$data['all_request_count_today'] = $this->Request_data->request_count_today();		
 		$this->load->view('user/user_payment', $data);

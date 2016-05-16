@@ -22,7 +22,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <div class="sidebar-module">
             <div class="panel panel-default">
               <!-- Default panel contents -->
-              <div class="panel-heading">Новости <a href="http://tklient.ru">Tklient.ru</a>:</div>
+              <div class="panel-heading">Новости <a href="http://tklient.ru">TKlient.ru</a>:</div>
               <!-- List group -->
               <ul class="list-group">
                     <li class="list-group-item"><small><em>Мы рады Вам представить новый сервис по поиску контрактных автозапчастей.<br> Если вы нашли ошибку в сервисе, то просьба сообщить о ней по адресу <a href="mailto:info@tklient.ru">info@tklient.ru.</a></em></small></li>

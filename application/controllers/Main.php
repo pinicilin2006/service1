@@ -13,7 +13,8 @@ class Main extends CI_Controller {
 
 		$this->load->model('Auto_data');
 		$this->load->model('Detail_data');
-		$this->load->model('Region_data');		
+		$this->load->model('Region_data');
+		$this->load->model('User_model');			
 		$this->load->library('pagination');
 		if($this->ion_auth->logged_in())
 		{	
@@ -27,8 +28,10 @@ class Main extends CI_Controller {
 			} else {
 				$data['request_read'][] = NULL;
 			}
+			$data['message_unread'] = $this->User_model->user_messages_unread($user_id);
 		} else {
 			$user_id = FALSE;
+			$data['message_unread'] = FALSE;
 		}	
 		$data['all_request_count_all'] = $this->Request_data->request_count();
 	 	$data['all_request_count_today'] = $this->Request_data->request_count_today();
@@ -96,7 +99,6 @@ class Main extends CI_Controller {
 		$data['pagination'] = $this->pagination->create_links();
 		$table_data = $this->Request_data->request_limit_to_table($limit,$offset,$filter,$limit_mark);
 		$data['table_data'] = $table_data->result_array();
-		
 		$this->load->view('main_page',$data);
 	}
 

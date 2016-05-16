@@ -19,6 +19,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
           <div class="blog-post">
           <?=$pagination?>
+          <?php if($message_unread):?>
+          <a href="/user/user_message"><small><span class="pull-right text-danger"><i class="fa fa-commenting-o" aria-hidden="true"></i> <b>Имеется непрочитанное сообщение</b></span></small></a>
+        <?php endif; ?>
             <!-- Содержимое страницы здесь -->
             <div class="panel panel-default" style="margin-bottom: 0px">
               <!-- Default panel contents -->
@@ -122,7 +125,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                   </div>
                 </div> 
               </div>
-              <small><span><i class="fa fa-check" aria-hidden="true"></i>-прочитаны</span></small>           
+              <small><span><i class="fa fa-check" aria-hidden="true"></i>-прочитаны</span></small>          
               <table class="table table-hover table-condensed table-bordered" id="request_table">
                 <thead>
                 <tr>
