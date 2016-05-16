@@ -90,18 +90,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	  <?php	if($this->ion_auth->logged_in() && $this->ion_auth->in_group('SMS') && $row['phone']):?>
 	  	<li class="list-group-item">
 	  		<div id="sms_data">
-				<form class="form-inline" id='send_sms' role="form">
-				  <div class="form-group">
-				    <label class="sr-only" for="sms_name">Название детали</label>
-				    <input type="text" class="form-control" name="sms_name" id="sms_name" placeholder="Название детали" required="required">
-				  </div>
-				  <div class="form-group">
-				    <label class="sr-only" for="sms_price">Цена</label>
-				    <input type="text" class="form-control" name="sms_price" id="sms_price" placeholder="Цена" required="required">
-				  </div>
-				  <input type="hidden" name="id_request" value="<?=$row['id_request']?>"></input>
-				  <button type="submit" id="button_send_sms" data-loading-text="Отправка..." class="btn btn-success">Отправить SMS</button>
-				</form>
+		  		<div class="row">
+					<form class="form-inline" id='send_sms' role="form">
+					  <div class="form-group">
+					    <label class="sr-only" for="sms_name">Название детали</label>
+					    <input type="text" maxlength="200" class="form-control" name="sms_name" id="sms_name" placeholder="Название детали" required="required">
+					  </div>
+					  <div class="form-group">
+					    <label class="sr-only" for="sms_price">Цена</label>
+					    <input type="text" class="form-control" name="sms_price" id="sms_price" placeholder="Цена" required="required">
+					  </div>
+					  <input type="hidden" name="id_request" value="<?=$row['id_request']?>"></input>
+					  <button type="submit" id="button_send_sms" data-loading-text="Отправка..." class="btn btn-success">Отправить SMS</button>
+					</form>
+				</div>
 			</div>
 	  	</li>
 	  <?php endif;?>

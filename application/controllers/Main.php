@@ -415,6 +415,7 @@ class Main extends CI_Controller {
 				'id_user'		=> $this->ion_auth->user()->row()->id,
 				'price'			=> $sms_sending[2],
 				'type_sms'		=> $type_sms,
+				'count_sms'		=> $sms_sending[1],
 			);
 			$this->Insert_model->send_sms($data_sms);
 			$data['sms_message'] = $sms_message;
