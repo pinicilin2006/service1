@@ -21,7 +21,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div class="panel panel-success">
   <!-- Default panel contents -->
   <div class="panel-heading"><h3 class="panel-title">Отчёт по заявкам</h3></div>
-  <div class="panel-body">
+  
   <!-- List group -->
   <ul class="list-group">
     <li class="list-group-item">Всего ваших заявок:<span class="badge"><?=$all_user_request?></span></li>
@@ -31,8 +31,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <li class="list-group-item">Всего ваших заявок за последние 4 часа:<span class="badge"><?=$hour4_user_request?></span></li>
     <li class="list-group-item">Всего ваших заявок за последний час:<span class="badge"><?=$hour1_user_request?></span></li>
   </ul>
-  </div>
-
+  
 
 </div>
 
