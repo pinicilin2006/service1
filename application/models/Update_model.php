@@ -22,7 +22,13 @@ class Update_model extends CI_Model{
         $this->db->where('id',$id_user);
         $this->db->set('sms_paid',"sms_paid-$num",FALSE);
         $this->db->update('users');
-    }             
+    }
+    public function message_reading($id_message)
+    {
+        $this->db->where('id_message',$id_message);
+        $this->db->set('reading','1');
+        $this->db->update('message_to_users');
+    }
 
 }
 

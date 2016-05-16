@@ -278,12 +278,8 @@ class Request_data extends CI_Model {
           return $query->result();
         }
 
-        public function count_user_request($user_id,$period = FALSE)
+        public function count_user_request($user_id,$period = 0)
         {
-          if($period === FALSE)
-          {
-            $period = 0;
-          }
           $this->db->where('id_user',$user_id);
           $this->db->where('time_create >',$period);
           $query = $this->db->count_all_results('request');

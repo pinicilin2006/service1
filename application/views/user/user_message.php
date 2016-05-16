@@ -11,23 +11,39 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <?php $this->view('blog_title') ?>
 
-      <div class="row">
-
         <div class="col-sm-9 blog-main">
-<?php $this->view('auth/user_menu') ?>
+          <?php $this->view('auth/user_menu') ?>
           <div class="blog-post">
+              <?=(!$user_messages ? '<span class="text-success">Отсутствуют сообщения</span>' : '')?>
+              <div class="panel-group" id="accordion">
+                  <?php $x = 0;?>
+                  <?php foreach ($user_messages as $row):?>
+                    <?php $x++?>
+                <div class="panel panel-primary">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse<?=$row->id_message?>">
+                              <?=$row->message_name?>
+                            </a>
+                          </h4>
+                  </div>
+                  <div id="collapse<?=$row->id_message?>" class="panel-collapse collapse <?=($x == 1 ? 'in' : '')?>">
+                    <div class="panel-body">
+                      <?=$row->message_text?>
+                    </div>
+                  </div>
+                </div>
 
-			
- <span class="text-danger">В разработке...</span>
+              <?php endforeach;?>
+              </div>
 
 
           </div>	
-
         </div><!-- /.blog-main -->
 
         <?php $this->view('right_sidebar') ?>
 
-      </div><!-- /.row -->
+
 
     </div><!-- /.container -->
 

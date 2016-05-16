@@ -6,6 +6,8 @@ class User extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('Request_data');
+		$this->load->model('User_model');
+		$this->load->model('Update_model');
 	}	
 	
 	
@@ -15,6 +17,14 @@ class User extends CI_Controller {
 		$data['all_request_count_all'] = $this->Request_data->request_count();
 	 	$data['all_request_count_today'] = $this->Request_data->request_count_today();
 	 	$user_id = $this->ion_auth->user()->row()->id;
+	 	$user_messages = $this->User_model->user_messages($user_id);
+	 	$data['user_messages'] = $user_messages;
+	 	foreach ($user_messages as $row) {
+	 		if($row->reading == '0')
+	 		{
+	 			$this->Update_model->message_reading($row->id_message);
+	 		}
+	 	}
 	 	$this->load->view('user/user_message', $data);
 	}
 
