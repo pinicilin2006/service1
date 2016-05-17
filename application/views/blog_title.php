@@ -46,7 +46,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			  <ul class="list-group">
 			    <li class="list-group-item"><span class="badge"><?=$all_request_count_today?></span>Добавлено за сутки</li>
 			    <li class="list-group-item"><span class="badge"><?=$all_request_count_all?></span>Всего заявок</li>
-			  </ul>
+				<?php if(isset($message_unread) && $message_unread && uri_string() != '/user/user_message'):?>
+				<li class="list-group-item"><a style="text-decoration: none; " href="/user/user_message"><span class="text-danger" ><i class="fa fa-commenting-o" aria-hidden="true"></i> <b class="alert_message">Имеется сообщение</b></span></a>
+				</li>
+				<?php endif; ?>		  
+        	  </ul>
 			</div>
 
 

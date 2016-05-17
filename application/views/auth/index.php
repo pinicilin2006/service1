@@ -14,11 +14,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <div class="row">
 
         <div class="col-sm-9 blog-main">
-
+        <?php $this->view('auth/admin_menu') ?>
           <div class="blog-post">
-
-<!-- 			<h1><?php echo lang('index_heading');?></h1>
-			<p><?php echo lang('index_subheading');?></p> -->
 			<div id="infoMessage"><?php echo $message;?></div>
 
 				<div class="panel panel-default">

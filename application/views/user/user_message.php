@@ -21,9 +21,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <?php $x++?>
                 <div class="panel panel-primary">
                   <div class="panel-heading">
-                    <h4 class="panel-title">
+                    <h4 class="panel-title message_name">
                             <a data-toggle="collapse" data-parent="#accordion" href="#collapse<?=$row->id_message?>">
-                              <?=$row->message_name?>
+                              <?=date('d.m.Y',$row->time_create)?>. <?=$row->message_name?>
                             </a>
                           </h4>
                   </div>

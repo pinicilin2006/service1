@@ -22,7 +22,15 @@ class User_model extends CI_Model{
         $this->db->where('reading','0');
         $query = $this->db->get('message_to_users');
         return $query->result();
-    }    
+    }
+
+    public function check_message_user($user_id,$uniq_id) 
+    {
+        $this->db->where('id_user',$user_id);
+        $this->db->where('uniq_id',$uniq_id);
+        $query = $this->db->get('message_to_users');
+        return $query->num_rows();
+    }   
 }
 
 ?>

@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
-<ul class="nav nav-tabs">
+<ul class="nav nav-pills">
   
   <li class="<?php echo (uri_string() == 'auth/edit_user/'.$this->ion_auth->user()->row()->id ? 'active' : '') ?>"><a href="/auth/edit_user/<?=$this->ion_auth->user()->row()->id?>">Профиль</a></li>
 

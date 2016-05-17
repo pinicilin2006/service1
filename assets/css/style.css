@@ -491,3 +491,41 @@ z-index: 100;
   padding-top: 20px;
   // padding-bottom: 20px;
 }
+
+.message_name a{
+  text-decoration: none;  
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+  color: #fff;
+  background-color: #98d361;
+}
+.panel-primary {
+  border-color: #98d361;
+}
+.panel-primary > .panel-heading {
+  // color: #fff;
+  background-color: #98d361;
+  border-color: #98d361;
+}
+
+.panel-primary > .panel-heading + .panel-collapse > .panel-body {
+  border-top-color: #98d361;
+}
+
+.alert_message { 
+  -webkit-animation: blink1 3s linear infinite; 
+  animation: blink1 3s linear infinite; 
+}
+
+@-webkit-keyframes blink1 {
+   0% { color: rgba(217, 83, 79, 1); }
+   50% { color: rgba(217, 83, 79, 0); }
+   100% { color: rgba(217, 83, 79, 1); }
+ }
+
+ @keyframes blink1 {
+  0% { color: rgba(217, 83, 79, 1); }
+  50% { color: rgba(217, 83, 79, 0); }
+  100% { color: rgba(217, 83, 79, 1); }
+}

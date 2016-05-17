@@ -62,15 +62,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             	<?php echo form_input($phone);?>
               <span class="text-danger"><em><small><?php echo form_error('phone'); ?></em></small></span>
             </div>
-        </div>            
-
-    <div class="form-group">
-      <label for="promocode" class="col-sm-4 control-label"><?php echo lang('edit_user_promocode_label', 'promocode');?></label>            
-             <div class="col-sm-8">
-              <?php echo form_input($promocode);?>
-              <span class="text-danger"><em><small><?php echo form_error('promocode'); ?></em></small></span>
-            </div>
-        </div>      
+        </div>                 
 
 		<div class="form-group">
 			<label for="password" class="col-sm-4 control-label"><?php echo lang('edit_user_password_label', 'password');?></label>            
@@ -89,6 +81,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>      
       
 <?php if ($this->ion_auth->is_admin()): ?>
+    <div class="form-group">
+      <label for="promocode" class="col-sm-4 control-label"><?php echo lang('edit_user_promocode_label', 'promocode');?></label>            
+             <div class="col-sm-8">
+              <?php echo form_input($promocode);?>
+              <span class="text-danger"><em><small><?php echo form_error('promocode'); ?></em></small></span>
+            </div>
+        </div> 
+          
     <div class="form-group">
       <label for="dop_info" class="col-sm-4 control-label"><?php echo lang('edit_user_dop_info_label', 'dop_info');?></label>            
              <div class="col-sm-8">

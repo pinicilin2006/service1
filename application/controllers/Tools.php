@@ -20,9 +20,10 @@ class Tools extends CI_Controller {
 		$data = array(
 			'time_end' => 0, 
 		);
-		$message = array(
-			'message_text' => 'Истёк период полного доступа к заявкам.',
+		$message = array(	
+			'message_name' => 'Истёк период полного доступа к заявкам',
 			'time_create'  => $date,
+			'uniq_id'	   => 'access_denied',		
 		);
 		$users = $this->Tools_model->users_id($date);
 		foreach ($users as $row)
@@ -30,6 +31,7 @@ class Tools extends CI_Controller {
 			$this->ion_auth->remove_from_group($group,$row->id);
 			$this->Tools_model->users_access_delete($row->id,$data);
 			$message['id_user'] = $row->id;
+			$message['message_text'] = $this->load->view('mail_access_denied',$row,true);
 			$this->Insert_model->message_to_user($message);
 		//Отправляем письмо с уведомлением о окончание действия полного доступа
         	$this->email->clear();
