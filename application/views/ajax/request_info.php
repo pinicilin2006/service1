@@ -84,7 +84,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		</ol>
 	</li>
 	<li class="list-group-item">
-		<textarea name="notes" id="<?=$row['id_request']?>" class="user_notes" rows="2" placeholder="Здесь вы можете оставить отметку о работе по данной заявке, которая видна будет только Вам" style="width:100%;"><?=$notes_text?></textarea>		
+		<ol class="list-inline">
+  			<li><b>Примечание:</b></li>		
+			<li><textarea name="notes" id="<?=$row['id_request']?>" class="user_notes" rows="2" placeholder="Здесь вы можете оставить отметку о работе по данной заявке, которая видна будет только Вам" style="width:100%;"><?=$notes_text?></textarea></li>		
+		</ol>		
 	</li>						
 
 	  <?php	if($this->ion_auth->logged_in() && $this->ion_auth->in_group('SMS') && $row['phone']):?>
