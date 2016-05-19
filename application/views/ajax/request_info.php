@@ -77,14 +77,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   			<li><a href="tel:+<?=preg_replace("/\D+/", "", $row['phone'])?>"><?=$row['phone']?></a></li>
 		</ol>
 	</li>
+	<?php if($row['email']):?>
 	<li class="list-group-item">
 		<ol class="list-inline">
   			<li><b>Email:</b></li>
   			<li><a href="mailto:<?=$row['email']?>"><?=$row['email']?></a></li>
 		</ol>
 	</li>
+	<?php endif; ?>
 	<li class="list-group-item">
-		<textarea name="notes" id="<?=$row['id_request']?>" class="user_notes" rows="2" placeholder="Здесь вы можете оставить отметку о работе по данной заявке, которая видна будет только Вам" style="width:100%;"><?=$notes_text?></textarea>		
+		<textarea name="notes" id="<?=$row['id_request']?>" class="user_notes" rows="2" placeholder="Здесь вы можете оставить отметку о работе по данной заявке, которая видна будет только Вам" style="width:100%;"><?=$notes_text?></textarea>
 	</li>						
 
 	  <?php	if($this->ion_auth->logged_in() && $this->ion_auth->in_group('SMS') && $row['phone']):?>
