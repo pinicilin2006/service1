@@ -26,25 +26,21 @@
     <div class="blog-footer">
         <div class='container'>
             <div class='row'>
-                    <div class="col-sm-4">
-                        <ul class="list-inline">
-                            <li><a href="http://h-aa.ru"><small>Изготовление сайта www.h-aa.ru</small></a></li>
-                        </ul>                        
-                    </div>            
-                    <div class="col-sm-2 text-right">
-                        <ul class="list-inline">
-                            <li><a href="mailto:info@tklient.ru"><small>Связаться с нами</small></a></li>
-                        </ul>                        
-                    </div>
-                    <div class="col-sm-6 text-right">
-                        <ul class="list-inline">
+                    <div class="col-sm-6 footer-menu">
+                        <ul class="list-unstyled">
                         <?php if($this->ion_auth->logged_in()):?>                       
                             <li><a href="/auth/edit_user/<?=$this->ion_auth->user()->row()->id?>"><small>Личный кабинет</small></a></li>
                         <?php endif;?>    
                         <?php if($this->ion_auth->is_admin()):?>
                             <li><a href="/auth/"><small>Админка</small></a></li>
-                        <?php endif;?> 
-                    </ul>                                              
+                        <?php endif;?>                            
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 text-right">
+                        <ul class="list-unstyled">
+                            <li><a href="mailto:info@tklient.ru"><small>Связаться с нами</small></a></li>
+                            <li><a href="http://h-aa.ru"><small>Изготовление сайта</small></a></li> 
+                        </ul>                                              
                     </div>            
             </div>
         </div>

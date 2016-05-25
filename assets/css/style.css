@@ -529,3 +529,13 @@ z-index: 100;
   50% { color: rgba(217, 83, 79, 0); }
   100% { color: rgba(217, 83, 79, 1); }
 }
+
+.footer-menu {
+  text-align: left;
+}
+
+@media screen and (max-width: 1024px) {
+  .footer-menu {
+    text-align: right;
+  }  
+}
