@@ -24,6 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			        <table class="table table-hover table-condensed table-bordered" id="request_table">
 						<thead>
 							<tr>
+								<th>#</th>
 								<th><?php echo lang('index_fname_th');?></th>
 								<th><?php echo lang('index_lname_th');?></th>
 								<th><?php echo lang('index_email_th');?></th>
@@ -36,6 +37,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<tbody>
 						<?php foreach ($users as $user):?>
 							<tr>
+								<td><?php echo $user->id;?></td>
 					            <td><?php echo htmlspecialchars($user->first_name,ENT_QUOTES,'UTF-8');?></td>
 					            <td><?php echo htmlspecialchars($user->last_name,ENT_QUOTES,'UTF-8');?></td>
 					            <td><?php echo htmlspecialchars($user->email,ENT_QUOTES,'UTF-8');?></td>
