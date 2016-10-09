@@ -27,7 +27,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           			'class' => 'form-horizontal',
           			'role' 	=> 'form'
           		);
-          		echo form_open('auth/login', $attributes);
+          		echo form_open('/auth/login', $attributes);
           		?>
 				<legend>Вход для зарегистрированых пользователей</legend>
 				  <div class="form-group">

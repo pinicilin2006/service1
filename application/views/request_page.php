@@ -19,7 +19,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <div class="row">
 
         <div class="col-sm-9 blog-main">
-
           <div class="blog-post">
               <?php echo validation_errors(); ?>
               <?php
@@ -30,6 +29,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               echo form_open('main/request_add', $attributes);
               ?>
               <legend>Добавление заявки на поиск автозапчасти</legend>
+              
                 <div class="row" id="register-message">
                   <p>
                     <span class="text-danger">Для внесения заявки на поиск запчастей не требуется регистрация</span>

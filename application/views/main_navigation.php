@@ -10,7 +10,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </button>
                         <div class="logo-wrapper">
                             <a  href="/main/index/all">
-                                <img src="/assets/images/logo_brand3.png" alt="TKlient.ru" >
+                                <img src="/assets/images/logo_brand3.png" alt="TKlient.ru" > 
                             </a>
                         </div>  
                     </div>
