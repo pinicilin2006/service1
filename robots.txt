@@ -1,0 +1,4 @@
+User-agent: *
+Crawl-delay: 1
+Host: tklient.ru
+Sitemap: http://tklient.ru/sitemap.xml
