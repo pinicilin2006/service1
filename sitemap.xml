@@ -1,0 +1,1434 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+		<!--	created with www.mysitemapgenerator.com	-->
+		<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<url>
+	<loc>http://tklient.ru/</loc>
+	<lastmod>2016-10-10T13:02:35+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/main/index/all</loc>
+	<lastmod>2016-10-10T13:02:37+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/main/request</loc>
+	<lastmod>2016-10-10T13:02:37+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/main/about</loc>
+	<lastmod>2016-10-10T13:02:38+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/auth/login</loc>
+	<lastmod>2016-10-10T13:02:40+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/50</loc>
+	<lastmod>2016-10-10T13:02:41+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/100</loc>
+	<lastmod>2016-10-10T13:02:46+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/150</loc>
+	<lastmod>2016-10-10T13:02:46+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/200</loc>
+	<lastmod>2016-10-10T13:02:46+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/13900</loc>
+	<lastmod>2016-10-10T13:02:49+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/auth/create_user</loc>
+	<lastmod>2016-10-10T13:02:49+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/auth/forgot_password</loc>
+	<lastmod>2016-10-10T13:02:50+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index</loc>
+	<lastmod>2016-10-10T13:02:56+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/250</loc>
+	<lastmod>2016-10-10T13:02:56+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/300</loc>
+	<lastmod>2016-10-10T13:02:56+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/350</loc>
+	<lastmod>2016-10-10T13:03:01+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/400</loc>
+	<lastmod>2016-10-10T13:03:01+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/13850</loc>
+	<lastmod>2016-10-10T13:03:03+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/13700</loc>
+	<lastmod>2016-10-10T13:03:07+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/13750</loc>
+	<lastmod>2016-10-10T13:03:07+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/13800</loc>
+	<lastmod>2016-10-10T13:03:13+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/450</loc>
+	<lastmod>2016-10-10T13:03:13+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/500</loc>
+	<lastmod>2016-10-10T13:03:13+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/550</loc>
+	<lastmod>2016-10-10T13:03:18+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/600</loc>
+	<lastmod>2016-10-10T13:03:19+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/13650</loc>
+	<lastmod>2016-10-10T13:03:19+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/13500</loc>
+	<lastmod>2016-10-10T13:03:23+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/13550</loc>
+	<lastmod>2016-10-10T13:03:24+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/13600</loc>
+	<lastmod>2016-10-10T13:03:24+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/650</loc>
+	<lastmod>2016-10-10T13:03:26+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/700</loc>
+	<lastmod>2016-10-10T13:03:29+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/750</loc>
+	<lastmod>2016-10-10T13:03:29+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/800</loc>
+	<lastmod>2016-10-10T13:03:30+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/13450</loc>
+	<lastmod>2016-10-10T13:03:34+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/13300</loc>
+	<lastmod>2016-10-10T13:03:34+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/13350</loc>
+	<lastmod>2016-10-10T13:03:35+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/13400</loc>
+	<lastmod>2016-10-10T13:03:39+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/850</loc>
+	<lastmod>2016-10-10T13:03:40+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/900</loc>
+	<lastmod>2016-10-10T13:03:40+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/950</loc>
+	<lastmod>2016-10-10T13:03:42+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/1000</loc>
+	<lastmod>2016-10-10T13:03:45+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/13250</loc>
+	<lastmod>2016-10-10T13:03:46+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/13100</loc>
+	<lastmod>2016-10-10T13:03:46+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/13150</loc>
+	<lastmod>2016-10-10T13:03:50+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/13200</loc>
+	<lastmod>2016-10-10T13:03:51+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/1050</loc>
+	<lastmod>2016-10-10T13:03:51+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/1100</loc>
+	<lastmod>2016-10-10T13:03:53+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/1150</loc>
+	<lastmod>2016-10-10T13:03:55+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/1200</loc>
+	<lastmod>2016-10-10T13:03:57+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/13050</loc>
+	<lastmod>2016-10-10T13:03:57+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/12900</loc>
+	<lastmod>2016-10-10T13:03:59+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/12950</loc>
+	<lastmod>2016-10-10T13:04:01+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/13000</loc>
+	<lastmod>2016-10-10T13:04:03+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/1250</loc>
+	<lastmod>2016-10-10T13:04:04+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/1300</loc>
+	<lastmod>2016-10-10T13:04:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/1350</loc>
+	<lastmod>2016-10-10T13:04:06+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/12850</loc>
+	<lastmod>2016-10-10T13:04:09+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/1400</loc>
+	<lastmod>2016-10-10T13:04:09+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/12700</loc>
+	<lastmod>2016-10-10T13:04:10+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/12750</loc>
+	<lastmod>2016-10-10T13:04:14+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/12800</loc>
+	<lastmod>2016-10-10T13:04:15+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/1450</loc>
+	<lastmod>2016-10-10T13:04:15+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/1500</loc>
+	<lastmod>2016-10-10T13:04:21+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/1550</loc>
+	<lastmod>2016-10-10T13:04:22+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/1600</loc>
+	<lastmod>2016-10-10T13:04:22+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/12650</loc>
+	<lastmod>2016-10-10T13:04:26+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/12500</loc>
+	<lastmod>2016-10-10T13:04:28+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/12550</loc>
+	<lastmod>2016-10-10T13:04:28+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/12600</loc>
+	<lastmod>2016-10-10T13:04:30+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/1650</loc>
+	<lastmod>2016-10-10T13:04:32+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/1700</loc>
+	<lastmod>2016-10-10T13:04:33+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/1750</loc>
+	<lastmod>2016-10-10T13:04:34+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/1800</loc>
+	<lastmod>2016-10-10T13:04:35+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/12450</loc>
+	<lastmod>2016-10-10T13:04:38+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/12300</loc>
+	<lastmod>2016-10-10T13:04:38+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/12350</loc>
+	<lastmod>2016-10-10T13:04:40+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/12400</loc>
+	<lastmod>2016-10-10T13:04:43+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/1850</loc>
+	<lastmod>2016-10-10T13:04:44+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/1900</loc>
+	<lastmod>2016-10-10T13:04:44+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/1950</loc>
+	<lastmod>2016-10-10T13:04:49+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/2000</loc>
+	<lastmod>2016-10-10T13:04:50+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/12250</loc>
+	<lastmod>2016-10-10T13:04:50+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/12100</loc>
+	<lastmod>2016-10-10T13:04:56+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/12150</loc>
+	<lastmod>2016-10-10T13:04:57+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/12200</loc>
+	<lastmod>2016-10-10T13:04:57+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/2050</loc>
+	<lastmod>2016-10-10T13:05:02+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/2100</loc>
+	<lastmod>2016-10-10T13:05:04+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/2150</loc>
+	<lastmod>2016-10-10T13:05:04+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/12050</loc>
+	<lastmod>2016-10-10T13:05:10+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/2200</loc>
+	<lastmod>2016-10-10T13:05:09+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/11900</loc>
+	<lastmod>2016-10-10T13:05:10+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/11950</loc>
+	<lastmod>2016-10-10T13:05:15+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/12000</loc>
+	<lastmod>2016-10-10T13:05:15+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/2250</loc>
+	<lastmod>2016-10-10T13:05:16+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/2300</loc>
+	<lastmod>2016-10-10T13:05:19+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/2350</loc>
+	<lastmod>2016-10-10T13:05:19+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/2400</loc>
+	<lastmod>2016-10-10T13:05:20+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/11850</loc>
+	<lastmod>2016-10-10T13:05:26+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/11700</loc>
+	<lastmod>2016-10-10T13:05:26+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/11750</loc>
+	<lastmod>2016-10-10T13:05:26+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/11800</loc>
+	<lastmod>2016-10-10T13:05:32+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/2450</loc>
+	<lastmod>2016-10-10T13:05:32+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/2500</loc>
+	<lastmod>2016-10-10T13:05:33+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/2550</loc>
+	<lastmod>2016-10-10T13:05:40+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/2600</loc>
+	<lastmod>2016-10-10T13:05:40+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/11650</loc>
+	<lastmod>2016-10-10T13:05:40+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/11500</loc>
+	<lastmod>2016-10-10T13:05:45+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/11550</loc>
+	<lastmod>2016-10-10T13:05:45+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/11600</loc>
+	<lastmod>2016-10-10T13:05:47+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/2650</loc>
+	<lastmod>2016-10-10T13:05:49+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/2700</loc>
+	<lastmod>2016-10-10T13:05:52+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/2750</loc>
+	<lastmod>2016-10-10T13:05:51+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/2800</loc>
+	<lastmod>2016-10-10T13:05:53+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/11450</loc>
+	<lastmod>2016-10-10T13:05:55+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/11300</loc>
+	<lastmod>2016-10-10T13:05:56+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/11350</loc>
+	<lastmod>2016-10-10T13:05:58+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/11400</loc>
+	<lastmod>2016-10-10T13:06:00+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/2850</loc>
+	<lastmod>2016-10-10T13:06:00+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/2900</loc>
+	<lastmod>2016-10-10T13:06:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/2950</loc>
+	<lastmod>2016-10-10T13:06:07+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/3000</loc>
+	<lastmod>2016-10-10T13:06:08+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/11250</loc>
+	<lastmod>2016-10-10T13:06:13+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/11100</loc>
+	<lastmod>2016-10-10T13:06:13+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/11150</loc>
+	<lastmod>2016-10-10T13:06:13+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/11200</loc>
+	<lastmod>2016-10-10T13:06:17+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/3050</loc>
+	<lastmod>2016-10-10T13:06:20+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/3100</loc>
+	<lastmod>2016-10-10T13:06:22+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/3150</loc>
+	<lastmod>2016-10-10T13:06:22+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/3200</loc>
+	<lastmod>2016-10-10T13:06:23+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/10950</loc>
+	<lastmod>2016-10-10T13:06:27+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/11000</loc>
+	<lastmod>2016-10-10T13:06:29+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/11050</loc>
+	<lastmod>2016-10-10T13:06:28+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/10900</loc>
+	<lastmod>2016-10-10T13:06:32+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/3250</loc>
+	<lastmod>2016-10-10T13:06:32+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/3300</loc>
+	<lastmod>2016-10-10T13:06:36+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/3350</loc>
+	<lastmod>2016-10-10T13:06:36+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/3400</loc>
+	<lastmod>2016-10-10T13:06:37+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/10750</loc>
+	<lastmod>2016-10-10T13:06:43+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/10800</loc>
+	<lastmod>2016-10-10T13:06:43+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/10850</loc>
+	<lastmod>2016-10-10T13:06:44+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/10700</loc>
+	<lastmod>2016-10-10T13:06:53+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/3450</loc>
+	<lastmod>2016-10-10T13:06:53+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/3500</loc>
+	<lastmod>2016-10-10T13:06:53+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/3550</loc>
+	<lastmod>2016-10-10T13:07:00+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/3600</loc>
+	<lastmod>2016-10-10T13:07:00+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/10550</loc>
+	<lastmod>2016-10-10T13:07:01+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/10600</loc>
+	<lastmod>2016-10-10T13:07:06+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/10650</loc>
+	<lastmod>2016-10-10T13:07:07+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/3650</loc>
+	<lastmod>2016-10-10T13:07:07+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/3700</loc>
+	<lastmod>2016-10-10T13:07:10+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/10500</loc>
+	<lastmod>2016-10-10T13:07:14+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/3750</loc>
+	<lastmod>2016-10-10T13:07:13+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/3800</loc>
+	<lastmod>2016-10-10T13:07:14+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/10350</loc>
+	<lastmod>2016-10-10T13:07:17+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/10400</loc>
+	<lastmod>2016-10-10T13:07:18+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/10450</loc>
+	<lastmod>2016-10-10T13:07:19+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/3850</loc>
+	<lastmod>2016-10-10T13:07:21+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/3900</loc>
+	<lastmod>2016-10-10T13:07:23+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/3950</loc>
+	<lastmod>2016-10-10T13:07:23+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/4000</loc>
+	<lastmod>2016-10-10T13:07:25+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/10300</loc>
+	<lastmod>2016-10-10T13:07:27+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/10150</loc>
+	<lastmod>2016-10-10T13:07:29+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/10200</loc>
+	<lastmod>2016-10-10T13:07:29+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/10250</loc>
+	<lastmod>2016-10-10T13:07:30+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/4050</loc>
+	<lastmod>2016-10-10T13:07:34+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/4100</loc>
+	<lastmod>2016-10-10T13:07:36+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/4150</loc>
+	<lastmod>2016-10-10T13:07:36+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/4200</loc>
+	<lastmod>2016-10-10T13:07:38+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/10100</loc>
+	<lastmod>2016-10-10T13:07:39+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/9950</loc>
+	<lastmod>2016-10-10T13:07:40+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/10000</loc>
+	<lastmod>2016-10-10T13:07:43+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/10050</loc>
+	<lastmod>2016-10-10T13:07:43+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/4250</loc>
+	<lastmod>2016-10-10T13:07:44+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/4300</loc>
+	<lastmod>2016-10-10T13:07:47+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/4350</loc>
+	<lastmod>2016-10-10T13:07:47+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/4400</loc>
+	<lastmod>2016-10-10T13:07:48+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/9900</loc>
+	<lastmod>2016-10-10T13:07:53+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/9750</loc>
+	<lastmod>2016-10-10T13:07:53+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/9800</loc>
+	<lastmod>2016-10-10T13:07:54+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/9850</loc>
+	<lastmod>2016-10-10T13:08:00+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/4450</loc>
+	<lastmod>2016-10-10T13:08:00+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/4500</loc>
+	<lastmod>2016-10-10T13:08:00+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/4550</loc>
+	<lastmod>2016-10-10T13:08:05+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/4600</loc>
+	<lastmod>2016-10-10T13:08:06+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/9700</loc>
+	<lastmod>2016-10-10T13:08:06+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/9550</loc>
+	<lastmod>2016-10-10T13:08:08+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/9600</loc>
+	<lastmod>2016-10-10T13:08:11+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/9650</loc>
+	<lastmod>2016-10-10T13:08:11+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/4650</loc>
+	<lastmod>2016-10-10T13:08:12+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/4700</loc>
+	<lastmod>2016-10-10T13:08:16+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/4750</loc>
+	<lastmod>2016-10-10T13:08:19+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/4800</loc>
+	<lastmod>2016-10-10T13:08:19+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/9500</loc>
+	<lastmod>2016-10-10T13:08:21+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/9350</loc>
+	<lastmod>2016-10-10T13:08:25+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/9400</loc>
+	<lastmod>2016-10-10T13:08:26+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/9450</loc>
+	<lastmod>2016-10-10T13:08:29+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/4850</loc>
+	<lastmod>2016-10-10T13:08:31+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/4900</loc>
+	<lastmod>2016-10-10T13:08:31+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/4950</loc>
+	<lastmod>2016-10-10T13:08:34+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/5000</loc>
+	<lastmod>2016-10-10T13:08:34+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/9300</loc>
+	<lastmod>2016-10-10T13:08:35+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/9150</loc>
+	<lastmod>2016-10-10T13:08:40+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/9200</loc>
+	<lastmod>2016-10-10T13:08:39+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/9250</loc>
+	<lastmod>2016-10-10T13:08:41+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/5050</loc>
+	<lastmod>2016-10-10T13:08:46+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/5100</loc>
+	<lastmod>2016-10-10T13:08:46+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/5150</loc>
+	<lastmod>2016-10-10T13:08:47+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/5200</loc>
+	<lastmod>2016-10-10T13:08:52+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/9100</loc>
+	<lastmod>2016-10-10T13:08:53+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/9000</loc>
+	<lastmod>2016-10-10T13:08:53+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/9050</loc>
+	<lastmod>2016-10-10T13:08:59+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/8950</loc>
+	<lastmod>2016-10-10T13:08:59+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/5250</loc>
+	<lastmod>2016-10-10T13:08:59+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/5300</loc>
+	<lastmod>2016-10-10T13:09:06+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/5350</loc>
+	<lastmod>2016-10-10T13:09:06+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/5400</loc>
+	<lastmod>2016-10-10T13:09:06+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/8900</loc>
+	<lastmod>2016-10-10T13:09:12+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/8800</loc>
+	<lastmod>2016-10-10T13:09:12+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/8850</loc>
+	<lastmod>2016-10-10T13:09:12+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/5450</loc>
+	<lastmod>2016-10-10T13:09:16+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/8750</loc>
+	<lastmod>2016-10-10T13:09:18+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/5500</loc>
+	<lastmod>2016-10-10T13:09:18+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/5550</loc>
+	<lastmod>2016-10-10T13:09:19+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/5600</loc>
+	<lastmod>2016-10-10T13:09:22+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/8700</loc>
+	<lastmod>2016-10-10T13:09:22+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/8650</loc>
+	<lastmod>2016-10-10T13:09:24+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/8600</loc>
+	<lastmod>2016-10-10T13:09:27+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/5650</loc>
+	<lastmod>2016-10-10T13:09:29+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/5700</loc>
+	<lastmod>2016-10-10T13:09:29+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/8550</loc>
+	<lastmod>2016-10-10T13:09:30+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/5750</loc>
+	<lastmod>2016-10-10T13:09:33+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/5800</loc>
+	<lastmod>2016-10-10T13:09:34+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/8500</loc>
+	<lastmod>2016-10-10T13:09:35+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/8450</loc>
+	<lastmod>2016-10-10T13:09:38+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/8400</loc>
+	<lastmod>2016-10-10T13:09:40+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/5850</loc>
+	<lastmod>2016-10-10T13:09:40+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/5900</loc>
+	<lastmod>2016-10-10T13:09:42+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/8350</loc>
+	<lastmod>2016-10-10T13:09:45+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/5950</loc>
+	<lastmod>2016-10-10T13:09:45+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/6000</loc>
+	<lastmod>2016-10-10T13:09:46+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/8300</loc>
+	<lastmod>2016-10-10T13:09:51+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/8250</loc>
+	<lastmod>2016-10-10T13:09:51+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/8200</loc>
+	<lastmod>2016-10-10T13:09:51+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/6050</loc>
+	<lastmod>2016-10-10T13:09:55+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/6100</loc>
+	<lastmod>2016-10-10T13:09:57+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/8150</loc>
+	<lastmod>2016-10-10T13:09:57+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/6150</loc>
+	<lastmod>2016-10-10T13:09:59+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/6200</loc>
+	<lastmod>2016-10-10T13:10:03+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/8100</loc>
+	<lastmod>2016-10-10T13:10:04+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/8000</loc>
+	<lastmod>2016-10-10T13:10:06+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/8050</loc>
+	<lastmod>2016-10-10T13:10:08+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/6250</loc>
+	<lastmod>2016-10-10T13:10:08+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/6300</loc>
+	<lastmod>2016-10-10T13:10:09+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/7950</loc>
+	<lastmod>2016-10-10T13:10:11+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/6350</loc>
+	<lastmod>2016-10-10T13:10:14+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/6400</loc>
+	<lastmod>2016-10-10T13:10:15+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/7900</loc>
+	<lastmod>2016-10-10T13:10:15+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/7800</loc>
+	<lastmod>2016-10-10T13:10:17+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/7850</loc>
+	<lastmod>2016-10-10T13:10:19+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/6450</loc>
+	<lastmod>2016-10-10T13:10:20+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/6500</loc>
+	<lastmod>2016-10-10T13:10:22+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/7750</loc>
+	<lastmod>2016-10-10T13:10:22+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/6550</loc>
+	<lastmod>2016-10-10T13:10:24+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/6600</loc>
+	<lastmod>2016-10-10T13:10:27+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/7700</loc>
+	<lastmod>2016-10-10T13:10:28+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/7600</loc>
+	<lastmod>2016-10-10T13:10:28+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/7650</loc>
+	<lastmod>2016-10-10T13:10:32+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/6650</loc>
+	<lastmod>2016-10-10T13:10:34+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/6700</loc>
+	<lastmod>2016-10-10T13:10:34+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/7550</loc>
+	<lastmod>2016-10-10T13:10:36+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/6750</loc>
+	<lastmod>2016-10-10T13:10:40+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/6800</loc>
+	<lastmod>2016-10-10T13:10:40+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/7500</loc>
+	<lastmod>2016-10-10T13:10:40+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/7400</loc>
+	<lastmod>2016-10-10T13:10:45+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/7450</loc>
+	<lastmod>2016-10-10T13:10:46+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/6850</loc>
+	<lastmod>2016-10-10T13:10:46+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/6900</loc>
+	<lastmod>2016-10-10T13:10:52+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/7350</loc>
+	<lastmod>2016-10-10T13:10:53+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/6950</loc>
+	<lastmod>2016-10-10T13:10:53+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/7000</loc>
+	<lastmod>2016-10-10T13:10:56+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/7300</loc>
+	<lastmod>2016-10-10T13:10:58+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/7200</loc>
+	<lastmod>2016-10-10T13:10:58+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/7250</loc>
+	<lastmod>2016-10-10T13:10:59+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/7050</loc>
+	<lastmod>2016-10-10T13:11:01+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/7100</loc>
+	<lastmod>2016-10-10T13:11:03+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://tklient.ru/index.php/main/index/7150</loc>
+	<lastmod>2016-10-10T13:11:04+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+</urlset>
