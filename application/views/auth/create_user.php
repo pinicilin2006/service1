@@ -33,7 +33,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                   <p>
                   	<span class="text-danger">Для внесения заявки на поиск запчастей не требуется регистрация</span>
                   	<br>
-                  	<span class="text-success">В случае успешной регистрации<br> в течение 30 минут с Вами свяжется наш менеджер<br> для уточнения времени начала тестового периода</span>
+                  	<span class="text-success">В случае успешной регистрации<br> в течение 30 минут Вам будет предоставлен<br> полный доступ к заявкам</span>
                   </p>
                 </div>				
 				  <div class="form-group">
