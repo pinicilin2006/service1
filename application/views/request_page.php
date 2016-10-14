@@ -47,7 +47,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="form-group">
                   <label for="phone" class="col-sm-4 control-label">Телефон*</label>
                   <div class="col-sm-8">
-                    <input type="text" name="phone" class="form-control" id="phone" placeholder="Телефон" required="required">
+                    <input type="tel" name="phone" class="form-control" id="phone" placeholder="Телефон" required="required">
                   </div>
                 </div>
 
