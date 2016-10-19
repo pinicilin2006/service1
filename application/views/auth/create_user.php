@@ -28,7 +28,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           		);
           		echo form_open('auth/create_user', $attributes);
           		?>
-				<legend>Регистрация нового пользователя</legend>
+				<legend>Регистрация нового пользователя (авторазборки)</legend>
                 <div class="row" id="register-message">
                   <p>
                   	<span class="text-danger">Для внесения заявки на поиск запчастей не требуется регистрация</span>
