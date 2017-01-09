@@ -13,7 +13,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
       <div class="row">
 
-        <div class="col-sm-9 blog-main">
+        <div class="col-sm-12 blog-main">
         <?php $this->view('auth/admin_menu') ?>
           <div class="blog-post">
 			<div id="infoMessage"><?php echo $message;?></div>
@@ -65,8 +65,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           </div>	
 
         </div><!-- /.blog-main -->
-
-        <?php $this->view('right_sidebar') ?>
 
       </div><!-- /.row -->
 
