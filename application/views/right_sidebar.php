@@ -30,19 +30,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <li class="list-group-item"><small><em>Согласно пожеланиям клиентов добавлена возможность оставлять примечание к заявке.</em></small></li>
                     <li class="list-group-item"><small><em>Добавлена возможность отправлять sms. Лимит sms для пользователя 100 штук. Возможность будет доступна только при внесение платы за полный доступ. Увелечение лимита sms возможно за дополнительную плату. Цена сверх лимита 2 рубля за смс</em></small></li>
               </ul>
-              <?php endif;?>
-              <?php if(!$this->ion_auth->logged_in()):?>
-                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                <!-- tklient.ru -->
-                <ins class="adsbygoogle"
-                     style="display:block"
-                     data-ad-client="ca-pub-7854349718987560"
-                     data-ad-slot="3554158017"
-                     data-ad-format="auto"></ins>
-                <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-                </script> 
-              <?php endif;?>              
+              <?php endif;?>             
             </div>
 
    
