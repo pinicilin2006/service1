@@ -7,7 +7,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
   <?php $this->view('main_navigation') ?>
 
-    <div class="container">
+    <div class="container-fluid">
 
     <?php $this->view('blog_title') ?>
 
