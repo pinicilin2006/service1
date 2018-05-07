@@ -66,5 +66,12 @@
 	  ga('send', 'pageview');
 
 	</script> 
-	<!-- /Google counter -->      
+	<!-- /Google counter -->
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<script>
+	(adsbygoogle = window.adsbygoogle || []).push({
+		google_ad_client: "ca-pub-7854349718987560",
+		enable_page_level_ads: true
+	     });
+	</script>
   </head>
