@@ -15,7 +15,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
       <div class="row">
 
-        <div class="col-sm-9 blog-main" style="padding-top: 5px">
+        <div class="col-sm-12 blog-main" style="padding-top: 5px">
 
           <div class="blog-post">
           <?=$pagination?>
@@ -168,7 +168,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         </div><!-- /.blog-main -->
 
-        <?php include_once('right_sidebar.php') ?>
+        <?php //include_once('right_sidebar.php') ?>
 
       </div><!-- /.row -->
 
