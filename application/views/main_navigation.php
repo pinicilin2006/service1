@@ -29,4 +29,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </div> 
             </div>
         </nav>
-    
+    <div class="container">
+            <div class="row">
+                    <!--google adsense-->
+            </div>
+    </div>
